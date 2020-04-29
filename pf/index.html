@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>박신향 포트폴리오</title>
+    <link rel="shortcut icon" href="./img/favicon.png"><!-- 파비콘 제작해서 추가 -->
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <!--<link rel="stylesheet" type="text/css" href="./css/examples.css" />-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/modernizr.custom.min.js"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-ui-1.12.0.custom.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="./js/examples.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="js/mixFilter.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var wd = parseInt($(window).width());
+            if(wd>=770){
+                $('#fullpage').fullpage({
+                sectionsColor: ['#fff', '#fff', '#fff', '#fff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
+                menu: '#menu',
+                afterLoad: function(anchorLink, index) {
+                    //section 2
+                    if (index == 2) {
+                        //moving the image
+                        $('#section1').find('.occupy').delay(1000).animate({
+                            left: '0%'
+                        }, 1000, 'easeOutExpo');
+
+                    }
+                    //section 3
+                    if (anchorLink == '3rdPage') {
+                        //moving the image
+                        $('#section2').find('.intro').delay(0).animate({
+                            left: '0%'
+                        }, 1000);
+                    }
+                    
+                 
+                }
+            });
+           } 
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="menubox">
+        <ul id="menu">
+            <li data-menuanchor="firstPage"><a href="#firstPage" onfocus="this.blur();">INTRO</a>
+            <li data-menuanchor="secondPage"><a href="#secondPage" onfocus="this.blur();">ABOUT </a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage" onfocus="this.blur();">PORTFOLIO</a></li>
+            <!--<li data-menuanchor="lastPage"><a href="#lastPage" onfocus="this.blur();">CONTACT</a></li>-->
+        </ul>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <h1>WELCOME</h1>
+            <h5>"자연스럽고 효율적인 소통을 좋아하는 웹디자이너 박신향입니다"</h5>
+            <p>WEB DESIGNER & WEB PUBLISHER PORTFOLIO</p>
+            <div id="scroll">
+                <img src="img/scrolldown.gif" width="30" height="auto">
+                <h6>scroll down</h6>
+            </div>
+        </div>
+
+        <div class="section" id="section1">
+            <div id="profile">
+                <div class="prof1">
+                    <ul>
+                        <h2>About me</h2>
+                        <h3>박신향</h3>
+                        <li class="profile_img"><img src="img/me.jpg" alt=""></li>
+                        <li class="icon"><!--<img src="img/birthday.png" alt="">--> 생년월일 : 1979.12.10</li>
+                        <li class="icon"><!--<img src="img/mobile.png" alt="">--> 휴대폰 : 010.9498.5945</li>
+                        <li class="icon"><!--<img src="img/mail.png" alt="">-->이메일 : hyang2z@naver.com</li>
+                        <li class="icon"><!--<img src="img/college.png" alt="">-->직업 : 웹디자이너 & 웹퍼블리셔 </li>
+                    </ul>
+                    
+                </div>
+                <div class="prof2">
+                    <div class="list1">
+
+                        <p><span class="title">자 격 증</span><span class="content">웹디자인 기능사,컴퓨터그래픽스운용기능사(필기),운전면허 1종보통</span></p>
+
+                        <p><span class="title">교육사항</span><span class="content">2019.11~2020.05 스마트기기 서비스를 위한 디지털 UX/UI디자인(반응형웹구현) 전문가 [그린컴퓨터아트학원 수료]</span></p>
+
+                        <p><span class="title">경력사항</span><span class="content">2016.12 ~ 2018.2 'ㄱ'회사에서 온라인 쇼핑몰 관리(작품사진 촬영 및 사진 보정후 업로드,카페24) </span></p>
+        
+                    </div>
+                    <div class="list23">
+                        <div class="list2">
+                            <h4 class="title">Software Skills</h4>
+                            <div class="skill">
+                                <div id="ai">
+                                    <p>Illustrator</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>70%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ps">
+                                    <p>Photoshop</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>80%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ht">
+                                    <p>HTML/CSS</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>75%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ja">
+                                    <p>Javascript</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>60%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="jq">
+                                    <p>JQuery</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>60%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ms">
+                                    <p>MS Office</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>80%</span></div>
+                                        </div>
+                                    </div>
+                                </div> <!--  ms   -->
+
+                            </div> <!-- skill  -->
+                        </div> <!-- list2 -->
+                        <div class="list3">
+                            <div class="hobby">
+                                <h4 class="title">Hobby</h4>
+                                <ul>
+                                    <li><img src="./img/airplane.png" alt="">여행</li>
+                                    <li><img src="./img/museum.png" alt="">전시관람</li>
+                                    <li><img src="./img/movie.png" alt="">영화관람</li>
+                                    <!--<li> <img src="./img/camera.png" alt="">사진찍기</li>
+                                    <li><img src="./img/cutlery.png" alt="">맛집탐방</li>-->
+                                </ul>
+                            </div>
+                            <div class="pers">
+                                <h4 class="title2">Personality</h4>
+                                <div id="per1">
+                                    <p class="left">외향적</p>
+                                    <div class="bar2">
+                                        <div class="fullbar2">
+                                            <div class="occupy2"></div>
+                                        </div>
+                                    </div>
+                                    <p class="right">내향적</p>
+                                </div>
+                                <div id="per2">
+                                    <p class="left">이성적</p>
+                                    <div class="bar2">
+                                        <div class="fullbar2">
+                                            <div class="occupy2"></div>
+                                        </div>
+                                    </div>
+                                    <p class="right">감성적</p>
+                                </div>
+                                <div id="per3">
+                                    <p class="left">능동적</p>
+                                    <div class="bar2">
+                                        <div class="fullbar2">
+                                            <div class="occupy2"></div>
+                                        </div>
+                                    </div>
+                                    <p class="right">수동적</p>
+                                </div> <!--  per3  -->
+
+                            </div> <!-- list3 -->
+                        </div> <!--  list23 -->
+
+                    </div> <!-- prof2  -->
+
+                </div> <!--  profile  -->
+            </div> <!--  section1  -->
+
+        </div>
+        
+        <div class="section" id="section2">
+            <div class="intro">
+                <div class="art">
+                    <h2>Portfolio</h2>
+                    <div class="filterWrap">
+                        <button class="filter" data-filter="all">All</button>
+                        <button class="filter" data-filter=".web">WEB</button>
+                        <button class="filter" data-filter=".responsive">RESPONSIVE</button>
+                        <button class="filter" data-filter=".mobile">MOBILE</button>
+                    </div>
+                </div>
+                <div class="container" id="mixItUp">
+                    <div class="mix web" id="d1" data-myorder="1">
+                        <img src="img/lee2.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 이응노 미술관</h3>
+                            <p class="discription">미술관의 지적이고 된이미지를 강조함 </p>
+                            <p class="size">web site(1920X1080)</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="http://pengsu.github.io/d1" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix web" id="d2" data-myorder="2">
+                        <img src="img/111.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 준비중</h3>
+                            <p class="discription">준비중입니다</p>
+                            <p class="size">web site(1920X1080)</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="http://pengsu.github.io/d2" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix mobile" id="d3" data-myorder="3">
+                        <img src="img/du.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">두끼떡볶이</h3>
+                            <p class="discription">두끼떡볶이의 모바일 앱</p>
+                            <p class="size">Mobile</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS</p>
+                            <a href="http://pengsu.github.io/d3" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix mobile" id="d4" data-myorder="4">
+                        <img src="img/111.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 준비중</h3>
+                            <p class="discription">준비중입니다</p>
+                            <p class="size">Mobile</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="http://pengsu.github.io/r1" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix responsive" id="d5" data-myorder="5">
+                        <img src="img/sam.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">삼성서울병원</h3>
+                            <p class="discription">간결하면서도 신뢰감있는 삼성병원의 이미지를 강조함</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="http://pengsu.github.io/r21" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix responsive" id="d7" data-myorder="7">
+                        <img src="img/bar.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">바리스타뉴스(커피 웹 매거진)</h3>
+                            <p class="discription">감성적이고 여백의 미를 추가하여 가독성을 높여줌</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="http://pengsu.github.io/m1" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix responsive" id="d6" data-myorder="6">
+                        <img src="img/gas.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">한국가스공사</h3>
+                            <p class="discription">소개글을 써주세요</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="http://pengsu.github.io/d1" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix responsive" id="d8" data-myorder="8">
+                        <img src="img/111.jpg" alt="" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">준비중</h3>
+                            <p class="discription">준비중입니다</p>
+                            <p class="size">Mobile</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS</p>
+                            <a href="http://pengsu.github.io/m21" target="new" class="ov_img"><img src="./img/link.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--section2-->
+
+        <div class="section" id="section3">
+        
+            <!--<div class="container2">
+					<h2>Contact</h2>
+					<div class="space"></div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<p class="large"></p>
+								<ul class="list-icons">
+                                	<li><i class="fa fa-child pr-10"></i>홍길동</li>
+									<li><i class="fa fa-map-marker pr-10"></i> 대전광역시 서구 거주</li>
+									<li><i class="fa fa-phone pr-10"></i>010-1234-5678</li>
+									<li><i class="fa fa-envelope-o pr-10"></i>abc1234@naver.com</li>
+                                    
+								</ul>
+								<ul class="social-links">
+									<li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/HtmlCoder/714570988650168"><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter"><a target="_blank" href="https://twitter.com/HtmlcoderMe"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>								
+									<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<form role="form" id="footer-form">
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name2">Name</label>
+										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email2">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message2">Message</label>
+										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<input type="submit" value="Send" class="btn btn-default">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>-->
+        
+        
+        <div id="footer">
+            <p>COPYRIGHT &copy; 2020 PARKSHINHYANG ALL RIGHTS RESERVED.</p>
+        </div>
+
+        </div><!--section3-->
+
+        
+
+    </div>
+
+
+</body>
+
+</html>
