@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>두끼떡볶이-모바일</title>
+    
+    <!-- 파비콘 및 메타포 아이콘 적용 -->
+    <!-- 가장 작은 형태EX12.의 16x16 크기의 ico -->
+    <link rel="shortcut icon" href="favicon/logo32x32.ico">
+    <!-- 가장 작은 형태의 16x16 크기의 png -->
+    <link rel="shortcut icon" href="favicon/logo16x16.png" type="image/x-icon">
+    <!-- 일반 앱형태의 아이콘 설정 -->
+    <link rel="icon" href="favicon/logo32x32.png">
+    <link rel="icon" href="favicon/logo16x16.png" sizes="16x16"> 
+    <link rel="icon" href="favicon/logo32x32.png" sizes="32x32"> 
+    <link rel="icon" href="favicon/logo48x48.png" sizes="48x48"> 
+    <link rel="icon" href="favicon/logo64x64.png" sizes="64x64"> 
+    <link rel="icon" href="favicon/logo128x128.png" sizes="128x128">
+    <!-- 아이폰 고해상도용 파비콘 152x152 -->
+    <link rel="apple-touch-icon-precomposed" href="favicon/logo152x152.ico">
+    
+    <!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 						
+    <meta name="msapplication-TileImage" content="favicon/logo144x144.png">
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="두끼 떡볶이">
+    <meta name="auther" content="박신향"><!--제작자-->
+    <meta name="url" content="http://hyang2z.dothome.co.kr/dduk">
+    <meta name="description" content="떡볶이,뷔페식 떡볶이,즉석떡볶이,분식">
+    <meta name="keywords" content="떡볶이,뷔페식 떡볶이,즉석떡볶이,분식,맛있는 떡볶이">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="떡볶이,뷔페식 떡볶이">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <meta itemprop="name" content="뷔페식 떡볶이">
+    <meta itemprop="description" content="떡볶이,뷔페식 떡볶이,즉석떡볶이">
+    <meta itemprop="image" content="favicon/logo256x256.png" >
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+   <!-- 카카오톡, 블로그 등의 크롤링으로 화면 미리보기 노출 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="뷔페식 떡볶이">
+    <meta property="og:url" content="./index.html">
+    <meta property="og:description" content="떡볶이,뷔페식 떡볶이,즉석떡볶이">
+    <meta property="og:img" content="http://hyang2z.dothome.co.kr/dduk/img/img1"><!-- 썸네일이미지 . http://부터 시작하는 절대주소로 남겨야 함 -->
+    
+    <!--상대경로. 부트스트랩 파일경로를 가지고 있을 경우
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>-->
+    
+    <!--제이쿼리 기본파일 cdn 형식으로 연결-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <!--폰트어썸 CDN 방식-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <!--xe-icon CDN 방식-->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!--구글폰트 링크-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./normalize.css">
+    
+    <style>
+        body,html{width: 100%;height: 100%;font-family: 'Noto Sans KR', sans-serif;}    
+        a{text-decoration: none;}
+        
+        .hd{position: fixed;left: 0;top: 0;background:#c1181f;width: 100%;height: 60px;z-index: 999;}
+        .hd button{position: absolute;top: 1em;z-index: 91;display: block;}
+        .hd button i{font-size: 1.8em;color: #fff;line-height: 30px;}
+        .logo{display: block;width: 60px;height: 40px;background-image: url(img/logoduki1.png);background-position: center center;background-repeat: no-repeat;background-size: contain;position: absolute;top: 0.7em; left: calc(50% - 35px);}
+        .lst_btn{left: 1em;}
+        .sns{right: 5.2em;}
+        .ev{right:3em;}
+        .log{right:1em;}
+        
+        .list_box,.sns_box,.event_box,.log_box
+        {width: 100%;height: 100%;position: fixed;z-index: 999;overflow: hidden;transition: 0.5s;}   
+        /* 버튼 클릭시 박스 위치 */
+        .list_box{left:-110%;top: 0;background: rgba(0,0,0,0.6);}
+        .list_box.on{left: 0;}
+        .sns_box{right:-110%;top: 0;background: rgba(0,0,0,0.6);}
+        .sns_box.on{right: 0;}
+        .event_box{left:0%;bottom:-110%;background: rgba(0,0,0,0.6);}
+        .event_box.on{bottom:0;}
+        .log_box{left:0;top: -110%;}
+        .log_box.on{top:0}
+
+        /* 왼쪽 사이드 메뉴*/
+        /*.list_box{width: 70%;height: 100%;}*/
+        .log_fr{width: 70%;height: 150px; background: #c1181f;padding-top: 60px;border-bottom: 1px solid #fff;}
+        .log_fr .btn{display: block;color: #fff;margin: 0 auto;margin-top:15px;font-size: 1em;}
+        .log_btn{width: 80px;height: 80px;margin: 0 auto;border-radius: 45px;background: #fff;font-size: 2em;line-height: 80px;color: #333;text-align: center;}
+        
+        .list_menu{clear: both;width: 70%;background: #fff;min-height: 70%;}
+        .list_menu li{padding: 1.2em;}
+        .list_menu li a{display: block;color: #c1181f;font-size: 1.1em;}
+        .list_menu li a i{float: right;color: #c1181f;opacity: 0.4;font-size: 0.8em;line-height: 30px;}
+        .list_box .close{display: block;position: absolute;top: 1em;right: 1em;color: #fff;font-size: 1.2em;}
+        
+        /* sns 박스 메뉴*/
+        .sns_list{width: 150px;height: 300px; margin: 80px auto;background: #fff;padding: 20px;}
+        .sns_list li{width: 150px;height: 75px;margin-top: 5px;} 
+        .sns_list li a{display: block;font-size:2.5em;line-height: 40px;text-align: center;color: #333;background: #fff;} 
+        .sns_box .close{display: block;position: absolute;top: 1em;right: 1em;color: #fff;font-size: 1.2em;opacity: 1;}
+        
+        /* 이벤트 팝업창 박스*/
+        .event_pic{width: 70%;height: auto;display: block;margin: 6em auto;}
+        .event_box .close{display: block;position: absolute;top: 1em;right: 1em;color: #fff;font-size: 1.2em;opacity: 1;}
+        
+        /* 로그인박스 */
+        .log_box{background: #fff;}
+        .collap_tit{text-align: center;padding-top: 40px;padding-bottom: 30px;}
+        .in_fr{border: 0;}
+        .in_frm{display: block;width: 80%;margin: 30px auto;line-height: 36px;clear: both;border: 1px solid #333;text-indent: 1em;}
+        .btn_frm{display: block;width: 25%;line-height: 36px;background: #333;margin: 12.5%;float: left;color: #fff;border-radius: 50px 50px 50px 50px;}
+        .log_txt{padding: 3em 5em;text-align: center;font-size: 1em;}
+        .log_box .close{display: block;color: #000;opacity: 1;position: absolute;top: 1em;right:1em;}
+        .btn_fr{border: 0;}
+    
+        /* 메인*/
+        .main{clear: both;width: 100%;}
+        .list{clear: both;width: 100%;padding-top: 60px;}
+        .list li{position: relative;}
+        .list li.item1{width: 100%;border-top: 2px solid #fff;}
+        .list li.item1 img{display: block;width: 100%;height: auto;overflow: hidden;}
+        .list li.item2{width: 100%;height: 120px;background: #f0d3c5;border-top: 2px solid #fff;}
+        .list li.item3{width: 100%;height: 120px;background: #93816e;border-top: 2px   solid #fff;}
+        .ban_img{width: 50%;position: absolute;bottom: 0;right: 0;}
+        .ban_txt{width: 45%;position: absolute;top: 0;left: 0;padding-top: 10px;padding-left: 10px;}
+        .list_com{color: #000;text-indent: 20px;padding-top: 80px;font-size: 1.6em;font-family: 'Nanum Pen Script', cursive;}
+        .item2 .list_com{color: #f51a23;}
+        .item3 .list_com{color : #f8db33;}
+        
+        /*메인 하단 블릿기호 - 추후 자동으로 넘어가도록 만들예정*/
+        .btn_iconbox{width: 60px;height: 24px;position: absolute;z-index: 100;left: calc(50% - 30px);top: 280px;}
+        .btn_iconbox li{float:left;width: 20px;height: 20px;position: absolute;}
+        .btn_iconbox li.item1{left: 0;}
+        .btn_iconbox li.item2{left: 20px;}
+        .btn_iconbox li.item3{left: 40px;}
+        .btn_iconbox li .btn{display: block; width: 8px;height: 8px;border: 2px solid #fff;border-radius: 6px;margin: 0 auto;box-sizing: border-box;background: transparent;}
+        
+        /*동영상*/
+        .mv_page{clear: both;width: 100%;}
+        .sec_tit{color: #333;margin: 10px 0;text-indent: 10px;}
+        #mv_fr{clear: both;width: 100%;top: 0;}
+        #mv_fr iframe{width: 100%;height: 300px;}
+        .mv_fr{border:0;}
+        
+        /*푸터*/
+        .ft{clear: both;background: #2b2b2b;color: #fff;padding-top: 1em;padding-bottom: 1.5em;}
+        .fnb{width: 70%;text-align: center;margin: 0 auto;}
+        .fnb ul{width: 100%;}
+        .fnb ul li{float: left;width: 50%;text-align: center;}
+        .fnb ul li a{color: #fff;}
+        .fnb ul li a:hover,.fnb ul li a:active{text-decoration: underline;}
+        .copyright{clear: both;text-align: center;}
+    
+    </style>
+    
+    <script>
+        $(document).ready(function(){
+            $(".lst_btn").click(function(){//.lst_btn버튼을 클릭하면
+                $(".list_box").addClass("on");//.lst_box에 on이라는 클래스를 추가해라 left:0%
+            });
+            $(".list_box .close").click(function(){//닫기 버튼 클릭하면
+                $(".list_box").removeClass("on");//.lst_box에 on이라는 클래스를 삭제해라. left:-110%
+            });
+            $(".sns").click(function(){
+                $(".sns_box").addClass("on");
+            });
+            $(".sns_box .close").click(function(){
+                $(".sns_box").removeClass("on");
+            });
+            $(".ev").click(function(){
+                $(".event_box").addClass("on");
+            });
+            $(".event_box .close").click(function(){
+                $(".event_box").removeClass("on");
+            });
+            $(".log").click(function(){
+                $(".log_box").addClass("on");
+            });
+            $(".log_box .close").click(function(){
+                $(".log_box").removeClass("on");
+            });
+            
+        });
+    
+    </script>
+
+</head>
+<body>
+    <header class="hd">
+       <button class="lst_btn"><i class="xi-bars"></i></button>
+       <a href="index.html" class="logo"></a>
+       <button class="sns"><i class="xi-share-alt-o"></i></button>
+       <button class="ev"><i class="xi-flag-o"></i></button>
+       <button class="log"><i class="xi-user-o"></i></button>
+   </header>
+   
+   <div class="list_box">
+       <div class="log_fr">
+           <div class="log_btn"><i class="fas fa-lock-open"></i></div>
+           <button class="btn">로그인</button>
+       </div>
+       
+       <ul class="list_menu">
+           <li class="item1"><a href="">두끼 떡볶이 소개<i class="fas fa-greater-than"></i></a></li>
+           <li class="item2"><a href="">두끼 떡볶이 메뉴<i class="fas fa-greater-than"></i></a></li>
+               <li class="item3"><a href="">공식 SNS<i class="fas fa-greater-than"></i></a></li>
+               <li class="item4"><a href="">이용안내<i class="fas fa-greater-than"></i></a></li>
+               <li class="item5"><a href="">가맹문의<i class="fas fa-greater-than"></i></a></li>
+       </ul>
+       <button class="close"><i class="xi-close"></i></button>
+   </div>
+   
+   <div class="sns_box">
+        <ul class="sns_list">
+            <li class="sns1"><a href=""><i class="xi-kakaotalk"></i></a></li>
+            <li class="sns2"><a href=""><i class="xi-facebook"></i></a></li>
+            <li class="sns3"><a href=""><i class="xi-blogger"></i></a></li>
+            <li class="sns4"><a href=""><i class="xi-twitter"></i></a></li>
+        </ul>
+        <button class="close"><i class="xi-close"></i></button>
+    </div>
+   
+   <div class="event_box">
+       <img src="img/event.png" alt="" class="event_pic">
+       <button class="close"><i class="xi-close"></i></button>
+   </div>
+   
+   <div class="log_box">
+       <h3 class="collap_tit">로그인</h3>
+       <form method="post">
+           <fieldset class="in_fr">
+               <input type="text" name="id" placeholder="아이디 입력" id="m_id" class="in_frm" autofocus>
+               <input type="text" name="pw" placeholder="패스워드 입력" id="m_pw" class="in_frm">
+           </fieldset>
+           <fieldset class="btn_fr">
+               <input type="submit" class="btn_frm" value="로그인">
+               <input type="reset" class="btn_frm" value="취소">
+            </fieldset>               
+            <p class="log_txt">회원가입시 풍성한 혜택과 알림서비스를 받으실 수 있습니다</p>
+       </form>
+       <button class="close"><i class="xi-close"></i></button>
+   </div>
+
+   
+   <div class="main">
+       <ul class="list">
+           <li class="item1">
+               <a href="#">
+                   <img src="img/main2.jpg" alt="">
+               </a>
+               
+           </li>
+           <li class="item2">
+                <a href="#">
+                   <img src="img/ban_hanki_img.png" alt="" class="ban_img">
+                   <img src="img/ban_hanki_txt.png" alt="" class="ban_txt">
+                    <p class="list_com">맛있는 상상 !!</p>
+               </a>
+           </li>
+           <li class="item3">
+                <a href="#">
+                   <img src="img/ban_duki_img.png" alt="" class="ban_img">
+                   <img src="img/ban_duki_txt.png" alt="" class="ban_txt">
+                   <p class="list_com">그 이상의 즐거움 !!</p>
+               </a>
+           </li>
+       </ul>
+        <ul class="btn_iconbox">
+            <li class="btn_icon item1"><button class="btn"></button></li>
+            <li class="btn_icon item2"><button class="btn"></button></li>
+            <li class="btn_icon item3"><button class="btn"></button></li>
+        </ul>
+   </div>
+   
+   <section class="mv_page">
+         <h3 class="sec_tit">두끼 미디어</h3>
+         <div id="mv_fr">
+              <iframe src="https://www.youtube.com/embed/OmwBzHSQSQY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+     </section>  
+     
+   <footer class="ft">
+         <nav class="fnb">
+             <ul class="menu">
+                 <li class="item1"><a href="sub2.html#tab1">이용약관</a></li>
+                 <li class="item2"><a href="sub2.html#tab2">개인정보처리방침</a></li>
+             </ul>
+         </nav>
+         <p class="copyright">ALL COPYRIGHT BY &copy; DOOKKI </p>
+     </footer>       
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
