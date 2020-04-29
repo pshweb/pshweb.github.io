@@ -1,0 +1,8 @@
+*{margin: 0;padding: 0;}
+body,html{font-size: 16px;	
+font-family:'맑은 고딕','Malgun Gothic','돋음',Dotum,Apple SD Gothic Neo,AppeGothic,Arial,Helvetica,sans-serif; color:#454545;}
+li{list-style: none;}
+img{border: none;}
+a{color:#555;text-decoration: none;}
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);

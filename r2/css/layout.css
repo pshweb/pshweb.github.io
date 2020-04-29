@@ -1,0 +1,1430 @@
+@charset "UTF-8";
+
+/*레이아웃 */
+body {
+    width: 100%;
+}
+
+/* header */
+#header {
+    width: 1200px;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 600px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.logo {
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    transition: all 0.5s;
+}
+
+.logo img {
+    width: 160px;
+}
+
+#gnb {
+    width: 1200px;
+    position: relative;
+    margin-left: 200px;
+}
+
+
+#gnb ul li {
+    float: left;
+    margin-top: 15px;
+    position: relative;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#gnb ul li a {
+    display: block;
+}
+
+#gnb ul li a.dep1 {
+    display: block;
+    font-size: 18px;
+    display: block;
+    height: 50px;
+    color: #454545;
+    font-weight: bold;
+    border-top: 2px solid transparent;
+    transition: all 0.5s;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#gnb ul li:hover .dep1 {
+    color: #0381bc;
+    border-top: 2px solid #0381bc;
+}
+
+#gnb .sub {
+    width: 160px;
+    height: 270px;
+    background: #fff;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#gnb .sub.first:before {
+    content: "";
+    width: 200px;
+    height: 270px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    background: #fff;
+    transition: all 0.5s;
+}
+
+
+#gnb .sub.last:after {
+    content: "";
+    width: 40px;
+    height: 270px;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    background: #fff;
+    z-index: 999;
+    transition: all 0.5s;
+}
+
+
+#gnb .sub li {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+#gnb .sub li a {
+    display: block;
+    font-size: 14px;
+}
+
+#gnb .sub li:hover a {
+    color: #0381bc;
+}
+
+#gnb:hover .sub {
+    height: 270px;
+    opacity: 1;
+}
+
+/* visual */
+#visual {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    transition: all 0.5s;
+    background-image: url(../img/visual_photo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.v_wrap {
+    width: 1200px;
+    height: 650px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slogan {
+    width: 1200px;
+    height: 650px;
+    /* position: absolute;bottom:0;left: 0;*/
+    background-image: url(../img/visual_slogan_1.png);
+    background-repeat: no-repeat;
+    background-size: 37%;
+    background-position: 90% 40%;
+}
+/*
+
+.txtBox {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 400px;
+    height: 250px;
+    background-image: url(../img/main_img.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: left center;
+    transition: all 0.5s;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.txtBox h2 {
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 0 3px 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.txtBox p {
+    padding: 20px 0 10px 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.txtBox h3 {
+    padding: 20px 0 10px 20px;
+    font-size: 14px;
+    color: #ff9b26;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.txtBox select {
+    margin: 30px 0 0 40px;
+    outline: none;
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-weight: 600;
+    padding: 3px;
+}
+
+.txtBox option {
+    color: #454545;
+}
+*/
+
+/* content1 */
+#content1 {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#content1:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+#content1 > div {
+    box-sizing: border-box;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+#content1 > div > div {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c7c6c6;
+    transition: all 0.5s;
+    margin-top: 10px;
+}
+
+.application,
+.parcel,
+.infomation {
+    position: relative;
+    width: 220px;
+    height: 190px;
+    float: left;
+}
+
+/*
+.application div {
+    background-image: linear-gradient(-220deg, #2bcde3 0%, #4b439f 100%);
+}
+
+.parcel div {
+    background-image: linear-gradient(-220deg, #7bdd7b 0%, #23a023 100%);
+}
+
+.infomation div {
+    background-image: linear-gradient(-220deg, #fa6879 0%, #b7182b 100%);
+}
+
+*/
+
+
+.application div {
+    background-image: linear-gradient(-220deg, #8898a8 0%, #012d74 100%);
+}
+
+.parcel div {
+    background-image: linear-gradient(-220deg, #f8a7a4 0%, #ec5671 100%);
+}
+
+.infomation div {
+    background-image: linear-gradient(-220deg, #8fc1c2 0%, #009ab1 100%);
+}
+
+.application div img,.parcel div img,.infomation div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;}
+
+.application h3,
+.parcel h3,
+.infomation h3 {
+    color: #fff;
+    display: block;
+    font-weight: 600;
+    font-size: 17.3px;
+    padding: 10px 10px 5px 10px;
+}
+
+
+
+.application p,
+.parcel p,
+.infomation p {
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.application a,
+.parcel a,
+.infomation a {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+
+.application a img,
+.parcel a img,
+.infomation a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.application > div,
+.parcel > div,
+.infomation > div{cursor: pointer;}
+
+.application > div:hover a,
+.parcel > div:hover a,
+.infomation > div:hover a {
+    transform: scale(1.3);
+}
+
+/* notice 공지사항*/
+.notice {
+    width: 540px;
+    height: 190px;
+    float: left;
+}
+
+.notice > div {
+    padding: 10px 15px 20px 15px;
+    background-image: url(../img/notice.png);
+    background-repeat: no-repeat;
+    background-position: right 85%;
+    background-size: 120px;
+    /*border: none !important;*/
+}
+
+.notice > div > h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c7c6c6;
+}
+
+.notice > div > ul li {
+    font-size: 12px;
+    width: 400px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.notice > div > ul li a {
+    float: left;
+}
+
+.notice > div > ul li span {
+    float: right;
+}
+
+.notice > div > ul li a:hover,
+.notice > div > ul li a:active {
+    font-weight: bold;
+    color: #ff6f52;
+}
+
+
+/*share*/
+.share {
+    width: 220px;
+    height: 280px;
+    float: left;
+    text-align: center;
+}
+
+.share h3 {
+    width: 180px;
+    height: 35px;
+    margin: 10px auto;
+    line-height: 35px;
+    font-size: 17px;
+    border-bottom: 1px solid #c7c6c6;
+}
+
+.share ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.share ul li {
+    margin: 13px 10px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.share ul li a {
+    display: block;
+    width: 190px;
+    height: 54px;
+    line-height: 49px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 auto;
+    text-indent: -999px;
+}
+
+.share ul li:nth-of-type(1) a {
+    background-image: url(../img/cnt_1.jpg);
+}
+
+.share ul li:nth-of-type(2) a {
+    background-image: url(../img/cnt_2.jpg);
+}
+
+.share ul li:nth-of-type(3) a {
+    background-image: url(../img/cnt_3.jpg);
+}
+
+.share ul li:hover {
+    opacity: 0.5;
+}
+
+/*icon_btn */
+.icon_btn {
+    width: 440px;
+    height: 280px;
+    float: left;
+}
+
+.icon_btn ul {
+    overflow: hidden;
+}
+
+.icon_btn ul li {
+    float: left;
+    width: 33.33333%;
+    height: 50%;
+    text-align: center;
+    padding-top: 80px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.icon_btn ul li:nth-child(1) {
+    background-image: url(../img/ico01.png);
+}
+
+.icon_btn ul li:nth-child(2) {
+    background-image: url(../img/ico02.png);
+}
+
+.icon_btn ul li:nth-child(3) {
+    background-image: url(../img/ico03.png);
+}
+
+.icon_btn ul li:nth-child(4) {
+    background-image: url(../img/ico07.png);
+}
+
+.icon_btn ul li:nth-child(5) {
+    background-image: url(../img/ico04.png);
+}
+
+.icon_btn ul li:nth-child(6) {
+    background-image: url(../img/ico06.png);
+}
+
+.icon_btn ul li:nth-child(1):hover {
+    background-image: url(../img/ico01_on.png);
+}
+
+.icon_btn ul li:nth-child(2):hover {
+    background-image: url(../img/ico02_on.png);
+}
+
+.icon_btn ul li:nth-child(3):hover {
+    background-image: url(../img/ico03_on.png);
+}
+
+.icon_btn ul li:nth-child(4):hover {
+    background-image: url(../img/ico07_on.png);
+}
+
+.icon_btn ul li:nth-child(5):hover {
+    background-image: url(../img/ico04_on.png);
+}
+
+.icon_btn ul li:nth-child(6):hover {
+    background-image: url(../img/ico06_on.png);
+}
+
+.icon_btn ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.5s;
+    padding-top: 7px;
+}
+
+/*center*/
+.center {
+    width: 270px;
+    height: 280px;
+    float: left;
+}
+
+.center a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c7c6c6;
+    background-color: #f2f3f5;
+    margin-top: 10px;
+    padding-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url(../img/sabo.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 50% 95%;
+}
+
+.center a h3 {
+    color: #454545;
+    font-size: 20px;
+}
+
+.center a p {
+    padding: 10px;
+    color: #454545;
+    font-size: 12px;
+}
+
+/*network*/
+.network {
+    width: 270px;
+    height: 280px;
+    float: left;
+}
+
+.network div {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c7c6c6;
+    background-color: #f2f3f5;
+    margin-top: 10px;
+    padding-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url(../img/network.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.network a h3 {
+    color: #454545;
+    font-size: 20px;
+}
+
+.network .search {
+    padding: 20px 0px;
+    box-sizing: border-box;
+}
+
+.network .search input {
+    width: 70%;
+    height: 30px;
+    border: 2px solid #0381bc;
+    border-radius: 25px;
+    background: url(../img/search.png) no-repeat;
+    background-size: 20px;
+    background-position: 95%;
+    padding-left: 20px;
+    outline: none;
+}
+
+.network a h4 {
+    font-size: 18px;
+    color: #454545;
+    margin-top: 20px;
+}
+
+.network a h4 span {
+    color: #f00;
+}
+
+/*banner*/
+.banner {
+    clear: both;
+    width: 1200px;
+    height: 110px;
+    border-bottom: 1px solid #3261b6;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.banner > div {
+    border: none !important;
+}
+
+.banner ul {
+    width: 1200px;
+    overflow: hidden;
+}
+
+.banner ul li {
+    float: left;
+    width: 16.6666%;
+    text-align: center;
+    height: 82px;
+}
+
+/*content2*/
+#content2 {
+    clear: both;
+    width: 100%;
+    background: #fff;
+}
+
+#content2:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.con2 {
+    width: 1200px;
+    margin: 0 auto;
+    height: 350px;
+    display: block;
+}
+
+.con2 h2 {
+    font-size: 30px;
+    color: #3261b6;
+    text-align: center;
+    line-height: 80px;
+}
+
+.con2 .listWrap {
+    width: 285px;
+    height: 179px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.con2 .listWrap:last-of-type {
+    margin-right: 0;
+}
+
+.listWrap .list {
+    width: 285px;
+    height: 197px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    transition: all 0.5s;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.list1 {
+    background-image: url(../img/notice_01.jpg);
+}
+
+.list2 {
+    background-image: url(../img/notice_02.jpg);
+}
+
+.list3 {
+    background-image: url(../img/notice_03.jpg);
+}
+
+.list4 {
+    background-image: url(../img/notice_04.jpg);
+}
+
+
+.listWrap .tit {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.listWrap p {
+    font-size: 12px;
+    letter-spacing: -0.8px;
+    margin-top: 8px;
+}
+
+/* 푸터영역 */
+#footer {
+    width: 100%;
+    background: #011e38;
+}
+
+.sitemap {
+    width: 1200px;
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sitemap ul {
+    float: left;
+    width: 160px;
+    margin-top: 10px;
+}
+
+.sitemap ul li {
+    font-size: 14px;
+    color: #a8afb5;
+}
+
+.sitemap ul li.sitemap_tit {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sitemap ul li a {
+    font-size: 12px;
+    color: #a8afb5;
+}
+
+.sitemap .sns {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.sitemap .sns li {
+    float: left;
+    margin-right: 10px;
+}
+
+.sitemap .sns li a {
+    display: block;
+    transition: 0.5s;
+    filter: brightness(0.7);
+}
+
+.sitemap .sns li a:hover {
+    filter: brightness(1);
+}
+
+.copyright {
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.copyright h2 {
+    position: absolute;
+    left: 0;
+    top: 14px;
+}
+
+.copyright address {
+    position: absolute;
+    left: 240px;
+    top: 20px;
+    color: #888;
+    width: 670px;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.copyright address a {
+    color: #ffcc00;
+}
+
+.copyright select {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background-color: transparent;
+    color: #a8afb5;
+    font-size: 12px;
+    padding: 3px;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 10px;
+}
+
+/*네비게이션 모바일 버전*/
+
+#gnbMo {
+    /*display: none;*/
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background-color: rgba(70, 67, 63, 0.6);
+    width: 80%;
+    height: 100%;
+    z-index: 500;
+    transition: all 0.6s;
+}
+
+#gnbMo label {
+    position: absolute;
+    right: -50px;
+    top: 20px;
+    text-indent: -9999px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(70, 67, 63, 0.6);
+    background-image: url(../img/close_btn.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center center;
+    cursor: pointer;
+}
+
+#gnbMo ul {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: 15%;
+    /*top: calc(50% - 150px);*/
+    transition: all 0.6s;
+}
+
+#gnbMo ul a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 1px solid #bbb;
+    opacity: 0.8;
+    transition: all 0.6s;
+}
+
+#gnbMo ul a:hover,
+#gnbMo ul a:active {
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.2);
+    border-bottom: 1px solid #fff;
+}
+
+.none {
+    display: none;
+}
+
+/*  라디오 버튼 안보이게 */
+.toggle_btn {
+    background: url(../img/btnMenu.png) no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    display: none;
+}
+
+/*#toggle1:checked ~ #gnbMo {display: block;}
+#toggle2:checked ~ #gnbMo {display: none;}*/
+#toggle1:checked ~ #gnbMo {
+    left: 0;
+}
+
+/*화면안으로 이동*/
+#toggle2:checked ~ #gnbMo {
+    left: -100%;
+}
+
+/*왼쪽 바깥으로 이동*/
+
+@media screen and (min-width:640px) and (max-width:1199px) {
+
+    /* header */
+    #header {
+        width: 100%;
+        height: 70px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .logo {
+        position: relative;
+        top: 10px;
+        left: 0px;
+        text-align: center;
+    }
+
+    #gnb {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    /* visual */
+    #visual {
+        width: 100%;
+        height: 320px;
+    }
+
+    .v_wrap {
+        width: 100%;
+        height: 320px;
+    }
+
+    .slogan {
+        width: 100%;
+        height: 100%;
+        background-size: 30%;
+        background-position: 75% 35%;
+    }
+
+    .txtBox {
+        top: 100px;
+        left: 10px;
+        width: 300px;
+        height: 197px;
+    }
+
+    .txtBox h2 {
+        font-size: 18px;
+        padding: 20px 0 3px 20px;
+    }
+
+    .txtBox p {
+        padding: 10px 0 10px 20px;
+        font-size: 13px;
+    }
+
+    .txtBox h3 {
+        padding: 20px 0 10px 20px;
+        font-size: 14px;
+    }
+
+    .txtBox select {
+        margin: 0 0 0 20px;
+        width: 200px;
+        height: 30px;
+    }
+
+    /* content1 */
+    #content1 {
+        clear: both;
+        width: 100%;
+    }
+
+    .application,
+    .parcel,
+    .infomation {
+        width: 33.33333%;
+        height: 190px;
+    }
+
+   .application div img,.parcel div img,.infomation div img{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+}
+
+
+    .application a img,
+    .parcel a img,
+    .infomation a img {
+        margin-top: 13px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* notice 공지사항*/
+    .notice {
+        clear: both;
+        float: none;
+        width: 100%;
+        height: 190px;
+    }
+
+    /*share 콜센터*/
+    .share {
+        width: 33.33333%;
+        height: 270px;
+    }
+
+    /*icon_btn */
+    .icon_btn {
+        width: 66.66666%;
+        height: 270px;
+    }
+
+    .icon_btn ul {
+        width: 450px;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+
+    .icon_btn ul li {
+        width: 30%;
+        padding-top: 74px;
+    }
+
+    .center {
+        width: 50%;
+        height: 280px;
+    }
+
+
+    .center a {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #c7c6c6;
+        background-color: #f2f3f5;
+        margin-top: 10px;
+        padding-top: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        background-image: url(../img/sabo.png);
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: 50% 90%;
+    }
+
+    .center a h3 {
+        color: #454545;
+        font-size: 20px;
+    }
+
+    .center a p {
+        padding: 10px;
+        color: #454545;
+        font-size: 13px;
+    }
+
+
+
+    .network {
+        width: 50%;
+        height: 280px;
+    }
+
+    /*banner*/
+    .banner {
+        clear: both;
+        width: 100%;
+    }
+
+    .banner ul {
+        width: 100%;
+    }
+
+    .banner ul li {
+        width: 25%;
+    }
+
+    /* 5,6번 배너 사라지게 */
+    .banner ul li:nth-child(5),
+    .banner ul li:nth-child(6) {
+        display: none;
+    }
+
+    /*content2*/
+    #content2 {
+        height: 580px;
+    }
+
+    .con2 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .con2 h2 {
+        font-size: 26px;
+        line-height: 56px;
+    }
+
+    .con2 .listWrap {
+        width: 50%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .listWrap .list {
+        width: 90%;
+        height: 197px;
+    }
+
+    .listWrap .tit {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .listWrap p {
+        display: block;
+        font-size: 12px;
+        letter-spacing: -0.8px;
+        margin-top: 8px;
+    }
+
+    /* 푸터영역 */
+    #footer {
+        width: 100%;
+        height: 100px;
+    }
+
+    .sitemap {
+        display: none;
+    }
+
+    .copyright {
+        width: 100%;
+    }
+
+    .copyright h2 {
+        position: absolute;
+        left: 5px;
+    }
+
+    .copyright address {
+        position: absolute;
+        left: 200px;
+        top: 20px;
+        width: 450px;
+        font-size: 12px;
+    }
+
+    .copyright select {
+        position: absolute;
+        right: 10px;
+        top: 55px;
+        width: 150px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:639px) {
+
+    /* 모바일 */
+    /* header */
+    #header {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 0;
+    }
+
+    .logo {
+        position: relative;
+        top: 10px;
+        left: 0px;
+        text-align: center;
+    }
+
+    .logo a img {
+        width: 100px;
+        height: auto;
+    }
+
+    #gnb {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+        top: 15px;
+    }
+
+    /* visual */
+    #visual {
+        width: 100%;
+        height: 200px;
+    }
+
+    .v_wrap {
+        width: 100%;
+        height: 200px;
+    }
+
+    .slogan {
+        width: 100%;
+        height: 100%;
+        background-size: 35%;
+        background-position: 75% 35%;
+    }
+
+
+    .txtBox {
+        top: 60px;
+        left: 10px;
+        width: 180px;
+        height: 130px;
+    }
+
+    .txtBox h2 {
+        font-size: 13px;
+        padding: 10px 0 3px 10px;
+    }
+
+    .txtBox p {
+        padding: 5px 0 5px 10px;
+        font-size: 12px;
+    }
+
+    .txtBox h3 {
+        padding: 5px 0 5px 10px;
+        font-size: 12px;
+    }
+
+    .txtBox select {
+        margin: 0 0 0 10px;
+        width: 150px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    /* content1 */
+    #content1 {
+        clear: both;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .application,
+    .parcel,
+    .infomation {
+        width: 33.33333%;
+        height: 120px;
+    }
+
+   .application div img,.parcel div img,.infomation div img {
+    position: absolute;
+    top: 49%;
+    left: 20%;
+    width: 60%;
+}
+
+    .application a img,
+    .parcel a img,
+    .infomation a img {display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .application h3,
+    .parcel h3,
+    .infomation h3 {
+        font-size: 14px;
+    }
+
+    .application p,
+    .parcel p,
+    .infomation p {display: none;
+        font-size: 10px;
+    }
+    /* notice 공지사항*/
+    .notice {
+        clear: both;
+        float: none;
+        width: 100%;
+        height: 190px;
+    }
+
+    .notice > div > ul {
+        width: 70%;
+        overflow: hidden;
+    }
+
+    .notice > div > ul li span {
+        display: none;
+    }
+
+    /* 날짜 안보이게 */
+    /*share 콜센터*/
+    .share {
+        width: 100%;
+        height: 270px;
+    }
+
+    .share h3 {
+        margin: 0 auto;
+    }
+
+    /*icon_btn */
+    .icon_btn {
+        width: 100%;
+        height: 240px;
+
+    }
+
+    .icon_btn ul {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 15px;
+    }
+
+    .icon_btn ul li {
+        width: 30%;
+        padding-top: 60px;
+    }
+
+    .icon_btn ul li a img {
+        width: 50px;
+    }
+
+    .center {
+        width: 50%;
+        height: 250px;
+    }
+
+    .center a p {
+        display: none;
+    }
+
+    .network {
+        width: 50%;
+        height: 250px;
+    }
+
+    /*banner*/
+    .banner {
+        display: none;
+    }
+
+    /*content1과 content2의 여백을 줌  */
+    #content1:after {
+        content: "";
+        clear: both;
+        display: block;
+        height: 10px;
+    }
+
+    /*content2*/
+    #content2 {
+        height: auto;
+    }
+
+    .con2 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .con2 h2 {
+        font-size: 22px;
+        line-height: 50px;
+        margin-top: 10px;
+    }
+
+    .con2 .listWrap {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .listWrap .list {
+        width: 80%;
+        height: 180px;
+        margin: 0 auto;
+        ;
+    }
+
+    .listWrap .tit {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .listWrap p {
+        display: none;
+    }
+
+    /* 푸터영역 */
+    #footer {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .sitemap {
+        display: none;
+    }
+
+    .copyright {
+        width: 98%;
+    }
+
+    .copyright h2 {
+        display: none;
+    }
+
+    .copyright address {
+        position: absolute;
+        left: 10px;
+        top: 50px;
+        width: 450px;
+        font-size: 10px;
+        width: 98%;
+    }
+
+    copyright select {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        width: 150px;
+        padding-left: 10px;
+    }
+}
