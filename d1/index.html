@@ -1,0 +1,660 @@
+
+<!--웹표준검사
+https://validator.w3.org/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lee Museum</title>
+    
+    <link rel="stylesheet" href="./common.css"  >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" >
+    
+    <style>
+        
+        body,html{clear: both;position: relative;}        
+        
+        /*사이드메뉴*/
+        .collap{position: fixed;top: 0;right: -110%;z-index: 100;background-color: rgba(0,0,0,0.6);width: 40vw;height: 100vh;box-sizing: border-box;padding-top:90px;transition-duration: 0.7s;padding-left: 100px;}
+        .collap.on{right: 0px;}/*사이드메뉴가 화면 안쪽으로 들어온 상태 on(가상의 클래스)*/
+        
+        .collap li{position: relative;}
+        .collap li a.dep1{color: #89811a;line-height: 3;height: 42px;font-size: 1.2em;font-weight: bold;}
+   
+        /*사이드 메뉴의 서브메뉴*/
+        .collap li ul.dep2{visibility: visible;opacity: 1; width: 100%;height: auto;background-color: transparent;position: static;line-height: 11px;color: #ddd;} 
+     
+         /*헤더영역- 메뉴*/
+        .hd{clear: both;position: fixed;top: 0;left: 0;z-index: 110;width: 100%;height: 90px;background-color: rgba(0,0,0,0);}
+        .hd.on{background-color: rgba(200,160,0,0)}
+        .hd.off{top: -120px;}
+        
+        .logo{display: block; width: 180px;height: auto;float: left;margin-left: 7em;margin-top: 3em;}
+        .logo img{display: block; width: 100%;}
+        
+        .gnb{float: left;margin-left: 3em;margin-top: 2.3em;}
+        .gnb li{float: left; width: 140px;position: relative;}
+        .gnb li a{display: block;text-align: center;/*padding: em;*/line-height: 1.8;font-size: 1.2em;}
+        
+        .gnb li a.dep1{color: #fff;background-color: transparent;}
+        .gnb li:hover a.dep1{color: #ddd;}
+        .dep2{width: 100%;height: 0;position: absolute;background-color: azure;visibility:hidden;opacity:0;}
+        .gnb li:hover .dep2{visibility:visible;opacity:1;}
+        
+        .dep2 li{clear: both;background-color: transparent;width: 100%;}
+        .dep2 li a{clear: both;display: block;color:#fff;padding: 0.5em;font-size: 1em}
+        .dep2 li a:hover{background-color: transparent;color:#ddd ;text-decoration: none;}
+        
+        /*헤더영역- 랭귀지*/
+        .lang{display: block;position: absolute;top: 2em;right: 8%;width: 100px;height: 42px;color:#fff;z-index: 110;line-height: 2;}
+        .lang.on{height: 106px;}
+        .this_lang{display: block;width: 100px;color: #fff;line-height: 2.4;padding: 0.5em;}
+        .this_lang:after{content: "▼";position: absolute;right: 1em;}
+        .this_lang.on:after{content: "▲";}
+        .lang_list{display: block; height: 0;overflow: hidden;}
+        .lang_list.on{height: 64px;}
+        .lang_list li{clear:both;line-height: 32px;text-indent: 2.1rem;}
+        .lang_list li a{display: block;color: #fff;width: 100px;}
+                
+        /*헤더영역- 사이트맵버튼*/        
+        .lst_btn{display: block;position:absolute;top: 2.5em;right: 5%; width: 48px;height: 48px;z-index: 110;cursor: pointer;box-sizing: border-box;}        
+        .lst_btn .line{display: block;height: 1.7px;background-color: #fff;position: absolute;right: 0.6em;z-index: 110;transform:rotate(0deg);transition-duration: 0.4s;}
+
+        .lst_btn .item1{width: 30px;top: 12px;}
+        .lst_btn .item2{width: 20px;top: 18px;}
+        .lst_btn .item3{width: 30px;top: 24px;}
+        .lst_btn:hover .item1{width: 20px;}
+        .lst_btn:hover .item2{width: 30px;}
+        .lst_btn:hover .item3{width: 20px;}
+        .lst_btn.on .item1{width: 30px;transform: rotate(45deg);top: 21px;}
+        .lst_btn.on .item2{opacity: 0;}
+        .lst_btn.on .item3{width: 30px;transform: rotate(-45deg);top: 21px;}
+
+        /*섹션 1영역*/        
+        .vs1{width: 100vw;height: 100vh;position: relative;clear: both;}
+        .vs_list{width: 400%;height: 100vh;}
+        .vs_list li{width: 25%;float: left;height: 100vh;background-repeat: no-repeat;background-size: cover;background-position: center center;}
+        .vs_list li.on{opacity: 1;}        
+        .vs_list li.item1{background-image: url(image/section1_1.jpg);}
+        .vs_list li.item2{background-image: url(image/section1_2.jpg);}
+        .vs_list li.item3{background-image: url(image/section1_3.jpg);}
+        
+        .vs_tit{font-size: 3em;color: #fff;padding-top: 12em;padding-left: 100px;transition-duration: 0.5s;opacity: 0;}
+        .vs_com{font-size: 1.2em;color: #fff;padding-top: 12em;padding-left: 100px;transition-duration: 0.5s;opacity: 0;line-height: 1.7;}
+        .vs_more{display: block; width: 150px;padding: 0.5em 1em;border: 2px solid #fff;margin-top: 8em;margin-left: 100px;border-radius: 50px;font-size: 1.4em;color: #fff;transition-duration: 0.5s;opacity: 0;position:relative;}
+        .more_arrow{position: absolute;top: 1em;right: 30px;display: block;
+            width: 37px;height: 10px;background-image: url(image/arrow-right.png);background-repeat: no-repeat;
+             animation-name: arrow_ani;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;} 
+        
+           @keyframes arrow_ani{
+            0%{right: 30px;}
+            100%{right: 60px;}
+        }
+        
+        
+        /*섹션 1영역 타이틀*/
+        .vs_list li.on .vs_tit{padding-top: 18rem;opacity: 1;}
+        .vs_list li.on .vs_com{padding-top: 5rem;opacity: 1;}
+        .vs_list li.on .vs_more{margin-top: 7rem;opacity: 1;}
+        
+        
+         /*섹션1 하단 블릿기호*/
+        .btn_box1{width: 60px;height: 24px;position: absolute;z-index: 25;left: calc(50% - 30px);bottom: 30px;}
+        .btn_box1 li{width: 20px;height: 20px;position: absolute;}
+        .btn_box1 li.item1{left: 0;}
+        .btn_box1 li.item2{left: 20px;}
+        .btn_box1 li.item3{left: 40px;}
+        .btn_box1 li .btn{display: block; width: 10px;height: 10px;border: 2px solid #fff;border-radius: 6px;margin: 0 auto;cursor: pointer;box-sizing: border-box;background: transparent;}
+        .btn_box1 li.on .btn{background: #fff;}
+        .play_btn{position: absolute;bottom: 30px;left: calc(50% + 30px);z-index: 25;width: 20px;height: 24px;}
+       /* .play_btn li .btn{display: block;width: 12px;height: 12px;background-image: url(image/slick_play.png);background-repeat: no-repeat;background-position: center center;border: 0;margin: 0 auto;}
+        .play_btn li.on .btn{background-image: url(image/slick_stop.png);}*/
+        
+         /*섹션 2영역*/
+        #page2{width: 100vw;height: 100vh;
+            background-image: url(image/section2.jpg);background-repeat: no-repeat;background-position: center center;}
+        .vs2{width: 100vw;height: 100vh;position: relative;clear: both;}
+        .vs_lst2 li{width: 100%;height: 100vh;}
+        .vs_lst2 li.item1{background-image: url(image/poster1.jpg);background-repeat: no-repeat;background-size: 470px 500px;position: absolute;left:290px;top: 230px;opacity: 1;}
+               
+        .vs_tit1{font-size: 3em;color:#fff;padding-top: 0.7em;padding-left: 14em;}
+        .vs_com1{font-size: 2em;color:#cb8112;padding-top: 1em;padding-left: 21em;}
+        .vs_com2{font-size: 2em;color:#cb8112;padding-top: 0.5em;padding-left: 21em;}
+        .vs_com3{font-size: 2em;color:#fff;padding-top: 2.5em;padding-left: 21em;}
+        .vs2_more{display: block; width: 150px;padding: 0.5em 1em;border: 2px solid #fff;margin-top:3em;margin-left: 30em;border-radius: 50px;font-size: 1.4em;color: #fff;transition-duration: 0.5s;opacity: 1;position:relative}
+        .vs2_more .more_arrow{position: absolute;top: 1em;right: 30px;display: block;
+            width: 37px;height: 10px;background-image: url(image/arrow-right.png);background-repeat: no-repeat;} 
+
+         /*섹션 3영역*/
+        #page3{width: 100vw;height: 100vh;background-image: url(image/section3.jpg);background-repeat: no-repeat;background-position: center center;}
+        .vs3 .collect_tit{width: 100%;height: 100%;display: block;font-size: 3em;color: #000;text-align: center;margin-top: 70px;}
+        .vs3 p{display: block;width: 39%;color: #555;margin: 0 auto;margin-top: 20px;}
+        .vs_lst3{width: 1450px;height: 400px;margin: 80px auto 50px;}
+        
+        .vs3 ul li{float: left;box-sizing: border-box;width: 33.3333%;height: 100%;overflow: hidden;}
+        .vs3 ul li.collect1{}
+        .vs3 ul li.collect2{}
+        .vs3 ul li.collect3{}
+        .vs3 ul li a{display: block;}
+        
+        .vs3 ul li .col{width: 79%;height: 90%;border: 10px solid #000;margin: 0 auto;position: relative;overflow: hidden;transition: 0.8s;box-shadow: 8px 8px 10px gray;}
+        .vs3 ul li .inner{width:100%;height: 100%;background: rgba(0,0,0,0);position: absolute;top: 0;left: 0;z-index: 55;margin: 0 auto;}
+        
+        .vs3 ul li img{display: block;opacity: 0.8;transition: all 0.3s;}
+        .vs3 ul li:hover .inner{background: rgba(0,0,0,0.6);transition: 0.5s;}
+        
+        .vs3 ul li p{color: #fff;font-size: 1.2em;text-align: center;padding-top: 120px;opacity: 0;transition: all 1s;}
+        .vs3 ul li:hover p{opacity: 1;}
+        
+        .vs3_more{display: block; width: 150px;padding: 0.5em 1em;border: 2px solid #555;margin-top:3.5em;margin-left: 44em;border-radius: 50px;font-size: 1.4em;color: #555;transition-duration: 0.5s;opacity: 1;position:relative;}
+        .vs3_more .more_arrow{position: absolute;top: 1em;right: 1.875em;display: block;
+            width: 37px;height: 10px;background-image: url(image/arrow-right_b.png);background-repeat: no-repeat;} 
+
+
+        /*섹션 4영역*/
+        #page4{width: 100vw;height: 100vh;background: #fff;}
+        .vs4 .space_tit{width: 100%;height: 100%;display: block;font-size: 3em;color: #000;text-align: center;margin-top: 90px;}
+        
+        .vs_lst4{width: 1450px;height:100%;margin: 50px auto;}
+        .vs_lst4 li{float: left;width: 33%;height: 420px;margin-top: 100px;margin-left: 0px;position: relative;border-right: 1px solid #555;text-align: center;bg#000}
+        .vs_lst4 li:last-child{border-right: none;}
+        .vs_lst4 li a{width: 100%;height: 100%;position:relative;display: block;color: #555;}
+        .vs_lst4 li .img_box{opacity: 0.5;transition: all 1s;width: 45%;}
+        .vs_lst4 li .img_tit{position: absolute;top: 0;left: 0;width: 100%;height: 100%;font-size: 2em;font-weight: bold;text-align: center;z-index: 10;line-height: 200px;margin-top: 180px;}
+        .vs_lst4 li p{width: 80%;line-height: 30px;margin: 90px auto 0;}
+               
+        .vs_lst4 li:hover a{color: #8e07b7;}
+        .vs_lst4 li:hover .line{background: #8e07b7;}
+        
+        .col.two{width: 100%;height: 100%;}
+        .col.two{padding:0px 0px;box-sizing: border-box;text-align: center;}
+        .line2{width: 20px;height: 2px;background: #777;display: block;margin: -2px auto;transition: all 0.3s;}
+        .line2:nth-child(1){transform: translateY(0px);}/*1라인 아래로 이동*/
+        .line2:nth-child(2){transform: translateY(0px) rotate(90deg);}/*위로 이동하면서 90도 회전*/
+        
+        .vs_lst4 li:hover .line2:nth-child(1){transform: translateY(0px) rotate(720deg);}
+        .vs_lst4 li:hover .line2:nth-child(2){transform: translateY(0px) rotate(630deg);}        
+        
+    
+        /*푸터영역*/
+        .ft{clear: both;background-color: #222;padding: 1rem 0rem;background-image: url(image/ftlogo.png);background-repeat: no-repeat;background-size: 200px;background-position: 50px center;position: relative;}
+        
+        .fnb{width: 300px;margin: 0 auto;}
+        .fnb li{float: left;padding: 10px;}
+        .fnb li a{display: block; color: #999;}
+        
+        .company{clear: both;width: 100%;padding-top: 0.5rem;text-align: center;}
+        .company p{color: #999;font-style: normal;}
+                
+        .copyright{clear: both;color: #999;padding: 1rem;text-align: center;}
+        
+        /*sns 박스*/
+        div.sns_box{width: 160px;height: 50px;position: absolute;top:20px;right: 20px;}
+        div.sns_box li{width: 30px;height: 30px;float: left;margin-right: 10px;border-radius: 5px;}
+        div.sns_box li img{width: 100%;float: left;filter: grayscale(0.5)}
+     
+    </style>
+    
+   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+       var ck1 = true, ck2 = true;  
+        //펼침 메뉴의 열기/닫기 모션
+       $(".lst_btn").click(function(){
+             if(ck1){
+                 $(".collap").addClass("on");
+                 $(".lst_btn").addClass("on");
+             } else {
+                 $(".collap").removeClass("on");
+                 $(".lst_btn").removeClass("on");
+             }
+             ck1 = !ck1;
+       }); 
+       //펼침 메뉴의 서브메뉴 열기
+       $(".collap li").click(function(){
+           $(".collap li").removeClass("on");
+           $(this).addClass("on");
+       }); 
+       //언어에 대한 선택메뉴 모션
+       $(".this_lang").click(function(){
+           if(ck2) {
+              $(".lang_list").addClass("on"); 
+              $(".lang").addClass("on"); 
+              $(this).addClass("on");    
+           } else {
+              $(".lang_list").removeClass("on"); 
+              $(".lang").removeClass("on"); 
+              $(this).removeClass("on");    
+           }
+           ck2 = !ck2;
+       }); 
+       //스크롤시 메인 메뉴 모션    
+       $(window).scroll(function(){
+          var sc_top = parseInt($("body, html").scrollTop());
+            if(sc_top>=500 && sc_top<1200){
+                $(".hd").addClass("on");
+                $(".hd").removeClass("off");
+            } else if(sc_top>=1200) {
+                $(".hd").removeClass("on");
+                $(".hd").addClass("off");                      
+            } else {
+                $(".hd").removeClass("on");
+                $(".hd").removeClass("off");
+            } 
+       }); 
+        //패럴럭스 스크롤링
+        var wh = $(window).height();
+        var wd = $(window).width();
+        $(".sc_data").each(function(index){
+            $(this).attr("data-val", index*wh);
+        });
+        $(".sc_data").on("mousewheel DOMMouseScroll", function(e){
+            var secPos = parseInt($(this).attr("data-val"));
+            if(e.originalEvent.wheelDelta >= 0){
+                $("html, body").stop().animate({scrollTop:secPos - wh});
+                return false;
+            } else if(e.originalEvent.wheelDelta < 0) {
+                $("html, body").stop().animate({scrollTop:secPos + wh});
+                return false;
+            }
+        }); 
+        //첫 번째 슬라이더
+        $(".btn_box1 li").click(function(i){
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+            var idx = $(this).index();
+            $(".vs_list li").eq(idx).addClass("on");
+            $(".vs_list li").eq(idx).siblings().removeClass("on");
+            $(".vs_list").not(":animated").animate({"margin-left": idx*-1*wd});
+        });
+            
+         //두 번째 슬라이더
+        $(".btn_box2 li").click(function(i){
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+            var idx = $(this).index();
+            $(".vs_lst2 li").eq(idx).addClass("on");
+            $(".vs_lst2 li").eq(idx).siblings().removeClass("on");
+            $(".vs_lst2").not(":animated").animate({"margin-left": idx*-1*wd});
+        });
+        
+      
+        });
+    </script>
+    
+</head>
+
+<body>
+   
+    <nav class="collap">
+        <ul class="main_menu">
+                <li>
+                   <a href="#" class="dep1">Lee Ungno</a>
+                   <ul class="dep2">
+                      <li><a href="lee.html#page1">고암연보</a></li>
+                      <li><a href="lee.html#page2">예술세계</a></li>
+                      <li><a href="lee.html#page3">파리동양미술학교</a></li>
+                   </ul>                   
+                </li>
+                
+                <li>
+                    <a href="#" class="dep1">About Us</a>
+                    <ul class="dep2">
+                        <li><a href="gallery.html#page1">관장인사말</a></li>
+                        <li><a href="gallery.html#page2">미술관 건축물 및 MI</a></li>
+                        <li><a href="gallery.html#page3">연혁</a></li>
+                        <li><a href="gallery.html#page4">조직</a></li>
+                        <li><a href="gallery.html#page5">윤리경영</a></li>
+                        <li><a href="gallery.html#page6">경영공시</a></li>
+                    </ul>             
+                </li>
+                
+                <li>
+                    <a href="#" class="dep1">Exhibitions</a>
+                    <ul class="dep2">
+                        <li><a href="exhibitions.html#page1">현재전시</a></li>
+                        <li><a href="exhibitions.html#page2">소장품</a></li>
+                        <li><a href="exhibitions.html#page3">아카이브</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" class="dep1">Education</a>
+                    <ul class="dep2">
+                        <li><a href="education.html#page1">파리이응노레지던스</a></li>
+                        <li><a href="education.html#page2">아트랩대전</a></li>
+                        <li><a href="education.html#page3">교육프로그램</a></li>
+                        <li><a href="education.html#page4">어린이미술대회</a></li>
+                     </ul>
+                 </li>
+
+                 <li>
+                     <a href="#" class="dep1">Notice</a>
+                     <ul class="dep2">
+                         <li><a href="notice.html#page1">미술관소식</a></li>
+                         <li><a href="notice.html#page2">후원</a></li>
+                         <li><a href="notice.html#page3">SNS</a></li>
+                     </ul>
+                  </li>
+        </ul>
+    </nav>
+
+    <header class="hd">
+        <a href="index.html" class="logo">
+        <img src="image/logoedit.png" alt="로고">
+        </a>
+        
+        <nav class="gnb">
+            <ul class="main_menu">
+                <li>
+                   <a href="#" class="dep1">Lee Ungno</a>
+                   <ul class="dep2">
+                      <li><a href="lee.html#page1">고암연보</a></li>
+                      <li><a href="lee.html#page2">예술세계</a></li>
+                      <li><a href="lee.html#page3">파리동양미술학교</a></li>
+                   </ul>                   
+                </li>
+                
+                <li>
+                    <a href="#" class="dep1">About Us</a>
+                    <ul class="dep2">
+                        <li><a href="gallery.html#page1">관장인사말</a></li>
+                        <li><a href="gallery.html#page2">미술관 건축물 및 MI</a></li>
+                        <li><a href="gallery.html#page3">연혁</a></li>
+                        <li><a href="gallery.html#page4">조직</a></li>
+                        <li><a href="gallery.html#page5">윤리경영</a></li>
+                        <li><a href="gallery.html#page6">경영공시</a></li>
+                    </ul>             
+                </li>
+                
+                <li>
+                    <a href="#" class="dep1">Exhibitions</a>
+                    <ul class="dep2">
+                        <li><a href="exhibitions.html#page1">현재전시</a></li>
+                        <li><a href="exhibitions.html#page2">소장품</a></li>
+                        <li><a href="exhibitions.html#page3">아카이브</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" class="dep1">Education</a>
+                    <ul class="dep2">
+                        <li><a href="education.html#page1">파리이응노레지던스</a></li>
+                        <li><a href="education.html#page2">아트랩대전</a></li>
+                        <li><a href="education.html#page3">교육프로그램</a></li>
+                        <li><a href="education.html#page4">어린이미술대회</a></li>
+                     </ul>
+                 </li>
+
+                 <li>
+                     <a href="#" class="dep1">Notice</a>
+                     <ul class="dep2">
+                         <li><a href="notice.html#page1">미술관소식</a></li>
+                         <li><a href="notice.html#page2">후원</a></li>
+                         <li><a href="notice.html#page3">SNS</a></li>
+                     </ul>
+                  </li>
+                
+                
+            </ul>
+        </nav>
+        
+        <div class="lang">
+               <button class="this_lang">한국어</button>
+               <ul class="lang_list">
+                   <li class="item1"><a href="index_en.html">English</a></li>
+                   <li class="item2"><a href="index_jp.html">FRANÇAIS</a></li>
+               </ul>
+        </div>
+        
+        <div class="lst_btn">
+           <span class="line item1"></span>
+           <span class="line item2"></span>
+           <span class="line item3"></span>
+        </div>
+
+    </header>
+    
+    <section class="page sc_data" id="page1">
+        <!--figure.vs1>ul.vs_list>li.item$>h3.vs_tit+p.vs_com+a.vs_more>span.*2-->
+        <figure class="vs1">
+            <ul class="vs_list">
+                <li class="item1 on">
+                    <h3 class="vs_tit">Lee Ungno Museum</h3>
+                    <p class="vs_com">고향은 그에게 먼 곳이었으나 이제는 가까운 곳으로, <br>
+                    고향은 일시 차디찬 곳이었으나,이제는 따뜻한 곳으로, <br>
+                    대전시는 그가 편안히 쉴 수 있는 고암의 집을 마련하였습니다.</p>
+                    <a href="" class="vs_more">
+                        <span class="more_txt">More</span>
+                        <span class="more_arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="item2">
+                    <h3 class="vs_tit">Lee Ungno Museum</h3>
+                    <p class="vs_com">고향은 그에게 먼 곳이었으나 이제는 가까운 곳으로, <br>
+                    고향은 일시 차디찬 곳이었으나,이제는 따뜻한 곳으로, <br>
+                    대전시는 그가 편안히 쉴 수 있는 고암의 집을 마련하였습니다.</p>
+                    <a href="" class="vs_more">
+                        <span class="more_txt">More</span>
+                        <span class="more_arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="item3">
+                    <h3 class="vs_tit">Lee Ungno Museum</h3>
+                    <p class="vs_com">고향은 그에게 먼 곳이었으나 이제는 가까운 곳으로, <br>
+                    고향은 일시 차디찬 곳이었으나,이제는 따뜻한 곳으로, <br>
+                    대전시는 그가 편안히 쉴 수 있는 고암의 집을 마련하였습니다.</p>
+                    <a href="" class="vs_more">
+                        <span class="more_txt">More</span>
+                        <span class="more_arrow"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="btn_box1">
+                <li class="btn_fr item1 on"><button class="btn"></button></li>
+                <li class="btn_fr item2"><button class="btn"></button></li>
+                <li class="btn_fr item3"><button class="btn"></button></li>
+            </ul>
+           <!-- <ul class="play_btn">
+                <li class="item4"><button class="btn"></button></li>
+            </ul>-->
+            
+        </figure>
+    </section>
+    
+    <section class="page sc_data" id="page2">
+       <figure class="vs2">
+           <ul class="vs_lst2">
+               <li class="item1 on">
+                  <div class="tit_box">
+                   <h3 class="vs_tit1">2020 이응노 미술관 소장품전</h3>
+                   <p class="vs_com1">예술가의&nbsp;방</p>
+                   <p class="vs_com2">Lee&nbsp;Ungno's&nbsp;Room</p>
+                   <p class="vs_com3">2020.01.14~03.22</p>                   
+                   <a href="" class="vs2_more">
+                       <span class="more_txt">More</span>
+                       <span class="more_arrow"></span>
+                    </a>
+                  </div>
+               </li>
+               
+              <!--  <li class="item2">
+                  <div class="tit_box">
+                   <h3 class="vs_tit1">2020 이응노, 드로잉의 기술</h3>
+                   <p class="vs_com1">Lee&nbsp;Ungno,&nbsp;</p>
+                   <p class="vs_com2">The Art of Drawing</p>
+                   <p class="vs_com3">전시 준비 중</p>                   
+                   <a href="" class="vs2_more">
+                       <span class="more_txt">More</span>
+                       <span class="more_arrow"></span>
+                    </a>
+                  </div>
+               </li>-->
+           </ul>
+          <!--<ul class="btn_box2">
+                <li class="btn_fr item1 on"><button class="btn"></button></li>
+                <li class="btn_fr item2"><button class="btn"></button></li>
+                <li class="btn_fr item3"><button class="btn"></button></li>
+            </ul>
+            <ul class="play_btn2">
+                <li class="item4"><button class="btn"></button></li>
+            </ul>-->
+         </figure>
+         
+    </section>
+    
+    <section class="page sc_data" id="page3">
+    
+     <figure class="vs3">
+         <h3 class="collect_tit">Collection & Archive</h3>
+         <p>이응노미술관은 2007년부터 이응노 작품 및 자료, 유품을 수집하기 시작하여 현재 1,344점(2016.9월 기준)의 소장품을 관리하고 있으며 이 가운데 1,309점이 박인경 명예관장으로부터 총 10번에 걸쳐 기증 받은 작품이다.</p>
+         <ul class="vs_lst3">
+             <li class="collect1">
+                 <div class="col">
+                     <a href="index.html">
+                         <div class="inner">
+                             <p>구성(1976)<br>한지에 수묵담채</p>
+                         </div>
+                         <img src="image/coll01.jpg" alt="구성">
+                     </a>
+                 </div>
+             </li>
+
+             <li class="collect2">
+                 <div class="col">
+                     <a href="index.html">
+                         <div class="inner">
+                             <p>군상(1986)<br>한지에 먹</p>
+                         </div>
+                         <img src="image/coll04.jpg" alt="군상">
+                     </a>
+                     
+                 </div>
+             </li>
+
+             <li class="collect3">
+                 <div class="col">
+                     <a href="index.html">
+                         <div class="inner">
+                             <p>밤나무(2009)<br>테피스트리</p>
+                         </div>
+                         <img src="image/coll02.jpg" alt="밤나무">
+                     </a>
+
+                 </div>
+             </li>
+         </ul>
+         <a href="" class="vs3_more">
+                       <span class="more_txt">More</span>
+                       <span class="more_arrow"></span>
+                    </a>
+
+     </figure>
+      
+    </section>
+    
+    <section class="page sc_data" id="page4">
+       
+       <figure class="vs4">
+         <h3 class="space_tit">Place & Members</h3>
+         <ul class="vs_lst4">
+             <li class="cafe">
+                 <a href="index.html">
+                 <img src="image/cafe2.png" alt="카페" class="img_box">
+                 <span class="img_tit">Cafeteria</span>
+                  <p>이응노미술관 카페테리아 <br>Café Pré St-Gervais 카페 프레 생제르베</p>
+                 </a>
+                 
+                 <div class="col two">
+                    <span class="line2"></span>
+                    <span class="line2"></span>
+                </div>
+                
+                                 
+             </li>
+             
+             <li class="shop">
+                 <a href="index.html">
+                 <img src="image/art2.png" alt="아트샵" class="img_box">
+                 <span class="img_tit">Art Shop</span>
+                 <p>이응노미술관 아트숍 작가 김동유,<br> 이응노를 그리다</p>
+                 </a>
+                 
+                 <div class="col two">
+                    <span class="line2"></span>
+                    <span class="line2"></span>
+                </div>
+                 
+             </li>
+             
+             <li class="embers">
+                 <a href="index.html">
+                 <img src="image/mem2.png" alt="멤버쉽" class="img_box">
+                 <span class="img_tit">Membership</span>
+                 <p>이응노미술관 개인멤버십 회원이 되셔서 <br>미술관이 제공하는 다양한 혜택을 누려보세요!</p>
+                 </a>
+                 
+                 <div class="col two">
+                    <span class="line2"></span>
+                    <span class="line2"></span>
+                </div>
+                
+             </li>
+         </ul>
+         
+     </figure>
+
+    </section>
+    
+    <footer class="ft">
+        <nav class="fnb">
+            <ul class="menu">
+                <li class="item1"><a href="">개인정보보호정책</a></li>
+                <li class="item2"><a href="">이용약관</a></li>
+            </ul>
+        </nav>
+        
+        <div class="company">
+            <address>
+                   <p>
+                    (35204) 대전광역시 서구 둔산대로 157&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Tel : 042) 611-9800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Fax : 042) 611-9819&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    사업자등록 번호 : 314-82-15539&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    통신판매업 신고번호 : 제 2017-대전서구-0403&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+            </address>
+        </div>
+        
+        <p class="copyright">Copyright &copy; 2020 LEEUNGNO MUSEUM. ALL RIGHTS RESERVED.</p>
+        
+        <div class="sns_box">
+            <ul class="sns_con">
+                <li><a href="#">
+                <img src="image/fa.png" alt="페이스북" class="face">
+                </a></li>
+
+                <li><a href="#">
+                <img src="image/ka.png" alt="카카오톡" class="kakao">
+                </a></li>
+                
+                <li><a href="#">
+                <img src="image/in.png" alt="인스타그램" class="insta">
+                </a></li>
+                
+                <li><a href="#">
+                <img src="image/you.png" alt="유튜브" class="tube">
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
