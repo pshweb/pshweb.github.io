@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>삼성서울병원</title>
+    
+     <!-- 파비콘 및 메타포 아이콘 적용 -->
+    <!-- 가장 작은 형태EX12.의 16x16 크기의 ico -->
+    <link rel="shortcut icon" href="./favicon/16_ico.ico">
+    <!-- 가장 작은 형태의 16x16 크기의 png -->
+    <link rel="shortcut icon" href="./favicon/16.png" type="image/x-icon">
+    <!-- 일반 앱형태의 아이콘 설정 -->
+    <link rel="icon" href="./favicon/16_ico.ico">
+    <link rel="icon" href="./favicon/16_ico.ico" sizes="16x16"> 
+    <link rel="icon" href="./favicon/32_ico.ico" sizes="32x32"> 
+    <link rel="icon" href="./favicon/48_ico.ico" sizes="48x48"> 
+    <link rel="icon" href="./favicon/64_ico.ico" sizes="64x64"> 
+    <link rel="icon" href="./favicon/128_ico.ico" sizes="128x128">
+    <!-- 아이폰 고해상도용 파비콘 152x152 -->
+    <link rel="apple-touch-icon-precomposed" href="./favicon/152.png">
+    
+    <!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 						
+    <meta name="msapplication-TileImage" content="./favicon/144_ico.ico">
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="서울삼성병원">
+    <meta name="auther" content="박신향"><!--제작자-->
+    <meta name="url" content="http://hyang2z.dothome.co.kr/r1">
+    <meta name="description" content="삼성병원,서울병원,종합병원">
+    <meta name="keywords" content="삼성병원,서울병원,종합병원">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="삼성병원,서울병원,종합병원">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <!--<meta itemprop="name" content="서울삼성병원">
+    <meta itemprop="description" content="삼성병원,서울병원,종합병원">
+    <meta itemprop="image" content="./favicon/256_ico.ico">-->
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+   <!-- 카카오톡, 블로그 등의 크롤링으로 화면 미리보기 노출 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="서울삼성병원">
+    <meta property="og:url" content="./index.html">
+    <meta property="og:description" content="삼성병원,서울병원,종합병원">
+    <meta property="og:img" content="http://hyang2z.dothome.co.kr/"><!-- 썸네일이미지 . http://부터 시작하는 절대주소로 남겨야 함 -->
+    
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    
+    <!--자바스크립트-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>    
+    <script src="./js/main.js"></script>
+
+</head>
+ 
+<body>
+    <div class="wrap">
+        <!--섹션 1 광고-->
+        <div id="promotionBanner">
+            <div class="info">
+                <img src="./img/Untitled-1.jpg" alt="배너">
+                <div class="popClose">
+                    <input type="checkbox" value="checkbox" name="chkbox" id="chkday"><label for="chkday">오늘 하루 그만보기 </label>
+                    <a href="#none" class="btnClose">&#91;닫기&#93;</a></div>
+            </div>
+        </div>
+
+        <!--info-->
+
+        <!--모바일 토글 버튼 오픈/클로즈-->
+        <input type="checkbox" name="menu" id="ck1" class="none">
+        <input type="checkbox" name="search" id="ck2" class="none">
+        <!--헤더-->
+        <header class="header">
+            <div class="header_wrap1">
+                <nav class="tnb">
+                    <ul class="tnb_list">
+                        <li><a href="login.html" class="this">병원소개</a></li>
+                        <li><a href="login.html" class="this">로그인</a></li>
+                        <li><a href="join.html" class="this">회원가입</a></li>
+                        <li><a href="english.html" class="this">English</a></li>
+                        <li><a href="chiness.html" class="this">Chiness</a></li>
+                        <li><a href="russian.html" class="this">Russian</a></li>
+                        <li><label for="ck2" class="this">검색</label></li>
+                    </ul>
+                </nav>
+                <!--nav tnb-->
+
+                <div id="find_nav">
+                    <form class="frm1">
+                        <input type="text" name="search" placeholder="검색어를 입력하세요" id="keyword" class="in_data">
+                        <input type="submit" value="찾기" class="frm_btn">
+                    </form>
+                    <label for="ck2" class="close"></label>
+                </div>
+                <!--find_nav-->
+
+            </div>
+            <!--header_wrap1-->
+
+            <div class="header_wrap2">
+                <a href="index.html" class="logo">
+                    <img src="./img/mainlogo.png" alt="logo"></a>
+
+                <div id="gnb">
+                    <nav class="gnb_menu">
+                        <!--pc에서만 보이는 메인 메뉴과 전화번호 아이콘 시작-->
+                        <ul class="gnbDep1">
+                            <li class="dep1 iTem1">
+                                <a href="#" class="mnb1">병원안내</a>
+                                <div class="navBox">
+                                    <div class="innerwrap">
+                                        <h3>병원안내</h3>
+                                        <p><a href="#">서비스메인보기</a></p>
+                                        <ul class="gnb_sub1">
+                                            <li class="menuPlus"><a href="#">외래진료안내 +</a>
+                                                <ul class="gnb_sub2 sub_item1">
+                                                    <li><a href="#">외래진료절차</a></li>
+                                                    <li><a href="#">의료전달체계안내</a></li>
+                                                    <li><a href="#">오픈카드서비스안내</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">입원생활안내</a></li>
+                                            <li><a href="#">중환자실이용안내</a></li>
+                                            <li><a href="#">가정간호안내</a></li>
+                                            <li><a href="#">응급진료안내</a></li>
+                                            <li class="menuPlus"><a href="#">병원소식 +</a>
+                                                <ul class="gnb_sub2 sub_item2">
+                                                    <li><a href="#">공지사항</a></li>
+                                                    <li><a href="#">뉴스</a></li>
+                                                    <li><a href="#">학술행사</a></li>
+                                                    <li><a href="#">소식지</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">삼성의료연보</a></li>
+                                        </ul>
+
+                                        <div class="infoBox">
+                                            <div class="shortCut">
+                                                <ul class="phone">
+                                                    <li><img src="./img/phone.png" alt="대표번호">
+                                                        <h4>대표번호</h4>
+                                                        <span>1599-3114</span>
+                                                    </li>
+
+                                                    <li><img src="./img/phone2.png" alt="진료예약">
+                                                        <h4>진료예약</h4>
+                                                        <span>02-3410-3000</span>
+                                                    </li>
+
+                                                    <li><img src="./img/phone3.png" alt="건진예약">
+                                                        <h4>건강검진예약</h4>
+                                                        <span>02-3410-1000</span>
+                                                    </li>
+                                                </ul>
+                                                <!--phone-->
+
+                                            </div>
+                                            <!--shortCut-->
+
+                                        </div>
+                                        <!--infoBox-->
+                                    </div>
+                                    <!--innerwrap-->   
+                                    </div>       <!--navBox-->                 
+                             </li>  
+                            <!--병원안내 li-->
+
+                            <li class="dep1 iTem2">
+                                <a href="#" class="mnb1">진료안내</a>
+                                <div class="navBox">
+                                    <div class="innerwrap">
+                                        <h3>진료안내</h3>
+                                        <p><a href="#">서비스메인보기</a></p>
+                                        <ul class="gnb_sub1">
+                                            <li class="menuPlus"><a href="#">진료과/의료진 +</a>
+                                                <ul class="gnb_sub2 sub_item3">
+                                                    <li><a href="#">의료진 검색</a></li>
+                                                    <li><a href="#">진료과 검색</a></li>
+                                                    <li><a href="#">센터 검색</a></li>
+                                                    <li><a href="#">클리닉 검색</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">진료일정검색</a></li>
+                                            <li><a href="#">진료예약안내</a></li>
+                                            <li class="menuPlus"><a href="#">예약하기 +</a>
+                                                <ul class="gnb_sub2 sub_item4">
+                                                    <li><a href="#">진료예약</a></li>
+                                                    <li><a href="#">건강검진예약</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">비급여진료비안내</a></li>
+                                            <li><a href="#">수납 및 환불안내</a></li>
+                                        </ul>
+                                        <div class="infoBox">
+                                            <div class="searchBox">
+                                                <h4>의료진 검색</h4>
+                                                <form>
+                                                    <input type="text" class="search" placeholder="검색할 단어를 입력하세요.">
+                                                    <button class="btn01"><i class="xi-search"></i></button>
+                                                </form>
+                                            </div>
+                                            <!--searchBox-->
+                                            <div class="searchBox">
+                                                <h4>진료과 검색</h4>
+                                                <form>
+                                                    <input type="text" class="search" placeholder="검색할 단어를 입력하세요.">
+                                                    <button class="btn02"><i class="xi-search"></i></button>
+                                                </form>
+                                            </div><!--/searchBox-->
+                                        </div>
+                                        <!--infoBox-->
+                                    </div>
+                                    <!--/innerwrap-->
+                                </div>
+                                <!--navBox-->
+                            </li>
+                            <!--진료안내 li-->
+
+                            <li class="dep1 iTem3">
+                                <a href="#" class="mnb1">진료차트</a>
+                                <div class="navBox">
+                                    <div class="innerwrap">
+                                        <h3>진료차트</h3>
+                                        <p><a href="#">서비스메인보기</a></p>
+                                        <ul class="gnb_sub1">
+                                            <li><a href="#">진료스케줄</a></li>
+                                            <li><a href="#">진료조회</a></li>
+                                            <li class="menuPlus"><a href="#">건강검진조회 +</a>
+                                                <ul class="gnb_sub2 sub_item5">
+                                                    <li><a href="#">예약조회</a></li>
+                                                    <li><a href="#">결과조회</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">발급서비스</a></li>
+                                        </ul>
+                                        <div class="infoBox">
+                                            <div class="infoBox_img">
+                                                <img src="img/info02.jpg" alt="이미지">
+                                            </div>
+                                        </div>
+                                        <!--infoBox-->
+                                    </div>
+                                    <!--innerwrap-->
+                                </div>
+                                <!--navBox-->
+
+                            </li>
+                            <!--진료차트 li-->
+
+                            <li class="dep1 iTem4">
+                                <a href="#" class="mnb1">건강정보</a>
+                                <div class="navBox">
+                                    <div class="innerwrap">
+                                        <h3>건강정보</h3>
+                                        <p><a href="#">서비스메인보기</a></p>
+                                        <ul class="gnb_sub1">
+                                            <li><a href="#">건강정보</a></li>
+                                            <li><a href="#">건강교실</a></li>
+                                            <li><a href="#">건강자료실</a></li>
+                                            <li><a href="#">의약품정보백과</a></li>
+                                            <li><a href="#">S미디어</a></li>
+                                            <li><a href="#">건강서비스</a></li>
+                                        </ul>
+                                        <div class="infoBox">
+                                            <div class="infoBox_img">
+                                                <img src="img/info01.jpg" alt="이미지">
+                                            </div>
+                                            <!--/infoBox_img-->
+                                        </div>
+                                        <!--infoBox-->
+
+                                    </div>
+                                    <!--innerwrap-->
+                                </div>
+                                <!--navBox-->
+                            </li>
+                            <!--건강정보-->
+
+                            <li class="dep1 iTem5">
+                                <a href="#" class="mnb1">고객서비스</a>
+                                <div class="navBox">
+                                    <div class="innerwrap">
+                                        <h3>고객서비스</h3>
+                                        <p><a href="#">서비스메인보기</a></p>
+                                        <ul class="gnb_sub1">
+                                            <li class="menuPlus"><a href="#">편의가이드 +</a>
+                                                <ul class="gnb_sub2 sub_item6">
+                                                    <li><a href="#">오시는 길</a></li>
+                                                    <li><a href="#">주차안내</a></li>
+                                                    <li><a href="#">병원둘러보기</a></li>
+                                                    <li><a href="#">편의시설</a></li>
+                                                    <li><a href="#">주요전화번호</a></li>
+                                                    <li><a href="#">주변약국</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menuPlus"><a href="#">나눔이야기 +</a>
+                                                <ul class="gnb_sub2 sub_item7">
+                                                    <li><a href="#">나눔활동</a></li>
+                                                    <li><a href="#">나눔참여</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">행복스토리</a></li>
+                                            <li><a href="#">칭찬합시다</a></li>
+                                            <li><a href="#">고객의소리</a></li>
+                                            <li><a href="#">자주하는 질문</a></li>
+                                            <li><a href="#">건강상담</a></li>
+                                        </ul>
+                                        <div class="infoBox">
+                                            <div class="infoBox_img">
+                                                <img src="img/info03.jpg" alt="이미지">
+                                            </div>
+                                            <!--infoBox_img-->
+                                        </div>
+                                        <!--/infoBox-->
+
+                                    </div>
+                                    <!--innerwrap-->
+                                </div>
+                                <!--navBox-->
+                            </li>
+                            <!--고객서비스-->
+
+                        </ul>
+                        <!--ul gnbDep1-->
+                    </nav>
+                    <!--nav gnb_menu-->
+
+                </div>
+                <!--navBox-->
+
+                <div class="btn">
+                    <a href=""><i class="xi-user-o"></i></a>
+                    <label for="ck2" class="search_btn"><i class="xi-search"></i></label>
+                    <label for="ck1" class="toggle_btn"><i class="xi-bars"></i></label>
+                </div>
+                <!--btn-->
+
+            </div>
+            <!--header_wrap2-->
+        </header>
+        <!--header-->
+
+        <div class="collaps">
+            <!--모바일과 태블릿에서 보이는 콜랩메뉴 시작-->
+
+            <!--모바일과 태블릿 전화번호 아이콘-->
+            <div class="tel_number">
+                <ul>
+                    <li><a href="tel:1599-3114">
+                            <img src="./img/phone.png" alt="대표전화">
+                            <h4 class="tel_tit">대표전화 </h4>
+                            <p class="tel_tit">안내,예약확인</p>
+                            <p class="tel_tit">1599-3114</p>
+                        </a>
+                    </li>
+
+                    <li><a href="tel:02-3410-3000">
+                            <img src="./img/phone2.png" alt="진료예약">
+                            <h4 class="tel_tit">진료예약</h4>
+                            <p class="tel_tit">02-3410-3000</p>
+                        </a>
+                    </li>
+
+                    <li><a href="tel:02-3410-1000">
+                            <img src="./img/phone3.png" alt="건진예약">
+                            <h4 class="tel_tit">건강검진예약</h4>
+                            <p class="tel_tit">02-3410-1000</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="gnb">
+                <!--모바일과 태블릿 메뉴-->
+                <label for="ck1"><i class="xi-close-thin"></i></label>
+
+                <ul class="gnb_dep1">
+                    <li><a href="#" class="mnb">병원안내</a>
+                        <ul class="gnb_dep2">
+                            <li><a href="#">외래진료안내</a>
+                                <!-- <ul class="gnb_dep3">
+                                    <li><a href="#">외래진료절차</a></li>
+                                    <li><a href="#">의료전달체계안내</a></li>
+                                    <li><a href="#">오픈카드서비스안내</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="#">입원생활안내</a></li>
+                            <li><a href="#">중환자실이용안내</a></li>
+                            <li><a href="#">가정간호안내</a></li>
+                            <li><a href="#">응급진료안내</a></li>
+                            <li><a href="#">병원소식</a>
+                                <!-- <ul class="gnb_dep3">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">뉴스</a></li>
+                                    <li><a href="#">학술행사</a></li>
+                                    <li><a href="#">소식지</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="#">삼성의료연보</a></li>
+                        </ul>
+                    </li>
+                    <!--li 1-->
+
+                    <li><a href="#" class="mnb">진료안내</a>
+                        <ul class="gnb_dep2">
+                            <li><a href="#">진료과/의료진</a>
+                                <!-- <ul class="gnb_dep3">
+                                    <li><a href="#">의료진 검색</a></li>
+                                    <li><a href="#">진료과 검색</a></li>
+                                    <li><a href="#">센터 검색</a></li>
+                                    <li><a href="#">클리닉 검색</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="#">진료일정검색</a></li>
+                            <li><a href="#">진료예약안내</a></li>
+                            <li><a href="#">예약하기</a>
+                                <!--<ul class="gnb_dep3">
+                                    <li><a href="#">진료예약</a></li>
+                                    <li><a href="#">건강검진예약</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="#">비급여진료비안내</a></li>
+                            <li><a href="#">수납 및 환불안내</a></li>
+                        </ul>
+                    </li>
+                    <!--li 2-->
+
+                    <li><a href="#" class="mnb">진료차트</a>
+                        <ul class="gnb_dep2">
+                            <li><a href="#">진료스케줄</a></li>
+                            <li><a href="#">진료조회</a></li>
+                            <li><a href="#">건강검진조회</a>
+                                <!-- <ul class="gnb_dep3">
+                                    <li><a href="#">예약조회</a></li>
+                                    <li><a href="#">결과조회</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="#">발급서비스</a></li>
+                        </ul>
+                    </li>
+                    <!--li 3-->
+
+                    <li><a href="#" class="mnb">건강정보</a>
+                        <ul class="gnb_dep2">
+                            <li><a href="#">건강정보</a></li>
+                            <li><a href="#">건강교실</a></li>
+                            <li><a href="#">건강자료실</a></li>
+                            <li><a href="#">의약품정보백과</a></li>
+                            <li><a href="#">S미디어</a></li>
+                            <li><a href="#">건강서비스</a></li>
+                        </ul>
+                    </li>
+                    <!--li 4-->
+
+                    <li><a href="#" class="mnb">고객서비스</a>
+                        <ul class="gnb_dep2">
+                            <li><a href="#">편의가이드</a>
+                                <!-- <ul class="gnb_dep3">
+                                    <li><a href="#">오시는 길</a></li>
+                                    <li><a href="#">주차안내</a></li>
+                                    <li><a href="#">병원둘러보기</a></li>
+                                    <li><a href="#">편의시설</a></li>
+                                    <li><a href="#">주요전화번호</a></li>
+                                    <li><a href="#">주변약국</a></li>
+                                </ul>-->
+                            </li>
+
+
+                            <li><a href="#">나눔이야기</a>
+                                <!--<ul class="gnb_dep3">
+                                    <li><a href="#">나눔활동</a></li>
+                                    <li><a href="#">나눔참여</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="#">행복스토리</a></li>
+                            <li><a href="#">칭찬합시다</a></li>
+                            <li><a href="#">고객의소리</a></li>
+                            <li><a href="#">자주하는 질문</a></li>
+                            <li><a href="#">건강상담</a></li>
+                        </ul>
+                        <!--ul gnb_dep2-->
+
+                    </li>
+                    <!--li 5-->
+                </ul>
+                <!--ul gnb_dep1-->
+            </div>
+            <!--#gnb-->
+
+        </div>
+        <!--collaps-->
+
+        <div class="slider_box_section">
+
+            <!--섹션 2 메인 슬라이더-->
+            <main class="slider_section">
+                <div id="visual">
+                    <div class="vs_box">
+                        <h3 class="vs_tit">미래 의료의 중심 SMC</h3>
+                        <p class="vs_com">함께하는 진료 함께하는 행복</p>
+                        <span class="slide1"></span>
+                        <span class="slide2"></span>
+                    </div>
+
+                    <ul class="img_box">
+                        <li class="item">
+                            <a href="sub1.html">
+                                <img src="./img/main1.jpg" alt="슬라이드1">
+                            </a>
+                        </li>
+
+                        <li class="item">
+                            <a href="sub2.html">
+                                <img src="./img/main2.jpg" alt="슬라이드2">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
+            <!--섹션 3 빠른메뉴박스-->
+            <div class="box_section">
+                <ul class="box_list">
+                    <li class="box item1">
+                        <div class="divBox">
+                            <h4 class="box_tit">온라인진료예약</h4>
+                            <p class="box_con1">로그인 없이도<br> 편리하게 예약이 가능합니다</p>
+                            <a href="#" class="box_con2">진료예약</a>
+                        </div>
+                    </li>
+
+                    <li class="box item2">
+                        <div class="divBox">
+                            <form method="post">
+                                <h4 class="box_tit">처음진료빠른예약</h4>
+                                <p class="box_con1">연락처릴 남겨주시면 <br> 빠른 예약을 도와 드립니다</p>
+                                <input type="tel" placeholder="010-0000-0000" class="txtIn" title="전화번호 입력형식:000-0000-0000" pattern="0\d{1,2}\-\d{3,4}\-\d{4}">
+
+                                <a href="#" class="box_con3">예약신청</a>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="box item3">
+                        <div class="divBox">
+                            <form method="post">
+                                <h4 class="box_tit">건강검진빠른예약</h4>
+                                <p class="box_con1">연락처를 남겨주시면 <br>빠른 예약을 도와드립니다.</p>
+
+                                <input type="tel" placeholder="010-0000-0000" class="txtIn" title="전화번호 입력형식:000-0000-0000" pattern="0\d{1,2}\-\d{3,4}\-\d{4}">
+
+                                <a href="#" class="box_con3">예약신청</a>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="box item4">
+                        <div class="divBox">
+                            <h4 class="box_tit">의무기록사본발급</h4>
+                            <p class="box_con1">로그인 하신 후<br>발급 신청이 가능합니다</p>
+                            <a href="#" class="box_con2">온라인신청</a>
+                            <span class="box_rec"></span>
+                        </div>
+
+                    </li>
+
+                    <li class="box item5">
+                        <div class="divBox">
+                            <h4 class="box_tit">진료조회</h4>
+                            <p class="box_con1">나의 진료예약 및 진료이력을<br>조회해 보세요</p>
+                            <a href="#" class="box_con2">진료조회</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+      
+
+        <!--섹션 4 콘텐츠-->
+        <section class="content_section">
+            <div class="content_wrap">
+
+                <div class="col notice">
+                    <h4 class="con_news">뉴스·공지·학술행사</h4>
+                    <a href="" class="con_more">더보기</a>
+                    <ul class="con_item1">
+                        <li>
+                            <img src="./img/new01.png" alt="">
+                            <a href="#">코로나바이러스 감염증-19확산에 따른</a>
+                            <span class="news_date">2020.02.25</span>
+                        </li>
+
+                        <li class="new_item2">
+                            <img src="./img/new02.png" alt="">
+                            <a href="#">2020 Webinar (2) 코로나바이러스</a>
+                            <span class="news_date">2020.02.13</span>
+                        </li>
+
+                        <li class="new_item3">
+                            <img src="./img/new02.png" alt="">
+                            <a href="#">이미지교수, 두통학 분야(Cephalagia)</a>
+                            <span class="news_date">2020.02.11</span>
+                        </li>
+
+                        <li class="new_item4">
+                            <img src="./img/new03.png" alt="">
+                            <a href="#">이은정 임상강사·기창원 교수팀,녹내장</a>
+                            <span class="news_date">2020.02.11</span>
+                        </li>
+
+                        <li class="new_item5">
+                            <img src="./img/new01.png" alt="">
+                            <a href="#">2020년 2월 건강교실 취소안내</a>
+                            <span class="news_date">2020.02.06</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col media">
+                    <div class="col_wrap">
+                        <ul class="con_item2">
+                            <li class="media_item">
+                                <h4 class="con_news">S 미디어</h4>
+                                <a href="#" class="con_more">더보기</a>
+
+                                <!--div.imgBox>a>img.media_img+div.txtBox-->
+                                <div class="imgBox">
+                                    <a href="#"><img src="./img/smedia.jpg" alt="S 미디어" class="media_img"></a>
+                                    <div class="txtBox">
+                                        <h4 class="txtBox1">&#91;병원소개&#93;</h4>
+                                        <p class="txtBox1">한 눈에 보는 삼성서울병원</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="blog_item">
+                                <h4 class="con_news">블로그</h4>
+                                <a href="#" class="con_more">더보기</a>
+
+                                <div class="imgBox">
+                                    <a href="#"><img src="./img/blog.jpg" alt="블로그" class="media_img"></a>
+                                    <div class="txtBox">
+                                        <h4 class="txtBox1">&#91;블로그&#93;</h4>
+                                        <p class="txtBox1">삼성서울병원 공식 블로그</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="icon">
+                <ul class="icon_list">
+                    <li><a href="#"><img src="./img/icon_01.png" alt="">오시는 길</a></li>
+                    <li><a href="#"><img src="./img/icon_02.png" alt="">주차안내</a></li>
+                    <li><a href="#"><img src="./img/icon_03.png" alt="">병원둘러보기</a></li>
+                    <li><a href="#"><img src="./img/icon_04.png" alt="">입원생활안내</a></li>
+                    <li><a href="#"><img src="./img/icon_05.png" alt="">발급서비스</a></li>
+                    <li><a href="#"><img src="./img/icon_06.png" alt="">외부영상CD등록</a></li>
+                </ul>
+            </div>
+
+
+        </section>
+    </div>
+    <!--wrap-->
+
+    <!--푸터-->
+    <footer class="footer">
+        <nav class="fnb">
+            <ul class="fnb_list1">
+                <li><a href="#">&nbsp;&nbsp;삼성서울병원&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;건강의학센터&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;심장뇌혈관병원&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;암병원&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;양성자치료센터&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;인재채용&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;장례식장&nbsp;&nbsp;</a></li>
+            </ul>
+
+            <ul class="fnb_list2">
+                <li><a href="#">▲ 센터홈페이지&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;▲ 패밀리사이트</a></li>
+            </ul>
+
+            <div class="line"></div>
+
+            <ul class="fnb_list3">
+                <li><a href="#">&nbsp;&nbsp;병원소개&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;회원약관&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;보안신고&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;환자의 권리와 의무&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;제보하기&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;비급여진료비안내&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;원격지원&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;고객의 소리&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;홈페이지가이드&nbsp;&nbsp;</a></li>
+                <li><a href="#">&nbsp;&nbsp;사이트맵&nbsp;&nbsp;</a></li>
+            </ul>
+
+            <ul class="isms">
+                <li><a href="#"><img src="./img/isms01.png" alt="인증마크1"></a></li>
+                <li><a href="#"><img src="./img/isms02.png" alt="인증마크2"></a></li>
+                <li><a href="#"><img src="./img/isms03.png" alt="인증마크3"></a></li>
+            </ul>
+
+            <ul class="sns">
+                <li><a href="https://twitter.com/mySMC"><img src="./img/sns_tw.png" alt="트위터"></a></li>
+                <li><a href="https://www.facebook.com/SamsungMedicalCenter"><img src="./img/sns_fb.png" alt="페이스북"></a></li>
+                <li><a href="http://blog.naver.com/ohhappysmc"><img src="./img/sns_bl.png" alt="블로그"></a></li>
+                <li><a href="https://www.youtube.com/user/SamsungMedicalCenter"><img src="./img/sns_yt.png" alt="유튜브"></a></li>
+            </ul>
+
+            <address>
+                <p class="address">
+                    서울특별시 강남구 일원로 81 (06351) 삼성서울병원 / <a href="tel:1599-3114">대표전화 : 1599-3114</a> / 사업자등록번호 : 213-82-05096 권오정
+                </p>
+
+                <p class="copyright">
+                    COPYRIGHT &copy; 2020 BY SAMSUNG MEDICAL CENTER. ALL RIGHTS RESERVED.
+                </p>
+            </address>
+
+            <div class="f_mo">
+                <!--모바일에서만 보임-->
+                <ul>
+                    <li><a href="#">&nbsp;개인정보처리방침&nbsp;</a></li>
+                    <li><a href="#">&nbsp;회원약관&nbsp;</a></li>
+                    <li><a href="#">&nbsp;환자의 권리와 의무&nbsp;</a></li>
+                </ul>
+                <p>&copy; SAMSUNG MEDICAL CENTER</p>
+            </div>
+        </nav>
+
+
+
+    </footer>
+</body>
+  
+</html>
