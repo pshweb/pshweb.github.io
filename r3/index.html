@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>바리스타뉴스</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+
+    <link rel="shortcut icon" href="favicon/32.png" sizes="32x32">
+    <link rel="icon" href="favicon/32.png" sizes="32x32" type="image/x-icon">
+
+    <!--폰트어썸 CDN 방식-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <!--xe-icon CDN 방식-->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="slick/slick.js"></script>
+    <script src="slick/slick2.js"></script>
+    <script src="js/main.js"></script>
+    
+    
+    
+</head>
+
+<body>
+
+    <div id="container">     
+       
+       <!--태블릿 모바일 콜랩메뉴-->
+        <div class="collap_hd clrarfix">
+            <a href="#" class="collap_hd_logo"><img src="img/logo.png" alt="로고"></a>
+            <button class="btn"><i class="xi-bars"></i></button>
+        </div>
+        <div class="collap_nav_box">           
+            <nav class="collap_nav">
+               <form class="frm">
+               
+                <input type="text" name="search" placeholder="검색어를 입력하세요" id="keyword" class="in_data"> 
+                <i class="xi-search"></i>
+                <input type="submit" value="검색" class="frm_btn">
+            </form>
+                <ul class="collap_nav_menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">EDU</a></li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">RECIPE</a></li>
+                    <li><a href="#">COFFEE & FOOD</a></li>
+                    <li><a href="#">TECH</a></li>
+                    <li><a href="#">CULTURE</a></li>
+                    <li><a href="#">ETC</a></li>
+                </ul>
+               
+                <div class="collap_sns">
+                    <div><a href="#"><i class="xi-home"></i></a></div>
+                    <div><a href="#"><i class="fab fa-instagram-square"></i></a></div>
+                    <div><a href="#"><i class="fab fa-facebook-square"></i></a></div>
+                </div>
+            </nav>
+            <button class="close"><i class="xi-close"></i></button>
+        </div>
+        <!--collap_nav_box-->
+        
+        <aside id="aside">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="로고"></a>
+
+            <nav class="nav">
+                <ul class="nav_menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">EDU</a></li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">RECIPE</a></li>
+                    <li><a href="#">COFFEE & FOOD</a></li>
+                    <li><a href="#">TECH</a></li>
+                    <li><a href="#">CULTURE</a></li>
+                    <li><a href="#">ETC</a></li>
+                </ul>
+            </nav>
+            <!--#nav-->
+            
+            <form class="frm">               
+                <input type="text" name="search" placeholder="검색어를 입력하세요" id="keyword" class="in_data"> 
+                <i class="xi-search"></i>
+                <input type="submit" value="검색" class="frm_btn">
+            </form>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><i class="xi-home"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                </ul>
+            </div>
+
+        </aside>
+        <!--#aside-->
+
+        <div id="wrap">
+            <main id="main">
+                <div class="img">
+                    <div class="inner">
+                        <img src="img/main01.jpg" alt="메인1" class="main_img">
+                        <img src="img/main_txt.png" alt="텍스트1" class="txt1">
+                        <img src="img/main_txt2.png" alt="텍스트2" class="txt2">
+                        <div class="txt3">
+                            <p>커피 마실 때가 참 좋다</p>
+                            <p> 커피는 생각할 시간을 주기 때문이다</p>
+                            <p> 그것은 음료 이상이다</p>
+                            <p> -거트루스 스타인-</p>
+                        </div>
+                    </div>
+                    <div class="inner">
+                        <img src="img/main02.jpg" alt="메인2" class="main_img">
+                        <img src="img/main_txt_3.png" alt="텍스트1" class="txt1">
+                        <img src="img/main_txt2.png" alt="텍스트2" class="txt2">
+                        <div class="txt3">
+                            <p> 내가 좋아하는 것은 향기다</p>
+                            <p> 집 근처에서 커피콩을 볶을 때면</p>
+                            <p> 나는 서둘러 창문을 열어 그 향기를 모두 받아 들인다.</p>
+                            <p> - 장자크 루소-</p>
+                        </div>
+                    </div>
+
+                    <div class="inner">
+                        <img src="img/main2.jpg" alt="메인3" class="main_img">
+                        <img src="img/main_txt_2.png" alt="텍스트1" class="txt1">
+                        <img src="img/main_txt2.png" alt="텍스트2" class="txt2">
+                        <div class="txt3">
+                            <p>커피가 나오는 자리에는 우아함과 화려함,</p>
+                            <p>그리고 우호적인 분위기와 행복이 있다.</p>
+                            <p>셰이크 아브드 알 카디르, 『커피예찬』중</p><br>
+                            <!-- <p> -거트루스 스타인-</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="#" id="0">0</a>
+                    <a href="#" id="1">1</a>
+                    <a href="#" id="2">2</a>
+                </div>
+           
+            </main>
+
+            <section class="news">
+                <h2>바리스타뉴스의 최신기사</h2>
+                <div class="center slider">
+                    <div class="s_inner">
+                        <a href="">
+                            <img src="img/edu1.jpg">
+                        </a>
+                        <div class="s_con">
+                            <h3>EDU</h3>
+                            <p>아이들을 위한 커피교육, 스텀타운 커피가 준비했다</p>
+                        </div>
+                    </div>
+                    <div class="s_inner">
+                        <a href="">
+                            <img src="img/rec1.jpg">
+                        </a>
+                        <div class="s_con">
+                            <h3>RECIPE</h3>
+                            <p>켄터키 커피 만드는 법</p>
+                        </div>
+                    </div>
+                    <div class="s_inner">
+                        <a href="">
+                            <img src="img/edu3.jpg">
+                        </a>
+                        <div class="s_con">
+                            <h3>EDU</h3>
+                            <p>피베리 커피는 무엇인가? 진실 혹은 거짓</p>
+                        </div>
+                    </div>
+                    <div class="s_inner">
+                        <a href="">
+                            <img src="img/edu4.jpg">
+                        </a>
+                        <div class="s_con">
+                            <h3>EDU</h3>
+                            <p>브라질 대학, 커피 품질을 향상시키는 효모 발견</p>
+                        </div>
+                    </div>
+                    <div class="s_inner">
+                        <a href="">
+                            <img src="img/biz1.jpeg">
+                        </a>
+                        <div class="s_con">
+                            <h3>BISINESS</h3>
+                            <p>신입 바리스타 온보딩: 오너가 알아야 할 것</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recommend clearfix">
+                <h2>4월 추천 싱글오리진</h2>
+                <div class="recommend_wrap  clearfix">
+                    <ul>
+                        <li class="re_img"><a href="#"><img src="img/ori.jpg" alt="추천싱글오리진"></a></li>
+                        <li class="re_con">
+                            <p class="tit">Single Origin Selection #197</p>
+                            <p class="con">에티오피아 게타추 제켈레 Ethiopia Getachew Zekele</p>
+                            <p class="tit">Washed / Medium Light Roasting</p>
+                            <p class="con">136명의 소농들이 수확한 딤투 테로 농장의 커피</p>
+                            <p class="con2">살구의 싱그러운 향과 함께, 단맛이 뚜렷하게 이어져 마치
+                                감귤 주스를 마시는 듯합니다. 코 끝에 캐모마일의 잔향이
+                                머물러 복합적인 향미를 완성합니다.
+                            </p>
+                            <p class="short"><a href="#">빈브라더스 바로가기</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="list">
+
+                <div class="list_wrap">
+
+                    <a href="#">
+                        <div class="listBox listItem1">
+                            <ul>
+                                <li><img src="img/edu5.png" alt="아이템1"><span>◀</span></li>
+                                <li>
+                                    <h3>커피 프로세싱 알기: 내추럴, 펄프드 내추럴, 그리고 허니</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="listBox listItem2">
+                            <ul>
+                                <li>
+                                    <h3>자메이카 커피의 숨겨진 가치를 찾아서</h3>
+                                </li>
+                                <li style="float: left"><img src="img/c&f.jpg" alt="아이템1"><span>▶</span></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="listBox listItem3">
+                            <ul>
+                                <li><img src="img/tech1.jpg" alt="아이템1"><span>◀</span></li>
+                                <li>
+                                    <h3>라마르조코, 홈머신을 위한 IoT 기술출시! 기존 머신에도 적용 가능</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="listBox listItem2">
+                            <ul>
+                                <li>
+                                    <h3>세계에서 가장 위험한 커피 한 잔의 이야기 <전쟁 말고 커피>
+                                    </h3>
+                                </li>
+                                <li><img src="img/cul1.png" alt="아이템1"><span>▶</span></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="subscribe">
+                <h2>&#91; 바리스타뉴스 구독신청 &#93;</h2>
+                <div class="subscribe-form">
+                    <!-- <p><input type="text" placeholder="소속" name="part" id="part" title="소속"></p>
+							<p><input type="text" placeholder="성명" name="uname" id="uname" title="성명"></p> -->
+                    <p><input type="text" placeholder="name" title="name">
+                        <input type="text" placeholder="이메일(email-id@domain.com)" name="email" id="email" value="" title="이메일"></p>
+                    <div class="info">
+                        <strong>개인정보수집 정책 및 개인정보의 제3자 제공</strong>
+                        <p>바리스타뉴스는 웹진 구독신청에 수집되는 귀하의 개인정보를 중요시하며 「개인정보보호법」을 준수하고 있습니다.</p>
+                        <ul class="bul bar">
+                            <li>개인정보 수집 항목 : 이메일</li>
+                            <li>제공받는 자: 바리스타뉴스 웹진 운영 대행사</li>
+                            <li>개인정보 수집·이용 목적 :바리스타뉴스 웹진 발행 시 메일 발송</li>
+                            <li>개인정보의 보유 및 이용기간 : 개인정보의 수집목적 달성시까지 보유, 고객 구독취소 시 파기</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subscribe-btn">
+                    <p>
+                        <label for="agree" class="control">
+                            위 개인정보수집 정책 및 개인정보의 제3자 제공에 동의합니다.
+                            <input type="checkbox" id="agree" name="check1" value="1">
+                        </label>
+                    </p>
+                    <a href="#">구독신청</a>
+                </div>
+            </section>
+
+            <footer class="ft">
+                <div class="ft_wrap">
+                    <p>Copyright &copy; 2020 Barista news. All rights reserved.</p>
+                    <p>Contact Us : baristanewsm@gmail.com</p>
+                    <p class="ft_att">바리스타뉴스는 커피이슈 웹매거진입니다. 바리스타뉴스 콘텐츠의무단배포 및 수정, 복사를 금합니다.</p>
+                </div>
+            </footer>
+
+        </div>
+        <!--wrap-->
+
+        <div id="quick">
+            <ul>
+                <li><a href="#" class="tit">Quick Menu</a></li>
+                <li><a href="#" class="top">TOP</a></li>
+                <li><a href="#" class="mail">구독신청</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--container-->
+
+</body></html>
+
