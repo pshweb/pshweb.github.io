@@ -5,8 +5,7 @@
 body,html{width: 100%;height: 100%;}
 ul{list-style: none;}
 a{text-decoration: none;}
-label, button, input { background-image:none; background-color:#fff; border:0; outline:0; }
-
+label, button, input {background-image:none; background-color:#transparent; border:0; outline:0; }
 
 /* ----모바일용---- CSS*/
 
@@ -114,6 +113,7 @@ border-bottom: 1px solid #d0d0d0;}
 
 
 /* 슬라이드 영역  CSS*/
+
 .slider_section{
     position: relative;
     width: 100%;
@@ -136,25 +136,12 @@ border-bottom: 1px solid #d0d0d0;}
     left: 1.5em;
     font-size: 0.8em;
     font-weight: 600;}
-.slide1{
-    display: block;
-    width: 30px;height: 1px;
-    background: #fa9b20;
-    position: absolute;
-    top: 5.5em;
-    left: 1.5em;}
-.slide2{
-    display: block;
-    width: 30px;height: 1px;
-    background: #fff;
-    position: absolute;
-    top: 5.5em;
-    left: 3.7em;}
+
 
 .img_box{width: 200%;height: auto;overflow: hidden;margin-bottom: 0.5em;}
 .img_box li{width: 50%;float: left;}
 .img_box img{display: block;width: 100%;height: auto;}
-
+.btn_box{display: none;}
 
 /* 박스메뉴  CSS*/
 .box_section{
@@ -420,19 +407,6 @@ border-bottom: 1px solid #d0d0d0;}
     top: 5em;
     left: 4.7em;
     font-size: 1.3em;}
-.slide1{
-    width: 40px;height: 2px;
-    background: #fa9b20;
-    position: absolute;
-    top: 10em;
-    left: 6em;}
-.slide2{
-    display: block;
-    width: 40px;height: 2px;
-    background: #fff;
-    position: absolute;
-    top: 10em;
-    left: 9em;}    
 
 /* 박스메뉴  CSS*/
  
@@ -619,7 +593,7 @@ border-bottom: 1px solid #d0d0d0;}
     width: 230px;height: 40px;display: none;
     background: #fff;transition: all 0.5s;}    
     
-#ck2:checked ~ .header .header_wrap1 #find_nav{display: block;}   
+#ck2:checked ~ .header .header_wrap1 #find_nav{display: block;} 
     
 .frm1{
     width: 215px;height: 30px;
@@ -810,6 +784,7 @@ border-bottom: 1px solid #d0d0d0;}
 .slider_section{
     width: 100%;
     height: auto;}
+    
 .vs_tit{
     position: absolute;
     top: 2em;
@@ -820,19 +795,16 @@ border-bottom: 1px solid #d0d0d0;}
     top: 6em;
     left: 12.9em;
     font-size: 2em;}
-.slide1{
-    width: 70px;height: 3px;
-    background: #fa9b20;
-    position: absolute;
-    top: 23em;
-    left: 26em;}
-.slide2{
-    display: block;
-    width: 70px;height: 3px;
-    background: #fff;
-    position: absolute;
-    top: 23em;
-    left: 31em;}    
+
+.visual{position: relative;}
+.visual ul{width: 200%;}
+.visual ul li{width: 100%;overflow: hidden;}
+    
+.btn_box{display: block;width: 90%;position: absolute;top: 70%;left: 0;margin-left: 5%;cursor: pointer}   
+.btn_box > button{color: rgba(250, 155, 32,0.8);width: 50px;height: 50px;text-align: center;line-height: 50px;border-radius: 50%;font-size: 30px;cursor: pointer;background:rgba(255,255,255,0.8);opacity: 0.4;}
+.btn_box > button:hover{opacity:0.7;}
+.btn_box > button.left{display: block;float: left;padding-right:0.5%;}
+.btn_box > button.right{display: block;float: right;padding-left:0.5%;} 
     
 /* 박스메뉴  CSS*/
 .box_section{
@@ -978,57 +950,7 @@ address{font-style: normal;color: #9d9b9b;font-size: 0.9em;}
 .copyright{color: #9d9b9b;font-size: 0.9em;}
     
 
-/* 푸터개선 2017-06-05 -new 붙은 클래스는 새로만든것 */
-    
-    
-.canexpanded .inner-wrap {padding-top:0 !important; line-height:22px;}
-.expand-link-new {float:right; margin-top:-18px; line-height:16px; }
-.expand-link-new .btn-expand-outer {display:inline-block; padding:19px 42px 19px 42px; font-size:15px; line-height:16px; color: #FFF; background:url(http://www.samsunghospital.com/_newhome/ui/home/static/img/main/main_sprite.png) 30px -1271px no-repeat; border: none; outline-color:transparent; text-align:left;}
-.expand-link-new .btn-expand-outer.on,
-.expand-link-new .btn-expand-outer:hover {background-color:#464c58;}
 
-.outer-link-new {display:none; position:relative; box-sizing:border-box;}
-.outer-link-new.on {display:block;}
-.dept-link.dept-link-new,
-.family-link.family-link-new {display:none !important}
-
-.dept-link.dept-link-new.on,
-.family-link.family-link-new.on {display:block !important; position:absolute  !important;  z-index:999;  border:1px solid #595f6a; border-bottom:0 none; box-sizing:border-box; background-color:#ffffff;}
-.dept-link.dept-link-new.on {left:-14px; right:0;}
-
-.family-link.family-link-new.on {/*height:220px;*/ right:0; padding:12px 10px 25px 10px;}
-.family-link.family-link-new.on ul {margin-left:8px;}
-
-.dept-link.dept-link-new {width:auto; padding:9px 16px 0 16px;}
-.dept-link.dept-link-new:after{display:block; content:""; clear:both;}
-.dept-link.dept-link-new .wrap_center_column {display:table-cell; width:261px; margin-left:0px; padding-left:2px; padding-right:2px; border-left:1px solid #e6e6e6; box-sizing:border-box;}
-.dept-link.dept-link-new .wrap_center_column:last-child {padding-right:0;}
-.dept-link.dept-link-new .wrap_center_column01  {border-left:0 none; padding-left:0px;}
-    
-.outer-link-new h3 {width:100%; margin:0 auto 20px auto; font-size: 20px; line-height:52px; height:52px; color: #fff; background-color:#0079bf; box-sizing:border-box; text-align:center; font-weight:normal}
-.outer-link-new li {padding:0px 0px 0px 9px;  
-background:url(../img/ico/bul_footer_newone.gif) 0 9px no-repeat; line-height:21px;}
-.outer-link-new li a {padding:2px 2px 2px 0px; font-size:14px; color: #0d0d0d; letter-spacing:0px; word-break:break-all;}
-.outer-link-new li a:hover {text-decoration: underline; color: #7498dc;}
-.dept-link.dept-link-new .wrap_center_column h4 {padding-left:20px; background-color:#cce4f2; box-sizing:border-box; letter-spacing:0px;}
-.dept-link.dept-link-new .wrap_center_column h4,
-.dept-link.dept-link-new .wrap_center_column h4 a {display:block; font-size:14px; color:#00456c; height:30px; line-height:30px;}
-.dept-link.dept-link-new .wrap_center_column h4 {margin-bottom:10px;}
-.dept-link.dept-link-new ul {float:none; margin-left:21px;}
-.dept-link.dept-link-new .wrap_center_column01 ul {padding-bottom:6px;}
-.inner_center_columnpart:first-child {height:235px}
-.btn_cls_layerlink {display:block; position:absolute;top:23px;right:-33px; width:20px; height:20px; background:url(../img/ico/btn_cls_footernewone.png) no-repeat 0 0;}
-
-.dept-link.dept-link-new.on,
-.family-link.family-link-new.on {bottom:57px} /* ie 본원 메인만 */
-.expand-link-new .btn-expand-outer, /* quick-navi-used는 본원만 붙음 */
-.expand-link-new .btn-expand-outer {padding-right:22px; padding-left:22px; background-position:10px -1271px}
-
-.family-link.family-link-new,
-.family-link.family-link-new {width:212px;margin-bottom:0px;}
-
-.dept-link.dept-link-new ul {margin-left:15px;}    
-    
     
     
 }
