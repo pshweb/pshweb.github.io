@@ -39,13 +39,9 @@ $(document).ready(function(){//문서가 시작이 되면
             $("#gnb a.mnb1").removeClass("on");//대메뉴에 on을 삭제해라
             $(this).addClass("on");//내자신(지금 내가 클릭한 대메뉴) on을 추가해라
         });
-});
 
 
-
-
-<!--
-	//쿠키저장 함수
+    //쿠키저장 함수
 	function setCookie( name, value, expiredays ) { 
 		var todayDate = new Date(); 
 		todayDate.setDate( todayDate.getDate() + expiredays ); 
@@ -66,3 +62,32 @@ $(document).ready(function(){//문서가 시작이 되면
 	});
 
 //-->  
+    
+    
+    //슬라이드
+    
+       var intv=setInterval(function(){ nextAni(); }, 2900);
+
+    //함수는 정의부로는 실행되지 않으며, 호출시에만 실행
+    function nextAni(){ //nextAni()함수 : 다음 이미지 모션 정의
+        $(".img_box").not(":animated").animate({"margin-left":"-100%"}, 800, function(){
+            $(".img_box li").eq(0).appendTo($(".img_box"));
+            $(".img_box").css("margin-left", "0%");
+        });
+    }
+    function prevAni(){
+        $(".img_box li").eq(2).prependTo($(".img_box"));
+        $(".img_box").css("margin-left", "-100%");
+        $(".img_box").not(":animated").animate({"margin-left":"0%"}, 800);
+    }
+    $(".right").click(function(){
+        clearInterval(intv);
+        nextAni(); 
+    });
+    $(".left").click(function(){
+        clearInterval(intv);
+        prevAni(); 
+    });
+    
+    
+    });
