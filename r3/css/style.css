@@ -49,7 +49,7 @@
 /*wrap news*/
 #wrap .news{width: 100%;height: 100%;background: #fff;position: relative;background-image: url(../img/subtle_dots.png);padding-top: 2%;}
 #wrap .news h2{width: 18%;margin: 0 auto;text-align: center;font-family: 'Godo';color: #555;padding-top: 6%;font-size: 22px;}
-#wrap .news h2:before{content: "";width: 6px;height: 22px;background: #43dfc9;position: absolute;left: 41.5%;}
+#wrap .news h2:before{content: "";width: 6px;height: 22px;background: #43dfc9;position: absolute;left: 41%;}
 #wrap .news h2::selection{background-color: #f77474;color: #fff;}
 
 #wrap .news .slider{width: 80%;height: 61%;position: relative;padding: 10px;box-sizing: border-box; margin: 6% auto;border: 1px solid #ccc;overflow: hidden;background: #fff;}
@@ -75,7 +75,7 @@
 /*wrap recommend*/
 #wrap .recommend{width: 100%;height: 100%;background-image: url(../img/subtle_dots.png);position: relative;padding-top: 1%;}
 #wrap .recommend h2{width: 18%;margin: 0 auto;text-align: center;font-family: 'Godo';color: #555;padding-top: 6%;font-size: 22px;}
-#wrap .recommend h2:before{content: "";width: 6px;height: 22px;background: #f15555;position: absolute;left: 43%;}
+#wrap .recommend h2:before{content: "";width: 6px;height: 22px;background: #f15555;position: absolute;left: 42.7%;}
 #wrap .recommend h2::selection{background-color: #f77474;color: #fff;}
 .recommend .recommend_wrap{width: 80%;height: 60%;margin: 6% auto;border:1px solid #ccc;padding-top: 4%;}
 .recommend .recommend_wrap ul{width: 100%;height: 100%;float: left;}
@@ -498,10 +498,10 @@
 @media (max-width: 480px) {    
 
 /*wrap*/
-#wrap{width: 100%;height: 250px;margin-left:0;margin-top: 40px;}
+#wrap{width: 100%;height: 30%;margin-left:0;margin-top: 40px;}
     
 /*wrap main*/
-#main{width: 100%;height: 250px;position: relative;}
+#main{width: 100%;position: relative;}
 #main .img{display: block;width: 100%;position: relative;}
 #main .img .inner{width: 100%;position: absolute;top: 0;left: 0;}
 #main .img .inner .main_img{width: 100%;height: 100%;}
@@ -521,12 +521,12 @@
 #wrap .news .slider{width: 90%;height: 60%;position: relative;padding: 10px;box-sizing: border-box; margin: 6% auto;border: 1px solid #ccc;overflow: hidden;background: #fff;}
 .slider .s_inner{width: 100%;height: 100%;margin-top: 0.4%;padding-top: 0.5%;border: 1px solid #eee;box-sizing: border-box;cursor: pointer;transition: all 0.2s;background-image: url(../img/subtle_dots.png);}
 .slider .s_inner:hover{box-shadow: 5px 5px 10px rgba(0,0,0,0.2);transform: translate(-5px, -5px);}
-.slider .s_inner a{display: block;width: 70px;height: 70px;border-radius: 50%;margin: 0 auto;}
+.slider .s_inner a{display: block;width: 90px;height: 90px;border-radius: 50%;margin: 0 auto;}
 .slider .s_inner img{display: block;width: 100%;height: 100%;margin: 0 auto;border-radius: 50%;}
-.slider .s_inner .s_con{width: 130px;height: 100px;margin: 0 auto;padding: 7% 3%;box-sizing: border-box;}
+.slider .s_inner .s_con{width: 270px;height: 100px;margin: 0 auto;padding: 7% 3%;box-sizing: border-box;}
 .slider .s_inner .s_con > h3{text-align: center;font-family: 'Godo';font-size: 15px;letter-spacing: 2px;color: #555;}
 .slider .s_inner:hover .s_con > h3{color: #f15555;}
-.slider .s_inner .s_con > p{margin-top: 5%;display: block;line-height: 25px;font-size: 10.5px;text-align: center;}
+.slider .s_inner .s_con > p{margin-top: 5%;display: block;line-height: 25px;font-size: 11px;text-align: center;}
     
 .slick-slide {margin: 0px 10px;}      
 
@@ -556,7 +556,7 @@
 .list_wrap div.listBox ul{width: 100%;height: 100%;}
 .list_wrap div.listBox ul li{width: 50%;height: 100px;float: left;position: relative;background: #fff;overflow: hidden;}
 .list_wrap div.listBox ul li img{display: block;width: 130%;}
-.list_wrap div.listBox ul li h3{display: block;width: 100%;color: #555;padding: 20% 3%;box-sizing: border-box;text-align: center;font-size: 1px;}
+.list_wrap div.listBox ul li h3{display: block;width: 100%;color: #555;padding: 20% 3%;box-sizing: border-box;text-align: center;font-size: 11px;}
 .list_wrap div.listBox:hover h3{color: #43dfc9;}
 .list_wrap div.listBox ul li span{font-size: 18px;display: block;color: #fff;}
 
