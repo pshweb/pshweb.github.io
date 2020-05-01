@@ -389,7 +389,7 @@
 @media (max-width: 768px) {
 
 /*wrap*/
-#wrap{width: 100%;height: 50% ;margin-left:0;margin-top: 60px;}
+#wrap{width: 100%;height: 510px ;margin-left:0;margin-top: 60px;}
     
 /*wrap main*/
     
@@ -436,7 +436,7 @@
 .list_wrap div.listBox ul{width: 100%;height: 100%;}
 .list_wrap div.listBox ul li{width: 50%;height: 150px;float: left;position: relative;background: #fff;overflow: hidden;}
 .list_wrap div.listBox ul li img{display: block;width: 130%;}
-.list_wrap div.listBox ul li h3{display: block;width: 100%;color: #555;padding: 20% 0;box-sizing: border-box;text-align: center;font-size: 1.5px;}
+.list_wrap div.listBox ul li h3{display: block;width: 100%;color: #555;padding: 20% 0;box-sizing: border-box;text-align: center;font-size: 11px;}
 .list_wrap div.listBox:hover h3{color: #43dfc9;}
 .list_wrap div.listBox ul li span{font-size: 25px;display: block;color: #fff;}
 
