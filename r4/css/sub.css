@@ -5,9 +5,9 @@ body.sub3 #main {background:#f6f6f6;}
 
 #sub_visual {position:relative; height:744px; margin-bottom:100px; background:top center; background-size:cover;}
 #sub_visual .txt_box {position:absolute; top:50%; left:5%; right:5%; margin-top:52px; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size:18px; color:#fff; text-align:center;}
-#sub_visual h3 {font-size:65px; color:#fff; font-family:'Lora', serif; font-weight:400; line-height:1.1;}
+#sub_visual h3 {font-size:55px; color:#000; font-family:'Lora', serif; font-weight:400; line-height:1.1;}
 #sub_visual h3 .r {position:relative; top:5px; font-size:30px;}
-#sub_visual p {margin-top:15px; font-size:18px; line-height:1.33;}
+#sub_visual p {margin-top:15px; font-size:18px; line-height:1.33;color: #000;}
 #sub_visual.visual_product01, #sub_visual.visual_product02 {height:880px; margin-bottom:0;}
 
 
