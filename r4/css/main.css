@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+
+#main_visual {position:relative; height:1143px; background:top center; background-size:cover;}
+#main_visual.play .bg {-webkit-transform:scale(1); transform:scale(1); opacity:1}
+#main_visual .bg {position:absolute;top:0;left:0;width:100%;height:100%; background:top center no-repeat; background-size:cover;z-index:1;-webkit-transition:opacity 2s cubic-bezier(.25,.1,.25,1),-webkit-transform 2s cubic-bezier(.165,.84,.44,1);transition:opacity 2s cubic-bezier(.25,.1,.25,1),-webkit-transform 2s cubic-bezier(.165,.84,.44,1);transition:opacity 2s cubic-bezier(.25,.1,.25,1),transform 2s cubic-bezier(.165,.84,.44,1);transition:opacity 2s cubic-bezier(.25,.1,.25,1),transform 2s cubic-bezier(.165,.84,.44,1),-webkit-transform 2s cubic-bezier(.165,.84,.44,1);-webkit-transform:scale(1.2);transform:scale(1.2);opacity:0;}
+
+
+    #main_visual .bg .more{position: absolute;top: 45%;left: 74%;z-index: 100;width: 100px;line-height: 24px;font-size: 14px;background: rgba(255,255,255,1);text-align: center;border: 1px solid #81d8d0;}
+    #main_visual .bg a{display: block;}
+    #main_visual .bg .more:hover{color: #fff;background: #81d8d0; }
+
+
+#main_list01 {margin-top:100px; margin-bottom:60px;}
+#main_list01 ul {overflow:hidden; margin:0 -2%;}
+#main_list01 li {float:left; width:33.33%; padding:0 2%;}
+#main_list01 ul div {overflow:hidden; position:relative; padding-top:10px; color:#000000; letter-spacing:0; text-align:center; line-height:1.6;}
+#main_list01 ul div:after {position:absolute; left:0; bottom:0; width:40px; height:40px; background:#fff url('../data/icon_plus.png') no-repeat center; content:''; -webkit-transition:all .3s ease-in-out; transition:all .3s ease-in-out;}
+#main_list01 h2 {position:relative; z-index:1; font-size:35px; font-family:'Lora', serif; font-weight:400; -webkit-transition:all .3s ease-in-out; transition:all .3s ease-in-out;color: #000;margin: 3% auto;width: 50%;text-align: center;}
+#main_list01 h2 span {display: block;margin-left:4px; font-size:28px; vertical-align:top;}
+#main_list01 p {position:relative; z-index:1; font-size:20px; font-family:'Lato', sans-serif; font-weight:300; -webkit-transition:all .3s ease-in-out; transition:all .3s ease-in-out;padding-bottom: 20px;}
+.pc #main_list01 ul div .img {-webkit-transition:all .3s ease-in-out; transition:all .3s ease-in-out;}
+.pc #main_list01 ul div:hover .img {opacity:0.7; -webkit-transform: scale(1.1); transform: scale(1.1);}
+.pc #main_list01 ul div:hover h2 {-webkit-transform: translate3d(0, -20px, 0); transform: translate3d(0, -20px, 0);}
+.pc #main_list01 ul div:hover p {-webkit-transform: translate3d(0, -20px, 0); transform: translate3d(0, -20px, 0);}
+.pc #main_list01 ul div:hover:after {width:60px; height:60px;}
+#main_list01 .notice_box {margin-top:35px;display: none;}
+
+
+#dear_women {position:relative; padding:180px 20px 170px;}
+#dear_women:before {position:absolute; top:0; left:50%; width:1px; height:0px; background:#000000; content:''; -webkit-transition:all .5s ease-in-out 0.5s; transition:all .5s ease-in-out 0.5s;}
+#dear_women .txt_box {font-family:'Lato', sans-serif; letter-spacing:0; color:#000; text-align:center; background:#fff; }
+#dear_women h2 {font-family:'Lora', sans-serif; font-size:55px; font-weight:400; line-height:1.1;}
+#dear_women .txt_box p {margin-top:15px; font-size:24px; line-height:1.5; font-weight:400; letter-spacing:-0.02em;}
+#dear_women h2.txt_fade_motion02 span {display:inline-block; min-width:13px;}
+#dear_women .txt_box p span {display:inline-block; min-width:6px;}
+#dear_women .txt_box em {display:inline-block;}
+#dear_women .txt_box {overflow:hidden; opacity:0; -webkit-transition:opacity 1s 0.8s; transition:opacity 1s 0.8s;}
+#dear_women.play .txt_box {opacity:1;}
+#dear_women.play:before {height:150px;}
+
+
+#main_look {}
+#main_look .box {display:inline-block; width:100%; position:relative;}
+#main_look .box+.box {margin-top:130px;}
+#main_look .box .img {position:relative;}
+#main_look .box .img p {position:relative; display:inline-block;}
+#main_look .box01 .img {width:41.493%;}
+#main_look .box01 .img p {float:right; width:100%; padding-bottom:138.33%; background:url('../data/s1.jpg') no-repeat center; background-size:100%;}
+#main_look .box02 .img {display:inline-block; float:right; width:41.493%;}
+#main_look .box02 .img p {width:100%; padding-bottom:125.66%; background:url('../data/s2.jpg') no-repeat center; background-size:auto 100%;}
+#main_look .box03 .img {width:50.6915%;}
+#main_look .box03 .img p {float:right; width:100%; padding-bottom:81.64%; background:url('../data/s3.jpg') no-repeat center; background-size:auto 100%;}
+#main_look .stxt {position:absolute; top:0; right:-28px; opacity:0; -webkit-transition:opacity 1s; transition:opacity 1s;}
+#main_look .box .txt {position:absolute; top:50%; margin-top:-100px; padding-top:26px; font-size:45px; font-family:'Lora', serif; letter-spacing:0.02em; color:#000000; font-weight:400; line-height:1.44; border:1px solid #fff;}
+#main_look .box .txt:before {position:absolute; top:0; left:0; width:29px; height:3px; background:#000; content:'';}
+#main_look .box01 .txt {left:50.6915%;}
+#main_look .box02 .txt {right:50.6915%;}
+#main_look .box02 .stxt {left:-28px; right:auto;}
+#main_look .box03 .txt {left:59.9585%;}
+
+#main_look .txt_fade_motion span {min-width:13px;}
+
+#main_look .txt_fade_motion {opacity:0; -webkit-transition:opacity 1s; transition:opacity 1s;}
+#main_look .txt_fade_motion.play {opacity:1;}
+#main_look .box .img:hover .stxt {opacity:1;}
+
+
+#main_look .txt_fade_motion span {-webkit-transition-delay:0.5s !important; transition-delay:0.5s !important;}
+
+
+.visible_pc {display: block;}
+.visible_mo {display:none;}
+
+@media all and (min-width: 700px){	
+	#main_visual .bg {background-image:url(../data/main_v.jpg);}
+    
+   
+}
+@media all and (max-width: 1199.98px){
+	 #main_visual .bg .more{display: none;} 
+}
+@media (max-width:991.99px){
+
+	#main_visual .bg {background-image:url(../data/main_v.jpg);}
+     #main_visual .bg .more{display: none;} 
+    
+	#main_visual .txt_box {right:60px; bottom:60px; left:60px; width:auto; padding:40px 50px 50px; text-align:center;}
+	#main_visual h2 {font-size:45px;}
+	#main_visual .txt_box p {margin-top:15px; font-size:20px;}
+
+
+	#main_list01 {margin-top:26px; margin-bottom:100px;}
+	#main_list01 li {width:100%;}
+	#main_list01 li+li {margin-top:26px;}
+	#main_list01 h2 span {margin-left:4px; font-size:26px; vertical-align:top;}
+	#main_list01 .img {width:350px; margin-top:-20px;}
+	#main_list01 .partners .img {width:auto; margin:0;}
+
+	#main_look .box+.box {margin-top:120px;}
+	#main_look .box .img {width:90.468% !important; max-width:600px;}
+	#main_look .stxt {display:none;}
+	#main_look .box .txt {float:left; position:relative; top:0; left:0 !important; margin-left:9.68%; margin-top:78px;}
+	#main_look .box02 .txt {float:right; width:90.468% !important; max-width:600px;}
+	#main_look .box .txt:before {width:21px; height:2px;}
+
+	
+
+	.visible_pc {display:block;}
+	.visible_mo {display:block;}
+}
+@media all and (max-width: 699.99px){
+	#main_visual .bg {background-image:url('../data/main_v_s.jpg');}
+	#main_visual {height:auto !important; padding-bottom:103%;}
+	
+    #main_visual .bg .more{display: none;}   
+	
+	#main_list01 {margin-top:13px; margin-bottom:30px;}
+	#main_list01 ul {margin:15px 0 50px;}
+	#main_list01 li+li {margin-top:13px;}
+	#main_list01 ul div {padding-top:35px;background: #fbf8f1;}
+	#main_list01 ul div:after {width:20px; height:20px; background-size:7px;}
+	#main_list01 h2 {font-size:24px;}
+	#main_list01 h2 span {font-size:13px;}
+	#main_list01 p {font-size:14px;}
+	#main_list01 .img {width:175px; margin-top:-10px;}
+	#main_list01 .partners .img {width:320px;}	
+	.pc #main_list01 ul div:hover:after {width:30px; height:30px;}
+	#main_list01 .notice_box {margin:-30px 10px;display: none;}
+
+	#dear_women {padding:90px 0 85px;}
+	#dear_women.play:before {height:75px;}
+	#dear_women .txt_box {right:20px; bottom:20px; left:20px; padding:15px 15px 20px;}
+	#dear_women h2 {font-size:29px;}
+	#dear_women .txt_box p {margin-top:10px; font-size:14px;}
+	#dear_women h2.txt_fade_motion02 span {min-width:7px;}
+	#dear_women .txt_box p span {min-width:3px;}
+	#dear_women .txt_box em {display:inline-block;}
+
+	#main_look .box+.box {margin-top:60px;}
+	#main_look .box .txt {margin-top:40px; padding-top:13px; font-size:26px;}
+	#main_look .box .txt:before {width:11px; height:1px;}
+	#main_look .txt_fade_motion span {min-width:7px;}
+
+	
+}
+

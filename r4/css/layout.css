@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+#wrap {overflow:hidden; min-width:320px;}
+#main {margin-bottom:120px;}
+
+#header {position:fixed; top:0; left:0; z-index:100; width:100%; height:105px; -webkit-transition:background 0.4s, top 0.4s; transition:background 0.4s, top 0.4s;}
+#header:before {position:absolute; top:104px; left:0; right:0; height:1px; background:rgba(255,255,255,0.3); content:'';}
+#header > .logo {float:left; margin-left:8.75%;}
+#header .logo a {display:block; overflow:hidden; position:relative; width:190px; height:104px; text-indent:-200px; background:url('../data/tiffany_logo.png') no-repeat center;}
+#header .logo a:after {position:absolute; top:0; left:0; right:0; bottom:0; opacity:0; background:url('../img/tiffany_logo.png') no-repeat center; -webkit-transition:opacity 0.4s; transition:opacity 0.4s; content:'';}
+
+#gnb {float:right; margin-top:30px; margin-right:8.75%;}
+#gnb ul {overflow:hidden;}
+#gnb li {float:left; -webkit-transition:opacity 0.4s; transition:opacity 0.4s;}
+#gnb li+li {margin-left:80px;}
+#gnb a {display:block; font-family:'Lato', sans-serif; letter-spacing:0.03em; color:#000; font-size:15px; font-weight:700; line-height:47px; -webkit-transition:color 0.4s; transition:color 0.4s;}
+#gnb.on li {opacity:0.5;}
+#gnb.on li.on {opacity:1;}
+
+#gnb_mobile {display:none;}
+.btn_menu_open {display:none;}
+
+#partners_nav {float:left; position:relative; width:100%; padding:0 8.75%; -webkit-transition:background 0.4s; transition:background 0.4s;}
+#partners_nav li {display:inline-block; width:auto; margin-right:50px; -webkit-transition:opacity 0.4s; transition:opacity 0.4s;}
+#partners_nav a {font-family:'Lato', sans-serif; font-size:15px; line-height:67px; color:#fff; font-weight:300; -webkit-transition:color 0.4s; transition:color 0.4s;}
+#partners_nav .swiper-container {margin:0 30px;}
+#partners_nav .swiper-button-prev {left:12px; width:10px; height:18px; margin-top:-9px; background:url('../data/btn_nav_prev.png') no-repeat center;}
+#partners_nav .swiper-button-next {right:12px; width:10px; height:18px; margin-top:-9px; background:url('../data/btn_nav_next.png') no-repeat center;}
+#partners_nav .swiper-button-prev, #partners_nav .swiper-button-next {display:none;}
+#partners_nav.on li {opacity:0.5;}
+#partners_nav.on li.on {opacity:1;}
+
+
+#header.fixed_top {background:#fff;}
+#header.fixed_top h1 a:after {opacity:1;}
+#header.fixed_top #gnb a {color:#333333;}
+#header.fixed_top #partners_nav {background:#fff;}
+#header.fixed_top #partners_nav a {color:#333;}
+.sub5 #header.fixed_top:before {background:rgba(51,51,51,0.3);}
+.sub5.scroll_down #header.fixed_top {top:-105px;}
+#header.fixed_top .swiper-button-prev {background-image:url('../data/btn_nav_prev_g.png')}
+#header.fixed_top .swiper-button-next {background-image:url('../data/btn_nav_next_g.png')}
+
+.sub6 #header {border-bottom:1px solid #848484; background:#fff;}
+.sub6 #header h1 a:after {opacity:1;}
+.sub6 #header #gnb a {color:#333333;}
+
+
+#footer {padding-bottom:100px;}
+#footer p.b_logo {position:relative; width:115px; height:30px; margin:0 auto; text-indent:-99999px; background:url('../data/tiffany_logo_ft.png') no-repeat center #fff;}
+
+#footer .b_logo:before {position:absolute; top:34px; left:50%; z-index:-1; width:5000px; height:1px; margin-left:-2500px; background:#ededed; content:'';}
+.b_sns_link {margin-top:37px; font-family:'Lato', sans-serif; letter-spacing:0.03em; font-weight:400; font-size:15px; text-align:center; color:#6b2670;}
+.b_sns_link dt, .b_sns_link dd {display:inline-block;}
+.b_sns_link dd {margin-left:40px;}
+.b_sns_link a {display:block; padding-left:19px; background:no-repeat 0 center; vertical-align:middle;}
+.b_sns_link a.instargram {background-image:url('../data/sns_insta.jpg');}
+.b_sns_link a.facebook {background-image:url('../data/sns_facebook.jpg');}
+
+address {margin-top:25px; font-size:13px; text-align:center; color:#8f8f8f; line-height:1.87}
+address dl {display:inline-block;}
+address dt, address dd {display:inline;}
+address dl {margin:0 15px;}
+address dt {margin-right:3px; color:#333333;}
+
+.dimmed_bg {display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:10; background:rgba(0,0,0,0.8);}
+.c_size01 {max-width:1466px; margin-left:auto; margin-right:auto;}
+.c_size02 {max-width:1496px; margin-left:auto; margin-right:auto;}
+
+@media all and (max-width: 1400px){
+	#header > .logo {margin-left:6%;}
+	#gnb {margin-right:6%;}
+	#gnb li+li {margin-left:60px;}
+	#partners_nav {padding:0 6%}
+}
+@media all and (max-width: 1200px){
+	#header > .logo {margin-left:4%;}
+	#gnb {margin-right:4%;}
+	#gnb li+li {margin-left:40px;}	
+	#partners_nav {padding:0 4%}
+}
+@media all and (max-width: 991.99px){
+	#main {margin-bottom:120px;}
+	/* 모바일 사이즈일경우 */
+	#header > .logo {float:none; margin:0 auto;}
+	#gnb {display:none;}
+	#gnb_mobile {display:block;}
+	.btn_menu_open {display:block;}
+	#header {height:105px;}
+	#header .logo a {width:143px; height:105px; margin:0 auto; background-size:100% auto;}
+	#header .logo a:after {background-size:100% auto;}
+	.btn_menu_open, .btn_menu_close {overflow:hidden; text-indent:-999px;}
+	.btn_menu_open {position:absolute; top:39px; left:24px; width:35px; height:24px; background:url('../data/icon_menu.png') no-repeat; background-size:100% auto;}
+	.btn_menu_close {position:absolute; top:36px; right:-73px; width:39px; height:39px; background:url('../data/icon_menu_close.png') no-repeat; background-size:100% auto;}
+	#gnb_mobile {position:fixed; top:0; left:-100%; bottom:0; z-index:20; width:80%; background:#fff; -webkit-transition:left 0.4s; transition:left 0.4s;}
+	#gnb_mobile.open {left:0;}
+	#gnb_mobile .logo {height:104px; border-bottom:1px solid #e9e9e9;}
+	#gnb_mobile .logo a {background-image:url('../data/tiffany_logo.png');}
+	#gnb_mobile nav {margin:30px 0 80px;}
+	#gnb_mobile nav a {display:block; padding-left:60px; font-family:'Lato', sans-serif; letter-spacing:0.03em; font-weight:400; font-size:27px; color:#333333; line-height:3.33;}
+	.gnb_sns_link {padding:34px 0; border-top:1px solid #e9e9e9; font-family:'Lato', sans-serif; font-weight:300; text-align:center; letter-spacing:0em;}
+	.gnb_sns_link li {display:inline-block;}
+	.gnb_sns_link li+li {margin-left:82px;}
+	.gnb_sns_link a {display:block; padding-left:38px; font-size:22px; color:#6b2670; background:no-repeat 0 center; background-size:23px auto; vertical-align:middle;}
+	.gnb_sns_link a.instargram {background-image:url('../data/sns_insta_s.png');}
+	.gnb_sns_link a.facebook {background-image:url('../data/sns_facebook_s.png');}
+
+	#partners_nav {padding:0 12px}
+	#partners_nav .swiper-button-prev, #partners_nav .swiper-button-next {display:block;}
+
+	#header.fixed_top .btn_menu_open {background-image:url('../data/icon_menu_scroll.png');}
+	.sub6 #header .btn_menu_open {background-image:url('../data/icon_menu_scroll.png');}
+}
+@media all and (max-width: 699.99px){
+	#main {margin-bottom:60px;}
+	#header {height:52px;}
+	#header:before {top:51px;}	
+	#header .logo a {width:72px; height:52px;}
+	.btn_menu_open {top:20px; left:12px; width:17px; height:12px;}
+	.btn_menu_close {top:18px; right:-36px; width:20px; height:20px;}
+	#gnb_mobile .logo {height:52px;}
+	#gnb_mobile nav {margin:15px 0 45px;}
+	#gnb_mobile nav a {padding-left:30px; font-size:14px;}
+	.gnb_sns_link {padding:17px 0;}
+	.gnb_sns_link li+li {margin-left:40px;}
+	.gnb_sns_link a {padding-left:19px; font-size:11px; background-size:12px auto;}
+
+	#partners_nav li {margin-right:25px;}
+	#partners_nav a {font-size:13px; line-height:45px;}
+
+	
+	#footer {padding-bottom:50px;}
+	#footer .b_logo {width:95px; height:24px; background-size:auto 100%;}
+	#footer .b_logo:before {top:14px;}
+	.b_sns_link {margin-top:20px; font-size:11px;}
+	.b_sns_link dt {position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;}
+	.b_sns_link dd {margin-left:23px;}
+	.b_sns_link a {padding-left:17px;}
+	.b_sns_link a.instargram {background-image:url('../data/sns_insta_s.png'); background-size:12px auto;}
+	.b_sns_link a.facebook {background-image:url('../data/sns_facebook_s.png'); background-size:12px auto;}
+	address .email {display:block;}
+	address dl {margin:0 8px;}
+	address {margin-top:15px; font-size:11px;}
+	.copyright {margin-top:6px;}
+
+	.sub5.scroll_down #header.fixed_top {top:-52px;}
+}

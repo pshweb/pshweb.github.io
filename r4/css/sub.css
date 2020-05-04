@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+body.sub3 #main {background:#f6f6f6;}
+
+
+#sub_visual {position:relative; height:744px; margin-bottom:100px; background:top center; background-size:cover;}
+#sub_visual .txt_box {position:absolute; top:50%; left:5%; right:5%; margin-top:52px; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size:18px; color:#fff; text-align:center;}
+#sub_visual h3 {font-size:65px; color:#fff; font-family:'Lora', serif; font-weight:400; line-height:1.1;}
+#sub_visual h3 .r {position:relative; top:5px; font-size:30px;}
+#sub_visual p {margin-top:15px; font-size:18px; line-height:1.33;}
+#sub_visual.visual_product01, #sub_visual.visual_product02 {height:880px; margin-bottom:0;}
+
+
+.story {position:relative; margin:0 37px;}
+.story h3 {font-size:50px; font-family:'Lora', serif; font-weight:400; line-height:1.2; color:#1a1a1a;}
+.story .box+.box {margin-top:80px;}
+.story .t01 {margin-top:23px; font-family:'Lato', sans-serif; font-size:18px; color:#000000; line-height:1.66;}
+.story .t02 {margin-top:27px; color:#666666;}
+.story .box {display:inline-block; width:100%;}
+.story .box .img {position:relative;}
+.story .stxt {position:absolute; bottom:0; opacity:0; -webkit-transition:opacity 1s; transition:opacity 1s;}
+.story .img:hover .stxt {opacity:1;}
+.story .cont {margin-top:80px;}
+.story .box01 .img {float:left;}
+.story .box01 .stxt {left:-37px;}
+.story .box01 .cont {margin-left:555px;}
+.story .box02 .img {float:right; text-align:right;}
+.story .box02 .stxt {right:-37px;}
+.story .box02 .cont {margin-right:800px;}
+.story .box03 .img {float:left;}
+.story .box03 .stxt {left:-37px;}
+.story .box03 .cont {margin-left:777px;}
+
+.story .more{font-size: 14px;line-height: 40px;}
+
+
+@media all and (min-width: 700px){
+	#sub_visual.visual_story {background-image:url('../data/gift.jpg');}
+    
+
+}
+@media all and (max-width: 1700px){
+	
+}
+@media all and (max-width: 1300px){
+
+}
+@media all and (max-width: 1199.98px){
+	.story {margin:0;}
+	
+}
+@media (max-width:991.99px){	
+	.story .stxt {display:none;}
+	.story .box01 .img,
+	.story .box02 .img,
+	.story .box03 .img {width:92.5%;}
+	.story .cont {float:left; width:100%; margin:0 !important; padding:50px 7.5%;}
+
+	
+}
+@media all and (max-width: 699.99px){
+	#sub_visual .txt_box {margin-top:25px;}
+	#sub_visual {height:auto !important; padding-bottom:87.65%; margin-bottom:55px;}
+	#sub_visual.visual_story {background-image:url('../data/gift_s.jpg');}
+
+	#sub_visual h3 {font-size:30px;}
+	#sub_visual h3 .r {font-size:15px;}
+	#sub_visual p {font-size:12px;}
+
+	.story .box+.box {margin-top:40px;}
+	.story .cont {padding:25px 7.5%;}
+	.story h3 {font-size:25px;}
+	.story .t01 {margin-top:13px; font-size:14px;}
+	.story .t02 {margin-top:15px;font-size:13px;}
+	
+
+}
