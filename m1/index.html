@@ -64,7 +64,7 @@
     <!--폰트어썸 CDN 방식-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
     <!--xe-icon CDN 방식-->
-    <link rel="stylesheet" href="httsp://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!--구글폰트 링크-->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     
@@ -108,9 +108,9 @@
         .list_box .close{display: block;position: absolute;top: 1em;right: 1em;color: #fff;font-size: 1.2em;}
         
         /* sns 박스 메뉴*/
-        .sns_list{width: 150px;height: 240px; margin: 60px auto ;background: #fff;padding: 40px;}
-        .sns_list li{width: 150px;height: 50px;margin-top: 5px;} 
-        .sns_list li a{display: block;font-size:2em;line-height: 40px;text-align: center;color: #333;background: #fff;} 
+        .sns_list{width: 150px;height: 300px; margin: 80px auto;background: #fff;padding: 20px;}
+        .sns_list li{width: 150px;height: 75px;margin-top: 5px;} 
+        .sns_list li a{display: block;font-size:2.5em;line-height: 40px;text-align: center;color: #333;background: #fff;} 
         .sns_box .close{display: block;position: absolute;top: 1em;right: 1em;color: #fff;font-size: 1.2em;opacity: 1;}
         
         /* 이벤트 팝업창 박스*/
@@ -130,24 +130,16 @@
         /* 메인*/
         .main{clear: both;width: 100%;}
         .list{clear: both;width: 100%;padding-top: 60px;}
-        .list{clear: both;width: 100%;height: 100%;}
-        .list li{float: left;}
+        .list li{position: relative;}
         .list li.item1{width: 100%;border-top: 2px solid #fff;}
         .list li.item1 img{display: block;width: 100%;height: auto;overflow: hidden;}
-        .list li.item2,.list li.item3{ width: 50%;height: 50%;}
-        .list li.item2{background: #c1181f;border: 1px solid #c1181f;box-sizing: border-box;}
-        .list li.item3{background: #fff;border: 1px solid #c1181f;box-sizing: border-box;}
-        /*.ban_img{width: 50%;position: absolute;bottom: 0;right: 0;}
-        .ban_txt{width: 45%;position: absolute;top: 0;left: 0;padding-top: 10px;padding-left: 10px;}*/
-        
+        .list li.item2{width: 100%;height: 120px;background: #f0d3c5;border-top: 2px solid #fff;}
+        .list li.item3{width: 100%;height: 120px;background: #93816e;border-top: 2px   solid #fff;}
+        .ban_img{width: 50%;position: absolute;bottom: 0;right: 0;}
+        .ban_txt{width: 45%;position: absolute;top: 0;left: 0;padding-top: 10px;padding-left: 10px;}
         .list_com{color: #000;text-indent: 20px;padding-top: 80px;font-size: 1.6em;font-family: 'Nanum Pen Script', cursive;}
-        
-        .list li.item2 .fas{display: block;color: #c1181f;opacity: 0.5;font-size: 30px;text-align: center;width: 40px;height: 40px;margin: 10px auto;background: #fff;border-radius: 50% ;padding: 7px;vertical-align: middle;}        
-        .list li.item3 .fas{display: block;color: #fff;opacity: 0.5; font-size: 30px;text-align: center;width: 40px;height: 40px;margin: 10px auto;background: #c1181f;border-radius: 50% ;padding: 7px;vertical-align: middle;}
-        .item2 .ico_tit{font-size: 1.4em;color: #fff;text-align: center;font-size: 15px;}
-        .item2 .ico_com{color: #fff;text-align: center;padding-bottom: 10px;font-size: 14px;}
-        .item3 .ico_tit{font-size: 1.4em;color: #c1181f;text-align: center;font-size: 15px;}
-        .item3 .ico_com{color: #c1181f;text-align: center;padding-bottom: 10px;font-size: 14px;}
+        .item2 .list_com{color: #f51a23;}
+        .item3 .list_com{color : #f8db33;}
         
         /*메인 하단 블릿기호 - 추후 자동으로 넘어가도록 만들예정*/
         .btn_iconbox{width: 60px;height: 24px;position: absolute;z-index: 100;left: calc(50% - 30px);top: 280px;}
@@ -274,21 +266,24 @@
            </li>
            <li class="item2">
                 <a href="#">
-                   <i class="fas fa-store"></i>
-                   <h3 class="ico_tit">두끼떡볶이</h3>
-                   <p class="ico_com">새 매장을<br>소개합니다</p>
+                   <img src="img/ban_hanki_img.png" alt="" class="ban_img">
+                   <img src="img/ban_hanki_txt.png" alt="" class="ban_txt">
+                    <p class="list_com">맛있는 상상 !!</p>
                </a>
            </li>
            <li class="item3">
                 <a href="#">
-                  <i class="fas fa-map-marker-alt"></i>
-      <h3 class="ico_tit">두끼떡볶이</h3>
-                   
-                   <p class="ico_com">매장,<br>어디있죠?</p>
+                   <img src="img/ban_duki_img.png" alt="" class="ban_img">
+                   <img src="img/ban_duki_txt.png" alt="" class="ban_txt">
+                   <p class="list_com">그 이상의 즐거움 !!</p>
                </a>
            </li>
        </ul>
-   
+        <!--<ul class="btn_iconbox">
+            <li class="btn_icon item1"><button class="btn"></button></li>
+            <li class="btn_icon item2"><button class="btn"></button></li>
+            <li class="btn_icon item3"><button class="btn"></button></li>
+        </ul>-->
    </div>
    
    <section class="mv_page">
