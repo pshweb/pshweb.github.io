@@ -349,6 +349,7 @@ body {
     margin-bottom: 15px;
     border-bottom: 1px solid #c7c6c6;
 }
+.notice > div > h3 > p{display: inline-block;padding-left: 73%;}
 
 .notice > div > ul li {
     font-size: 12px;
@@ -992,6 +993,8 @@ body {
         width: 100%;
         height: 190px;
     }
+    
+    .notice > div > h3 > p{display: inline-block;padding-left: 85%;}
 
     /*share 콜센터*/
     .share {
@@ -1280,6 +1283,8 @@ body {
         width: 100%;
         height: 190px;
     }
+    
+     .notice > div > h3 > p{display: inline-block;padding-left: 58%;}
 
     .notice > div > ul {
         width: 70%;
