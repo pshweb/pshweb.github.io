@@ -129,28 +129,19 @@ body {
     position: relative;
     width: 100%;
     height: 650px;
-    transition: all 0.5s;
-    background-image: url(../img/visual_photo.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
+    transition: all 1s;
 }
 
-.v_wrap {
-    width: 1200px;
-    height: 650px;
-    position: relative;
-    margin: 0 auto;
-}
+
 
 .slogan {
-    width: 1200px;
-    height: 650px;
-    /* position: absolute;bottom:0;left: 0;*/
-    background-image: url(../img/visual_slogan_1.png);
+    width: 30%;
+    height: 30%;
+     position: absolute;top:20%;right: 20%;
+    background-image: url(../img/visual_slogan_2.png);
     background-repeat: no-repeat;
-    background-size: 37%;
-    background-position: 90% 40%;
+    background-size: 80%;
+    background-position: 90% 40%;z-index: 1;
 }
 /*
 
@@ -349,7 +340,7 @@ body {
     margin-bottom: 15px;
     border-bottom: 1px solid #c7c6c6;
 }
-.notice > div > h3 > p{display: inline-block;padding-left: 73%;}
+.notice > div > h3 > a{display: inline-block;padding-left: 73%;}
 
 .notice > div > ul li {
     font-size: 12px;
@@ -915,20 +906,19 @@ body {
     /* visual */
     #visual {
         width: 100%;
-        height: 320px;
+        height: 550px;
     }
 
-    .v_wrap {
-        width: 100%;
-        height: 320px;
-    }
 
-    .slogan {
-        width: 100%;
-        height: 100%;
-        background-size: 30%;
-        background-position: 75% 35%;
-    }
+.slogan {
+    width: 40%;
+    height: 40%;
+     position: absolute;top:20%;right: 15%;
+    background-image: url(../img/visual_slogan_2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 90% 40%;z-index: 1;
+}
 
     .txtBox {
         top: 100px;
@@ -994,7 +984,7 @@ body {
         height: 190px;
     }
     
-    .notice > div > h3 > p{display: inline-block;padding-left: 85%;}
+    .notice > div > h3 > a{display: inline-block;padding-left: 85%;}
 
     /*share 콜센터*/
     .share {
@@ -1192,20 +1182,19 @@ body {
     /* visual */
     #visual {
         width: 100%;
-        height: 200px;
+        height: 550px;
     }
+    
+.slogan {
+    width: 80%;
+    height: 80%;
+     position: absolute;top:5%;right: 8%;
+    background-image: url(../img/visual_slogan_2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+   z-index: 1;
+}
 
-    .v_wrap {
-        width: 100%;
-        height: 200px;
-    }
-
-    .slogan {
-        width: 100%;
-        height: 100%;
-        background-size: 35%;
-        background-position: 75% 35%;
-    }
 
 
     .txtBox {
@@ -1284,7 +1273,7 @@ body {
         height: 190px;
     }
     
-     .notice > div > h3 > p{display: inline-block;padding-left: 58%;}
+     .notice > div > h3 > a{display: inline-block;padding-left: 58%;}
 
     .notice > div > ul {
         width: 70%;

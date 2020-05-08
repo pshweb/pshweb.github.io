@@ -9,7 +9,15 @@
 	<link rel="shortcut icon" href="favicon/32.png" sizes="32x32">
 	<link rel="icon" href="favicon/32.png" sizes="32x32" type="image/x-icon">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" >
-	<script src="https://code.jquery.com/jquery-latest.js">  </script>
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+<!--	<script src="https://code.jquery.com/jquery-latest.js">  </script>-->
+	<script src="js/vendor/modernizr.custom.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/main.js"></script>
 		
 </head>
 
@@ -99,28 +107,36 @@
         </nav>
         <label for="toggle1" class="toggle_btn"></label>
     </header>
-    <div id="visual">
+    <div id="visual" class="slideshow">
         <!--visual영역 100%-->
-        <div class="v_wrap">
-            <!--visual사이즈담당. 1200px, 부모역할-->
-         
-            <div class="slogan"></div>
-         <!--
-            <div class="txtBox">                 
-                <h2>안전하고 안정적인 천연가스</h2>
-                <p>깨끗하고 경제적인 천연가스를 안전하게 보급하겠습니다.</p>
-                <h3>KOGAS 주요사업</h3>
-                <select name="" id="">
-                    <option value="">천연가스공급</option>
-                    <option value="">해외사업</option>
-                    <option value="">연구개발</option>
-                    <option value="">고객지원제도</option>
-                </select>
-                 
-            </div> txtBox -->
- 
-        </div><!-- v_wrap  -->
+         <div class="slogan"></div>
+                          
+        <div class="slideshow-slides">
+          
+            <ul>
+                <li>
+                    <a href="#" class="slide" id="slide-1"><img src="img/visual_photo.jpg" alt="" ></a>
+                </li>
+
+                <li>
+                    <a href="#" class="slide" id="slide-2"><img src="img/visual_photo_2.jpg" alt="" ></a>
+                </li>
+                <li>
+                    <a href="#" class="slide" id="slide-3"><img src="img/visual_photo_3.jpg" alt="" ></a>
+                </li>
+                <li>
+                    <a href="#" class="slide" id="slide-4"><img src="img/visual_photo_4.jpg" alt="" ></a>
+                </li>
+            </ul>
+        </div>
+        <div class="slideshow-nav">
+            <a href="#" class="prev">Prev</a>
+            <a href="#" class="next">Next</a>
+        </div>
+        <div class="slideshow-indicator"></div>
     </div><!-- visual-->
+    
+    
     <div id="content1">
         <!-- 9개 블럭영역-->
         <div class="application">
@@ -149,7 +165,7 @@
         </div>
         <div class="notice">
             <div>
-                <h3>보도자료<p>+</p></h3>
+                <h3>보도자료<a href="#">+</a></h3>
                 <ul>
                     <li><a href="#">제주시 관내 천연가스 본격 공급 개시</a><span>2020.03.24</span></li>
                     <li><a href="#">코로나19 극복 위한 임직원 성금 1.7억 원 기탁</a><span>2020.03.09</span></li>
