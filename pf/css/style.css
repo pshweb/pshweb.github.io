@@ -13,7 +13,7 @@ body{font-family: 'HUWindgoth120', sans-serif;
 ul,li{list-style: none;}
 a{color:#000000; text-decoration: none;}
 img{border:none;vertical-align: middle;}
-input{outline:none;}
+input,label,textarea{outline:none;border: 0;}
 button {outline: none;}
 
 #menu li {display:inline-block;color: #000;font-size:16px;width: 20%;text-align: center;}
@@ -28,6 +28,8 @@ button {outline: none;}
 #fullpage{width: 100%;height: 100%;}
 .section{width: 100%;height: 100%;position: relative;/*background-repeat: no-repeat;background-size: 100% 100%;background-position: center center;box-sizing: border-box;*/}
 
+/*section0*/
+
 #section0{width: 100%;height: 100%;position: relative;text-align: center;padding-top: 50px;overflow: hidden;background: url(../img/portfolio.jpg) no-repeat;background-size: 100%;}
 #section0 h1{font-size: 100px;font-family: "title1";text-transform:none;animation:txtAni 5s infinite 0s;padding-bottom: 0%;}
 #section0 h5{font-size: 26px;color: #555;}
@@ -36,8 +38,8 @@ button {outline: none;}
 /*section1*/
 
 #section1{width: 100%;}
-#profile{position: relative;width: 1700px;height: 800px;margin: 0 auto;overflow: hidden;padding: 50px 60px;box-sizing: border-box;}
-.prof1{float: left;width: 400px;height: 800px;box-sizing: border-box;padding-left: 70px;padding-top: 2%;}
+#profile{position: relative;width: 90%;height: 80%;margin: 0 auto;overflow: hidden;padding: 0% 2% ;box-sizing: border-box;}
+.prof1{float: left;width: 25%;height: 100%;box-sizing: border-box;padding-top: 2%;}
 .prof1 h2{font-size: 40px;font-family: "HUWindgoth110",sans-serif;padding-bottom: 20px;padding-left: 16%;}
 .prof1 h3{font-size: 20px;font-family: "HUWindgoth120",sans-serif;padding-bottom: 30px;padding-left: 16%;}
 .prof1 ul{width: 80%;padding-left: 0%;}
@@ -45,7 +47,8 @@ button {outline: none;}
 .prof1 ul li{font-size: 14px;font-family: "HUWindgoth120",sans-serif;line-height: 30px;font-weight: 600;/*background: #fff;*/}
 .icon{padding-left: 15%;}
 .profile_img img{width: 70%;height: auto;display: block;margin: 5% auto 5%;}
-.prof2{float: right; width: 68%;height: 700px;box-sizing: border-box;border-left: 1px #555 solid;padding: 40px 0;}
+
+.prof2{float: right; width: 75%;height: 100%;box-sizing: border-box;border-left: 1px #555 solid;padding: 40px 0;padding-left: 5%;}
 
 .list1{width: 100%;height: 180px;float: left;line-height: 25px;/*border-bottom:1px #fff solid;*/}
 .list1 p{width: 100%;font-family: :"HUWindgoth130",sans-serif;overflow: hidden;}
@@ -53,8 +56,8 @@ button {outline: none;}
 .list1 span.content{float: left;width: 85%;font-size: 15px;}
 
 /*추가된 부분*/
-.list23{clear: both;width: 1300px; box-sizing: border-box; overflow: hidden;padding-top: 50px;}
-.list2{float: left;width: 500px;height: 500px;overflow: hidden;box-sizing: border-box;}
+.list23{clear: both;width: 100%; box-sizing: border-box; overflow: hidden;padding-top: 50px;}
+.list2{float: left;width: 50%;height: 500px;overflow: hidden;box-sizing: border-box;}
 .title{font-size: 20px;text-align: center;padding-bottom: 30px;}
 .skill{width: 600px;height: 300px;padding: 20px 15px;box-sizing: border-box;margin: 0 auto;}
 .skill > div{clear: both;width: 100%;overflow: hidden;padding-bottom: 15px;padding-left: 40px;}
@@ -70,7 +73,7 @@ button {outline: none;}
 #jq .occupy{width: 60%;}
 #ms .occupy{width: 80%;}
 
-.list3{width: 500px;height: 450px;float: left;box-sizing: border-box;}
+.list3{width: 50%;height: 450px;float: left;box-sizing: border-box;}
 .hobby{width: 500px;height: 190px;}
 .hobby ul{width: 440px;overflow: hidden;margin: 0 auto;}
 .hobby ul li{float: left;width: 146px;font-size: 16px;font-weight: bold;text-align: center;padding: 0 0px;}
@@ -116,12 +119,33 @@ button:focus{outline: none;}
 
 .container > div:hover .po_title,.container > div:active .po_title{opacity: 1;}
 
-#section3{/*width: 100%;height: 1500px;*/display: none;}
-#section3 .container2 {position: relative;background: #eee;}
-.container2 h2{font-size: 40px;font-family: "HUWindgoth110",sans-serif;padding-bottom: 20px;}
+/*section3*/
 
-#footer { background:#babec3; width:100%; height:100px; position:absolute; bottom:0;text-align: center;}
-#footer p { color:#333; font-size:15px; line-height:100px;}
+#section3{width: 100%;}
+#section3 .contact {width: 90%;height: 80%;margin: 0 auto;overflow: hidden;padding: 0px ;box-sizing: border-box;}
+.contact h2{font-size: 40px;font-family: "HUWindgoth110",sans-serif;padding: 0 5% 2%;}
+
+.row{width: 90%;height: 65%;padding: 5%;box-sizing: border-box; border: 2px solid #ccc;margin: 0 auto;border-radius: 10px;}
+.col-sm-6{float: left;width: 50%;height: 100%;box-sizing: border-box;}
+.footer-content{width: 100%;height: 100%;box-sizing: border-box;margin: 0 auto;padding: 0 10%;}
+
+.list-icons{width: 90%;padding-top: 5%;}
+.list-icons li{line-height: 35px;padding-left: 30%;font-size: 17px;}
+.list-icons li i{width: 30px;height: 30px;font-size: 18px;line-height: 40px;color: #11b59c;}
+
+.form-group{margin: 2% 0;position: relative;}
+.form-group label{width: 100%;font-size: 16px;}
+.form-group input{width: 90%;line-height: 38px;padding-left: 2%;border: 1px solid #ccc;}
+.form-control{font-size: 14px;}
+.form-group textarea{width: 90%;padding-left: 2%;padding-top: 2%;border: 1px solid #ccc;}
+.form-group i{color: #f66c6c;font-size: 14px;position: absolute;top: 30%;right: 10%;}
+.form-group i.fa-pencil-alt{color: #f66c6c;font-size: 14px;position: absolute;top: 5%;right: 10%;}
+.btn-default{background: #fff;border: 1px solid #ccc;color: #f66c6c;width: 100px;line-height: 30px;}
+.form-group input:focus,.form-group textarea:focus{box-shadow: 0 0 4px #00a7ff;}
+
+
+#footer { width:100%; height:100px; position:absolute; bottom:0;text-align: center;background: #f66c6c;}
+#footer p { color:#fff; font-size:15px; line-height:100px;}
 
 /**********************************************************/
 
@@ -134,7 +158,7 @@ button:focus{outline: none;}
 #fullpage{width: 100%;height: auto;}
 .section{width: 100%;height: auto;}
 
-#section0{width: 100%;height:190px;padding-top: 0%;}
+#section0{width: 100%;height:230px;padding-top: 0%;}
 #section0 h1{font-size: 30px;padding-bottom: 0%;}
 #section0 h5{width: 60%;font-size: 11px;color: #555;padding-top: 5%;padding-left: 0%;margin: 0 auto;}
 #section0 p{width: 80%;font-size: 11px;padding: 1% 0% 0% ;color: #555;margin: 0 auto;}    
@@ -161,7 +185,7 @@ button:focus{outline: none;}
 .skill{width: 100%;height: 100%;padding: 10px 30px;box-sizing: border-box;margin: 0 auto;}
 .skill > div{clear: both;width: 100%;overflow: hidden;padding-bottom: 15px;padding-left: 0px;}
 .skill p{width: 70px;font-size: 12px;font-weight: 600;float: left;padding-top: 5px;box-sizing: border-box;}
-.skill .bar{float: left;width: 200px;height: 30px;}
+.skill .bar{float: left;width: 100%;height: 30px;}
 .skill .fullbar{width: 100%;height: 25px;background: #eee; position: relative;overflow: hidden;}
 .skill .occupy{background: #f66c6c;height: 100%;color: #fff;position: absolute;top: 0;left: 0px;}
 .skill .occupy > span{float: right;margin-right: 10px;line-height: 25px;font-size: 14px; font-family: "HUWindgoth130",sans-serif;}
@@ -180,7 +204,7 @@ button:focus{outline: none;}
 
 .pers{width: 100%;height: 160px;margin-top: 30px;}
 .title2{font-size: 16px;text-align: center;padding-bottom: 20px;}
-.pers > div{clear: both;width: 84%;overflow: hidden;padding-bottom: 15px;margin: 0 auto;}
+.pers > div{clear: both;overflow: hidden;padding-bottom: 15px;margin: 0 auto;}
 .left{width: 50px;font-weight: 600;float: left;text-align: center;}
 .right{width: 50px;font-weight: 600;float: right;text-align: center;}
 .pers .bar2{float: left;width: 180px;height: 10px;padding-top: 2px;}
@@ -207,7 +231,7 @@ button:focus{outline: none;}
 #section2{width: 100%;height: 100%;margin-top: 5% auto 0; }
 #section2 .intro {left: 0;width: 90%;}
 .art{width: 100%;height: 130px;margin: 0 auto;padding-top: 5%;box-sizing: border-box;}
-.art h2{font-size: 40px;font-family: "HUWindgoth110",sans-serif;padding-bottom: 3%;padding-left: 5%;}
+.art h2{font-size: 30px;font-family: "HUWindgoth110",sans-serif;padding-bottom: 3%;padding-left: 0%;}
     
 .container{overflow:hidden;width:100%;box-sizing:border-box;backface-visibility: hidden;min-height: 820px;}
 .container:after{content: "";display: inline-block;width: 100%;}
@@ -224,11 +248,34 @@ button:focus{outline: none;}
 
 .container > div:hover .po_title,.container > div:active .po_title{opacity: 1;display: block;}
 
-/*seciotn3*/    
-    
-#section3{/*width: 100%;height: auto;*/display: none;}
+/*section3*/
 
-#footer { background:#babec3; width:100%; height:50px; position:absolute; bottom:0;text-align: center;}
-#footer p { color:#333; font-size:13px; line-height:50px;}
+#section3{width: 100%;}
+#section3 .contact {width: 90%;height: 100%;padding: 0px ;box-sizing: border-box;overflow: hidden;}
+.contact h2{font-size: 30px;font-family: "HUWindgoth110",sans-serif;padding: 0 1.5% 2%;}
+
+.row{width: 100%;height:100% ;padding: 0%;box-sizing: border-box; border: none;}
+.col-sm-6{float: none;width: 100%;height: 100%;box-sizing: border-box;}
+.footer-content{width: 90%;height: 100%;box-sizing: border-box;padding: 0;}
+
+.list-icons{width: 100%;padding-top: 0%;margin-bottom: 10%;}
+.list-icons li{line-height: 30px;padding-left: 0%;font-size: 15px;}
+.list-icons li i{width: 30px;height: 30px;font-size: 16px;line-height: 40px;color: #11b59c;}
+
+.form-group{margin: 2% 0;position: relative;}
+.form-group label{width: 100%;font-size: 16px;}
+.form-group input{width: 100%;line-height: 30px;padding-left: 2%;border: 1px solid #ccc;margin: 0 auto;}
+.form-control{font-size: 14px;}
+.form-group textarea{width: 100%;padding-left: 2%;padding-top: 2%;border: 1px solid #ccc;}
+.form-group i{color: #f66c6c;font-size: 14px;position: absolute;top: 30%;right: 2%;}
+.form-group i.fa-pencil-alt{color: #f66c6c;font-size: 14px;position: absolute;top: 5%;right: 2%;}
+.btn-default{background: #fff;border: 1px solid #ccc;color: #f66c6c;width: 100px;line-height: 30px;}
+.form-group input:focus,.form-group textarea:focus{box-shadow: 0 0 4px #00a7ff;}
+
+
+#footer { width:100%; height:50px; position:relative;text-align: center;background: #f66c6c;margin-top: 5%;overflow: hidden;}
+#footer p { color:#fff; font-size:14px; line-height:50px;}    
+    
+
 
 /**********************************************************/
