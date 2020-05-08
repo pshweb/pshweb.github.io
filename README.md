@@ -1,2 +1,0 @@
-# pshweb.github.io
-portfolio
