@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>건강한 약콩두유</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/16.ico">
+    <!-- 신형 브라우저와 안드로이드 폰 -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/32.png">
+    <!-- 아이폰3 이하 -->
+    <link rel="apple-touch-icon" size="57x57" href="favicon/57.png">
+    <!-- 아이패드 -->
+    <link rel="apple-touch-icon" size="72x72" href="favicon/72.png">
+    <!-- 아이폰4 이상 -->
+    <link rel="apple-touch-icon" size="114x114" href="favicon/114.png">
+    <!-- IE10 이상 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 
+    <meta name="msapplication-TileImage" content="favicon/144.png">
+
+    <!-- 메타데이터 개발 공통 사항 -->
+    <!-- 데스크탑에서 IE로 웹 문서를 열 때 가장 최신 버전으로 실행 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <!-- 앱(웹 사이트)의 이름 -->
+    <meta name="application-name" content="soymilk">
+    <!-- 웹 사이트 저작자의 이름 -->
+    <meta name="author" content="PARK">
+    <!-- 현재 문서의 설명 -->
+    <meta name="description" content="soymilk"> 
+    <!-- 현재 문서의 저작도구 -->
+    <meta name="generator" content="bobsnu">
+    <!-- 검색엔진에서 검색되게할 키워드 -->
+    <meta name="keywords" content="두유,서울대두유,약콩두유,soymilk">
+    
+    <!-- 반응형, 모바일, 태블릿 사이트 일 경우 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <!--    타이포 폰트 연결-->
+    <link rel="stylesheet" href="./font2.css">
+    <link rel="stylesheet" href="./reset2.css" >
+    <script src="jquery-latest.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        var wd = $(window).width();
+        var cnt = $(".imgBox li").length - 1;
+        var intv = setInterval(function(){ nextAni(); }, 5000);
+        
+        function nextAni(){
+               $(".imgBox").not(":animated").animate({"margin-left":-wd+"px"}, 800, function(){
+                   $(".imgBox li").eq(0).appendTo($(".imgBox"));
+                   $(".imgBox").css("margin-left", "0px");
+                   $(".numBtnFrame li").eq(0).appendTo($(".numBtnFrame"));
+                   $(".numBtnFrame li button").removeClass("on");
+                   $(".numBtnFrame li").eq(0).find("button").addClass("on");
+               }); 
+        }
+        function prevAni(){
+               $(".imgBox li").eq(cnt).prependTo($(".imgBox"));
+               $(".imgBox").css("margin-left", -wd+"px");
+               $(".imgBox").not(":animated").animate({"margin-left":"0px"}, 800, function(){
+                   $(".numBtnFrame li").eq(cnt).prependTo($(".numBtnFrame"));
+                   $(".numBtnFrame li button").removeClass("on");
+                   $(".numBtnFrame li").eq(0).find("button").addClass("on");
+               }); 
+        }
+        $(".lrBtn.left").click(function(){
+            clearInterval(intv);
+            prevAni();
+            intv = setInterval(function(){ nextAni(); }, 5000);
+        });
+        $(".lrBtn.right").click(function(){
+            clearInterval(intv);
+            nextAni();
+            intv = setInterval(function(){ nextAni(); }, 5000);
+        });
+    });    
+    </script>
+    <script>
+    $(document).ready(function(){
+       $("#gnb label").click(function(){
+           var th = $(this).attr("for");
+           var thId = "#"+th;
+           var scObj = $(thId).offset();
+           var scDist = scObj.top;
+           $("body, html").not(":animated").animate({"scrollTop": scDist}, 600);
+           $("#gnb label").removeClass("on");
+           $(this).addClass("on");
+       }); 
+    });    
+    </script>
+    <script>
+    $(document).ready(function(){
+        $(".popBtn2").click(function(){
+            window.open('event.html','title','height=' + screen.height + ',width=' + screen.width + 'fullscreen=yes');            
+        });
+    });    
+    </script>
+    <!--    적응형 미디어 스크립트 연결    -->
+<!--    <script src="media4.js"></script>    -->
+   
+    <style>
+    .header { width:100%; height:auto; background-color:#000; 
+          position:fixed;
+        top:0; left:0; z-index:99998; }  
+    .hdWrap1 { width: 100%; height:80px; }
+    .logo { width:100%; height:80px; background-image:url("img/footer_logo.png"); text-indent:-9999px; 
+        background-repeat: no-repeat; background-position: center center; background-size:auto 30px; border-bottom:1px solid #fff; 
+        background-color:#f8e8c4;  position:relative; }    
+    .hdWrap2 { width:100%; height:100vh; position:fixed; z-index:99999; top: -800px; left:0; transition:0.5s; min-height:700px; background:#f8e8c4; }
+    #menuOpen:checked ~ .hdWrap2 {top:0;  }
+    #gnb { width:100%; height:auto; margin:0 auto; }
+    #gnb li { line-height:80px; width:100%; text-align: center; height: 90px; line-height:90px; background:#f8e8c4; border-bottom:1px solid #fff; }
+    #gnb li label { display:block; color:#de9e2c; 
+        text-align: center; font-size:16px; cursor:pointer; font-weight: 600; }
+    .menuBtn { display:block; position:absolute; height: 80px; width:80px; right:20px; top:0; background-repeat: no-repeat; background-position:center center; z-index:99; }  
+    .openBtn { background-image:url("img/menuOpen.png");
+        background-size:auto 30px; }    
+    .closeBtn { background-image:url("img/menuClose.png"); background-size:auto 40px;}    
+    </style>
+    <style>
+    .pg { clear:both; width:100%; min-height:400px; position:relative; }
+    #main { width: 100%; height: 100%; }    
+    .vs { clear:both; position:relative; width:100%; overflow:hidden;
+        height:100%; }
+    .imgBox { width:400%; height:100%;  }
+    .imgBox li { width:25%; float:left; height:100%; 
+        background-repeat: no-repeat; background-position:center bottom; background-size:auto 100%; position:relative; }
+    .imgBox li.item1 { background-image:url("img/m1.jpg"); }
+    .imgBox li.item2 { background-image:url("img/m2.jpg"); }
+    .imgBox li.item3 { background-image:url("img/m3.jpg"); }
+    .imgBox li.item4 { background-image:url("img/m4.jpg"); }
+   
+    .lrBtnBox { position:absolute; z-index:60; top:40%; width:100%; }
+    .lrBtn { display:block; width: 40px; height:40px; background-size:40px 40px; background-repeat: no-repeat; background-position:center center; background-color:transparent; 
+        position:absolute; border-radius:27px; cursor:pointer; }
+    .lrBtn.left { background-image:url("img/prevBtn.png"); left:10%; }
+    .lrBtn.right { background-image:url("img/nextBtn.png"); 
+        right:10%; }
+    .numBtnBox { position:absolute; bottom:105px; z-index:61; left: 0; 
+        width:100%; height:40px; }    
+   
+    .numBtnFrame { width:100px; position:relative; margin:0 auto; height:40px; }
+    .numBtnFrame li { position:absolute; top:100px; width:10px; height: 10px; border-radius:50%;}
+    .numBtnFrame li.item1 { left:0px; }    
+    .numBtnFrame li.item2 { left:30px; }    
+    .numBtnFrame li.item3 { left:60px; }    
+    .numBtnFrame li.item4 { left:90px; }
+    .numBtn { display:block; width: 10px; height: 10px; 
+        background-color:#f7e7b5;cursor:pointer; border-radius: 50%;}
+    .numBtn.on {background-color:#f2b700;cursor:pointer; border-radius: 50%; }         
+    </style>
+    <style>
+    #sub1 { width: 100%; height:auto; background-image:url("img/section_2_1.jpg"); background-repeat: no-repeat; 
+        background-position:center top; border:0; outline:0; 
+        background-size:100% auto; position:static; overflow:visible; }
+    .titBox1 { clear:both; padding-top:80px; width:100%; margin:0px auto; text-align:center; color:#444;  }
+    .sub1Tit1 { font-size:20px; font-weight:500; }
+    .sub1Tit1 .txt { font-size:24px; font-weight:500; } 
+    .sub1Tit2 { font-size:15px; font-weight:500; line-height:1.6; display:none; }
+    .sub1Tit2 .txt { font-weight:500; }  
+    .grid { clear:both; width:100%; margin:0 auto; padding-top:20px; 
+        background:#fff; height:auto; }
+    .grid .col4 { width:100%; background:#fff; overflow:hidden; }  
+    .boxFrame { border-top:1px solid #ccc; text-align: center;  clear:both;
+        background:#fff; min-height:150px; overflow:hidden;  } 
+    .grid li:last-child .boxFrame{border-bottom:1px solid #ccc;}
+        
+    .boxImg { display:block; width:50%; height: auto; float:left; min-height:150px;  }    
+    .boxCom { padding:10px; width:50%; font-size:12px; font-weight:500; float:left; box-sizing:border-box; padding-top: 35px; min-height:150px; }  
+    .titBox2 { clear:both; padding-top:16px; width:100%; margin:0px auto; text-align:center; color:#444;  }
+    .sub1Tit3 { font-size:16px; font-weight:500; }
+    .sub1Tit3 .txt { font-weight:500; }   
+    .sub1Com1 { font-size:12px; font-weight:500; padding:20px; padding-top: 12px;  padding-bottom:67px; } 
+    .sub1Com1 .txt { font-weight:500;  }    
+    </style>
+    <style>
+    #sub2 { width: 100%; height:auto; background-image:url("img/C1.jpg"); background-repeat: no-repeat; 
+        background-position:center top; border:0; outline:0; margin-top:-1px;  background-size:100% auto; position:static; overflow: visible;} 
+    .titBox3 { color:#555; text-align:center; }    
+    .sub2Tit1 { padding-top:20px; padding-bottom:20px; font-size:20px; }
+    .sub2Tit1 .subSpan{ color: #2169dd;}
+    .sub2Com1 { font-size:14px; line-height: 1.3; padding:20px; padding-top:30px; 
+        border-top:2px solid #fff; font-weight: 500;}    
+    #sub2_1 { width: 100%; height:750px; background-image:url("img/C3.jpg"); background-repeat: no-repeat; 
+        background-position:center center; border:0; outline:0; margin-top:-1px; background-size:100% auto;  position:static; overflow:visible; }    
+    </style>
+    <style>
+    #sub3  { width: 100%; height:auto; background-image:url("img/C2.jpg"); background-repeat: no-repeat; 
+        background-position:center top; border:0; outline:0; margin-top:-1px; background-size:100% auto;  position:static; overflow:visible;}      
+    .sub2Tit1 .greenTxt { color: #89bf69; }
+    #sub3 .sub2com1 { padding-bottom:50px; }    
+    .popBox { width:100%; height: 100%; height:100%; 
+        background:rgba(0,0,0,0.6); position:fixed; top:0; 
+        left:0; z-index:80; display:none; }    
+    .popFrame { width:100%;  position:relative;
+        border:1px solid #ccc; }   
+    .popTit { color: #f2cb85;   text-shadow:0px 0px 6px #333, 0px 0px 5px #222, 0px 0px 4px #111, 0px 0px 3px #000;
+        text-indent:20px; line-height:60px; font-size:20px;  } 
+    .popCloseBtn { display:block; width:60px; height:60px; position:absolute; right:0; top:0; background-image:url("./src/btn_close.png"); background-repeat: no-repeat; background-position: center center; cursor:pointer; }
+    .popContTit { color:#474747;    font-weight: 400;    font-size:18px;  line-height:1.2;  text-align: center; padding-left:50px; padding-right: 50px; padding-top: 35px; }  
+    .popImgBox { width:80%; margin:15% auto; position:relative;
+        }  
+    .popImgBox img { display:block; width: 100%; height: auto; }    
+    .ckItem { display:none; } 
+    /*#popCk1:checked ~ .popBox { display:block; }   */
+    
+    </style>
+    <style>
+    #sub4  { width: 100%; height:auto; background-image: url("img/C5.jpg"); background-repeat: no-repeat; 
+        background-position:center top; border:0; outline:0; margin-top:-1px; background-size:100% auto;  position:static; overflow:visible; }
+    #sub4_1 .sub2Tit1 { padding-bottom:10px; padding: 20px;border-bottom: 1px solid #fff;}    
+    .sub2Tit1 .cTxt { color: #dda43f; }
+    .sub2Tit2 { font-weight:500;   font-size:16px; padding-bottom: 50px; }  
+        
+    #sub4_1  { width: 100%; height:auto; background-image: url("img/C4.jpg"); background-repeat: no-repeat; 
+        background-position:center top; border:0; outline:0; margin-top:0; background-size: 100%;  position:static; overflow:visible;}
+        
+    #sub4_2  { width: 100%; height:auto; border:0; outline:0; margin-top:-1px; background-size:auto 100%;  position:static; overflow:visible; background: #fff5f5;} 
+    .titBox4 { width:100%; margin:0 auto; color:#555; 
+        text-align:center; }
+    .sub4Tit1 { font-size:19px; padding-top:20px; padding-bottom:20px; 
+        font-weight:600; }   
+    .sub4Tit1 .wTxt { font-size:26px;  font-weight:600;  } 
+    .sub4Com1 { font-weight:600;   font-size:16px; padding-top:10px; 
+        border-top:2px solid #fff; padding-bottom:10px; }    
+    .iconLst { clear:both; width:100%; margin:0 auto; color:#555; padding-top:30px; padding-bottom: 30px; height:500px; }
+    .iconLst li { float:left; text-align:center; }
+    .col3 { width:50%;  }    
+    .iconTit { height:auto; font-size:16px; padding:15px; line-height: 1.2; }  
+    .iconTxt { font-weight:500;   font-size:14px; padding:15px; 
+         padding-top:10px; line-height: 1.2; margin-bottom: 10px; }    
+        
+    #sub4_3  { width: 100%; height:auto; background-color:#fff;
+        position:static; overflow:visible;
+        background-position:left 10%, right 240%; background-size:auto;
+    }   
+    .titBox5 { width:100%; margin:0 auto; text-align:center;
+        color:#474747;  }
+    .sub4Tit2 {  font-weight:700; font-size:20px;
+    line-height:1.2; padding-top:20px; padding-bottom:15px; }    
+    .sub4Com2 {  font-weight:600; font-size:14px;  line-height:1.2;
+        border-bottom:2px solid #d9d9d9;  padding:20px;  padding-bottom:15px;
+        padding-top:5px; }
+    .LstFrame { width:100%; margin:0 auto; } 
+    .cateTit { color:#000;  font-weight:700;  font-size:16px;
+        margin-top:40px;    margin-bottom:15px;  text-align:left; 
+        text-indent:20px; }    
+    .imgLst { background:#fff; } 
+    .imgLst li { padding:10px 10px 10px 10px; margin-bottom:5px; padding-bottom: 5px;  }
+    .imgLst .itemBox { min-height:300px; padding-left:46%; 
+        background-repeat:no-repeat; background-position:left center;
+        background-size:42%; } 
+    .itemBox { color:#482c29; background:#fff;}  
+    .itemBox.item1 { background-image:url("img/d1.png"); }    
+    .itemBox.item2 { background-image:url("img/d2.png"); }    
+    .itemBox.item3 { background-image:url("img/d3.png"); }    
+    .itemBox.item4 { background-image:url("img/u1.png"); }   
+    .itemBox.item5 { background-image:url("img/u2.png"); }
+    .itemBox.item6 { background-image:url("img/u3.png"); }
+    .itemTit { font-size:18px;  font-weight:400; line-height:1.3;padding-top: 40px; }
+    .itemTit .txt { font-size:19px; font-weight:700; padding-bottom:20px; display:block; }  
+    .itemCon { font-size:14px; font-weight:400; line-height:1.3; 
+        padding-top:20px; border-top:2px solid #d9d9d9; width:100%; }
+    .itemCon .strong { font-weight:600; } 
+    .itemComent { font-size:12px; font-weight:700; }
+    .itemBox a { color:#482c29; } 
+    .itemMore { display:block;   width:100px;  height:30px;
+        line-height:24px;    font-size:14px;  color:#482c29;
+        text-align:center;   border:2px solid #482c29;
+        box-sizing:border-box;   font-weight:600; margin-top: 20px; }  
+    .itemMore:hover { border:2px solid #f2cb85; color:#f2cb85; }   
+
+    </style>
+    <style>
+    .footer { width: 100%; clear:both; height:140px;  background:#f8e8c4;   color:#777; 
+        }   
+    .ftWrap { width:100%; margin:0 auto; 
+        background-image:url("img/footer_logo.png");
+        background-repeat:no-repeat; 
+        background-position:center 15px; background-size: 30%;}    
+    .copyright { text-align:center; font-size:12px; line-height:1.3; 
+        padding-top:50px; font-weight:500; }    
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="hdWrap1">
+        <h1 class="logo">로고</h1>
+        <label for="menuOpen" class="menuBtn openBtn"></label>
+    </div>
+    <input type="checkbox" id="menuOpen" class="ckItem">
+    <div class="hdWrap2">
+        <h1 class="logo">로고</h1>
+        <label for="menuOpen" class="menuBtn closeBtn"></label>
+        <nav id="gnb">
+            <ul class="mnb clearfix">
+                <li><label for="main">브랜드</label></li>
+                <li><label for="sub1">제품소개</label></li>
+                <li><label for="sub2">두유레시피</label></li>
+                <li><label for="sub3">언론 속 약콩두유</label></li>
+                <li><label for="sub4">이벤트</label></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="pg" id="main">
+    <figure class="vs">
+        <ul class="imgBox">
+            <li class="item1">
+               
+            </li>
+            <li class="item2">
+               
+            </li>
+            <li class="item3">
+               
+            </li>
+            <li class="item4">
+               
+            </li>
+        </ul>
+        <ul class="lrBtnBox">
+            <li class="leftFr"><button class="lrBtn left"></button></li>
+            <li class="rightFr"><button class="lrBtn right"></button></li>
+        </ul>
+        <div class="numBtnBox">
+            <ul class="numBtnFrame">
+                <li class="item1">
+                    <button class="numBtn on"></button>
+                </li>
+                <li class="item2">
+                    <button class="numBtn"></button>
+                </li>
+                <li class="item3">
+                    <button class="numBtn"></button>
+                </li>
+                <li class="item4">
+                    <button class="numBtn"></button>
+                </li>
+            </ul>
+        </div>
+    </figure>
+</div>
+<div class="pg" id="sub1">
+    <div class="titBox1">
+        <h2 class="sub1Tit1">기본부터 건강한, 
+            <span class="txt">약콩두유</span>
+        </h2>
+        <h3 class="sub1Tit2">온 가족이 함께하니까, 
+            <span class="txt">맛과 건강을 함께 생각</span>
+            합니다.
+        </h3>
+    </div>
+    <ul class="grid">
+        <li class="col4">
+            <div class="boxFrame">
+                <img src="img/a1.jpg" alt="서울대학교" class="boxImg">
+                <p class="boxCom">서울대학교와 코넬대학교,<br>
+                미네소타대학교가 함께<br>
+                '약콩'을 연구했습니다.</p>
+            </div>
+        </li>
+        <li class="col4">
+            <div class="boxFrame">
+                <img src="img/a3.jpg" alt="통째로" class="boxImg">
+                <p class="boxCom">껍찔째 통째로 갈아넣어 <br>
+                영양이 풍부한 약콩!<br> 
+                </p>
+            </div>
+        </li>
+        <li class="col4 last">
+            <div class="boxFrame">
+                <img src="img/a2.jpg" alt="영양" class="boxImg">
+                <p class="boxCom">서울대학교 연구로 <br>
+                밝혀지는 약콩의 효능<br> 
+                </p>
+            </div>
+        </li>
+    </ul>
+    <div class="titBox2">
+        <h2 class="sub1Tit3">약콩효능
+            <span class="txt"></span>
+        </h2>
+        <p class="sub1Com1"><br>
+        <span class="txt">다른 콩(노란콩,검은콩)보다 우수한 약콩!</span><br>대두 및 일반 검은콩 대비 폴리페톨,프로안토시아니딘이 <br>풍부한 것으로 연구됨</p>
+    </div>
+</div>
+<div class="pg" id="sub2">
+    <div class="titBox3">
+        <h2 class="sub2Tit1">약콩두유에 사용된 원료</h2>
+        <p class="sub2Com1">기본부터 건강한 두유소재 </p>
+    </div>
+</div>
+<div class="pg" id="sub2_1"></div>
+<div class="pg" id="sub3">
+    <div class="titBox3">
+        <h2 class="sub2Tit1">약효가 탁월한<br>
+            <span class="greenTxt"> 약콩(쥐눈이콩), 서목태</span>
+        </h2>
+        <p class="sub1Com1">약콩은 예로부터 약효가 탁월해 우리선조들은 <br>집집마다 기침이나 열병,
+        홍역과 갖가지 중독시에 <br>해독약으로 쓰기위해 재배해 왔습니다<br>
+        <span class="txt">또한 당뇨,고혈압,동맥경화,심장질환 등 <br>각종 성인병 예방과 치료에도 좋다고 알려져 있습니다.</span><br</p>
+    </div>
+   <!-- <input type="checkbox" id="popCk1" class="ckItem">
+    <div id="popBox1" class="popBox">
+        <div class="popFrame">
+            <h3 class="popTit">노블의 건강 블렌딩</h3>
+            <label for="popCk1" class="popCloseBtn"></label>
+            <h2 class="popContTit">그린커피빈에서 추출한 폴리페놀이 건강에 좋은 이유!</h2>
+            <div class="popImgBox">
+                <img src="./mobile/s_pop_4.png" alt="총 폴리페놀 함량">
+            </div>
+        </div>
+    </div>-->
+</div>
+<div class="pg" id="sub4">
+    <div class="titBox3">
+        <h2 class="sub2Tit1">강원 청정 지역의 <span class="subSpan"> 약콩</span>
+        </h2>
+        <p class="sub2Com1">청정지역 강원도 평창, 정선에서 자란 약콩을<br> 직접 수매하여 생산합니다
+
+    </div>
+</div>
+<div class="pg" id="sub4_1">
+    <div class="titBox3">
+        <h2 class="sub2Tit1">하나하나 따져 보셨다면,<br>
+            <span class="cTxt">바로 고소하고 맛있는 <br>약콩두유입니다</span>
+        </h2>
+       
+    </div>
+</div>
+<div class="pg" id="sub4_2">
+    <div class="titBox4">
+        <h2 class="sub4Tit1">약콩두유 알고마시기
+            <span class="wTxt"></span>
+        </h2>
+        <p class="sub4Com1">약콩두유 먹을 때, 꼭 기억해야 할 것</p>
+    </div>
+    <ul class="iconLst">
+        <li class="col3">
+            <div class="iconBoxFrame">
+                <img src="img/b1.png" alt="커피원두" class="iconImg">
+                <h3 class="iconTit" style="">1 흔들어 드세요</h3>
+                <p class="iconTxt">안정제 유화제 등을  <br>
+                넣지않아 더 잘  가라 <br>
+                앉으니 충분히 흔들어 <br>  
+                 드시기 바랍니다.<br>
+                </p>
+            </div>
+        </li>
+        <li class="col3">
+            <div class="iconBoxFrame">
+                <img src="img/b2.png" alt="그린커피" class="iconImg">
+                <h3 class="iconTit" style="">2 유통기한 8개월 <br>
+                </h3>
+                <p class="iconTxt">약콩두유는 <br>
+                 멸균처리된 제품이기<br>
+                때문에 유통기한이 <br>
+                8개월입니다.</p>
+            </div>
+        </li>
+        <li class="col3">
+            <div class="iconBoxFrame">
+                <img src="img/b3.png" alt="밀크커피" class="iconImg">
+                <h3 class="iconTit" style="">3 보관방법</h3>
+                <p class="iconTxt">직사광선을 피해 <br>
+                서늘한 곳에 보관하시거나 <br>
+                냉장보관 하시면 됩니다<br>
+                </p>
+            </div>
+        </li>
+        <li class="col3 last">
+            <div class="iconBoxFrame">
+                <img src="img/b4.png" alt="코코넛오일" class="iconImg">
+                <h3 class="iconTit" style="">4 주의사항</h3>
+                <p class="iconTxt">우유,땅콩,밀,메밀,<br>
+                토마토,호두를 사용한 <br>
+               제품과 같은 시설에서<br>
+제조하고 있습니다</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="pg" id="sub4_3">
+    <div class="titBox5">
+        <h2 class="sub4Tit2">건강을 맛보다</h2>
+        <h3 class="sub4Com2">국산약콩을 통째로 갈아넣은 <br>
+        건강한 약콩두유를 즐겨보세요</h3>
+    </div>
+    <div class="LstFrame">
+        <h3 class="cateTit">Original</h3>
+        <ul class="imgLst con1">
+            <li class="itemSpl">
+                <div class="itemBox item1">
+                    <h2 class="itemTit">건강한 약콩두유 <br>
+                        <span class="txt">약콩두유 오리지널</span>
+                    </h2>
+                    <p class="itemCon">
+                         <span class="strong">국산 약콩</span>을 <span class="strong">통째로 갈아 넣어</span>약콩의 풍부한 영양성분을 그대로 담은 <span class="strong">기본부터 건강한 약콩두유.</span> <br>
+                        
+                        <span class="itemComent">(190mg / 75kcal)</span>
+                    </p>
+                    <a href="" class="itemMore">제품 구매하기</a>
+                </div>
+            </li>
+            <li class="itemSpl">
+                <div class="itemBox item2">
+                    <h2 class="itemTit">건강한 약콩두유 <br>
+                        <span class="txt">배로 맛있는 약콩두유</span>
+                    </h2>
+                    <p class="itemCon">
+                        <span class="strong">기본부터 건강한</span> 약콩두유에, 국산 배농축액을 더해<br>
+                        <span class="strong">배로 맛있고</span> <span class="strong">건강한약콩두유.</span> <br>
+                        
+                        <span class="itemComent">(190mg / 80kcal)</span>
+                    </p>
+                    <a href="" class="itemMore">제품 구매하기</a>
+                </div>
+            </li>
+            <li class="itemSpl">
+                <div class="itemBox item3">
+                    <h2 class="itemTit">건강한 약콩두유<br>
+                        <span class="txt">쌀눈으로 더 똑똑한! <br>약콩두유</span>
+                    </h2>
+                    <p class="itemCon">
+                         <span class="strong">두뇌 활동이 </span><br>
+                        <span class="strong">많은 학생 및 직장인을 위한 프리미엄 영양두유.</span><br>
+                        <span class="itemComent">(190mg / 95kcal)</span>
+                    </p>
+                    <a href="" class="itemMore">제품 구매하기</a>
+                </div>
+            </li>
+        </ul>
+        <h3 class="cateTit">Premium</h3>
+        <ul class="imgLst con2">
+            <li class="itemSpl">
+                <div class="itemBox item4">
+                    <h2 class="itemTit">건강한 약콩두유 <br>
+                        <span class="txt">약콩베베</span>
+                    </h2>
+                    <p class="itemCon">
+                        <span class="strong">우리아이 하루 건강 솔루션!</span><br> 
+                        <span class="strong">100% 국산약콩과 자연 </span>에서 얻은 9가지 국산 과채, 곡류로영양을 맞춘 
+                        <span class="strong">우리아이 하루 건강 솔루션.</span> <br>
+                       
+                        <span class="itemComent">(140mg / 65kcal)</span>
+                    </p>
+                    <a href="" class="itemMore">제품 구매하기</a>
+                </div>
+            </li>
+            <li class="itemSpl">
+                <div class="itemBox item5">
+                    <h2 class="itemTit">건강한 약콩두유 <br>
+                        <span class="txt">약콩100</span>
+                    </h2>
+                    <p class="itemCon">
+                        <span class="strong">껍질째 통째로 갈아넣은 <br>약콩100</span><br>
+                        
+                        <span class="itemComent">(190mg / 70kcal)</span>
+                    </p>
+                    <a href="" class="itemMore">제품 구매하기</a>
+                </div>
+            </li>
+            <li class="itemSpl">
+                <div class="itemBox item6">
+                    <h2 class="itemTit">건강한 약콩두유 <br>
+                        <span class="txt">엄마를 부탁해!약콩100</span>
+                    </h2>
+                    <p class="itemCon">
+                        여성을 위한 <span class="strong">프리미엄 약콩 솔루션.</span>
+                        
+                        <span class="itemComent">(180mg / 65kcal)</span>
+                    </p>
+                    <a href="" class="itemMore">제품 구매하기</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+    <div class="ftWrap">
+        <p class="copyright">
+        <br>경기도 수원시 영통구 에듀타운로 101 101동 204호 <br>
+         (주) BOBSNU 대표 정 홍균 <br>
+            <span class="cp">COPYRIGHT &copy; (주) BOBSNU All rights reserved.</span>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
