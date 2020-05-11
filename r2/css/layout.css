@@ -279,7 +279,6 @@ body {
 }
 
 
-
 .application p,
 .parcel p,
 .infomation p {
@@ -917,7 +916,7 @@ body {
     background-image: url(../img/visual_slogan_2.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 90% 40%;z-index: 1;
+   /* background-position: 90% 40%;*/z-index: 1;
 }
 
     .txtBox {
@@ -1186,9 +1185,9 @@ body {
     }
     
 .slogan {
-    width: 80%;
-    height: 80%;
-     position: absolute;top:5%;right: 8%;
+    width: 70%;
+    height: 70%;
+     position: absolute;top:0%;right: 14%;
     background-image: url(../img/visual_slogan_2.png);
     background-repeat: no-repeat;
     background-size: 100%;
